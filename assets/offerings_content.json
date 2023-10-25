@@ -1,0 +1,172 @@
+[
+  {
+    "label": "Collaboration",
+    "subcategories": [
+      {
+        "title": "Business Agility",
+        "text": "The GFT Business Agility Center (BAC) is our specialized hub for agile practices, values, and culture. We have over 300 agilists deployed in more than 100 projects across clients from different business segments. Our main services include:",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "API & Integration",
+        "text": "GFT offers a comprehensive portfolio of services to address all aspects related to the connectivity of your technological environment with internal systems, partners, and open channels. We can provide support at every stage of the API lifecycle, from Discovery to Delivery, with specialized architects and developers. This ensures governance and applies security practices in compliance with the most widely accepted market standards and protocols.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Automation",
+    "subcategories": [
+      {
+        "title": "Hyperautomation",
+        "text": "Hyperautomation is the combination of Robotic Process Automation (RPA), Artificial Intelligence, Machine Learning, and also Intelligent Business Process Management (IBPM) technologies. RPA stands as the core element of hyperautomation, always working in conjunction with artificial intelligence, Data Analytics, Process/Task Mining, and process governance in this context. By leveraging all of these components, the financial market has witnessed a transformation marked by error reduction, diminished operational costs, minimized management risk, enhanced process control, and scalability. Today, automation is no longer an option but rather a strategic tool for a company to remain competitive in the market.",
+        "image": "./assets/industries_bg.jpg"
+      },
+      {
+        "title": "Digital Back Office",
+        "text": "More informational text...",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Digital Assets",
+    "subcategories": [
+      {
+        "title": "SaaS Solutions",
+        "text": "Open Business as a Service GO!BaaS, harnesses the full potential of Open Finance and Open Insurance. It's your all-in-one solution for regulation, optimization, and monitoring, built on our national and international expertise in Open Finance.\n\nGO!Dash, powered by Business Intelligence (BI) and Artificial Intelligence (AI), drives product strategies based on Open Finance movement data.\n\nGO!Quality, a platform for verifying the quality of data within the Open Finance ecosystem, ensuring correct adherence to regulatory standards.\n\nGO!Client, a platform to accelerate your strategy for handling and defending consent operations within the Open Finance ecosystem, seamlessly integrated with Salesforce.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "Accelerator Components",
+        "text": "OAF - Open API Framework: An accelerating solution for open APIs developed in partnership with AWS. It manages and enables monetization of your APIs through a secure and intuitive management interface, including a developer portal and a management portal.\n\nMood Sensor: A solution that enhances talent management using AI, allowing you to gauge employee satisfaction levels, alerting about imminent turnover risks, and more.\n\nCybercheck: Professional cybersecurity services, offering assessments and security strategies through leading market solutions. With a complete and trained team, GFT can help you quantify and understand your risks, enhance your team's resources, detect and respond to threats, and unify your company's security priorities to accelerate transformation.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Customer Centricity",
+    "subcategories": [
+      {
+        "title": "DEX - Digital Experience Studio",
+        "text": "In today's world, solutions involve a 360º approach, with companies and their clients collaborating. Highlighting, combining important points, directing, and making solutions tangible can all use technology to bridge the two worlds. We create solutions through a digital journey that is easy to use, secure, and intuitive, across three levels: incremental, disruptive, and futuristic, aiming to generate value at every moment in the business. Operating end-to-end in projects, addressing business, experience, and technology, you can rely on our Digital Assets to accelerate the development of solutions. Our goal is to make products and clients market leaders.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "Salesforce",
+        "text": "GFT has more than 150 professionals with over 350 certifications undertaking projects in Brazil, the USA, and Spain. Through our competency centers, we understand the needs and strategies of companies to deliver the best journey and meet the one-to-one needs of the client, always using the best development practices to ensure the best for the client. We have a four-month training program for the formation of new consultants and developers in Salesforce. Additionally, we have four pillars to deliver a high-level project: 360º vision, DevOps/COE, assessment, and automated testing.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "ServiceNow",
+        "text": "GFT is the only ServiceNow partner with over 20 years of experience in the financial services sector, present in 16 countries with its main delivery core in Brazil.\n\nWith a worldwide team of the best specialists, GFT has a one-stop-shop for investment banks, retail banks, insurers and other markets that can leverage the full power of ServiceNow.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Game Changers",
+    "subcategories": [
+      {
+        "title": "Artificial Intelligence",
+        "text": "We aim to bring and implement the best of artificial intelligence tailored to the business goals of our clients. GFT has been growing rapidly, achieving the goal of spreading an analytical culture among clients towards a \"Data Driven\" journey. Through data science and artificial intelligence applied to Big Data, it has become a reference in knowledge and data utilization. GFT has a focus on results, driven by innovation, continuous learning, Co-Creation (teamwork), and the appreciation of each professional's dedication and applied expertise.\n\nWith over 150 certified professionals in all cloud technologies, the Data & AI area has been operating across all market segments, offering predictive models, process optimization, customer segmentation, digital modernization, virtual assistants, anomaly analysis models, and through services such as TDD - Technology Data Discovery\n\nCurrently, GFT operates from traditional data science approaches to the use of innovative generative AI technologies.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "Blockchain, DLT",
+        "text": "Tokenizing assets in the context of Digital Real presents challenges in different layers of Decentralized Architecture. We face a new context of wallet management for asset operation, necessitating seamless integration processes within current Web/Web2 applications to ensure a frictionless user experience and enable journeys of wallet aggregation.\n\nAddressing impacts on KYC (Know Your Customer) processes, adding the complexity of decentralized identity, and affecting current solutions to expand research scopes while ensuring customer privacy. This also involves implementing new rules to enhance KYT (Know Your Transaction) models.\n\nEstablishing a Blockchain environment (onchain) integrated with CI/CD pipelines to provide continuous evolution capacity and integrated distributed environment through the implementation and evolution of smart contracts and integration layers (Web3.js and Ether.Js). Additionally, a new context for testing interoperability between blockchains.\n\nIntegration processes with Interoperability solutions for other blockchain networks to facilitate cross-border payments.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "IoT",
+        "text": "Handling large volumes of data from Internet of Things (IoT) devices, GFT designs and implements solutions for real-time data capture, processing, and analysis. This incorporates analytical potential for control, supervision, and predictive analysis. With successful implementation cases ranging from architecture design to the application of predictive maintenance.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Cloud Engineering",
+    "subcategories": [
+      {
+        "title": "Cloud Adoption & Migration",
+        "text": "We support your organization in Cloud Adoption, from strategy to operations, to underpin an ambitious growth strategy, charting the right path towards the cloud with governance, automation, and continuous improvement. We address the complexity of Cloud Migration, creating and delivering a robust modernization plan that aligns with business objectives and accelerates benefits. We enable Cloud Services by leveraging best practices to ensure alignment between business, operations, and technology. We provide methods to reduce your Cloud costs by up to 30% through strategic financial control. We have partnerships and certified professionals with key players in the ecosystem such as AWS, Microsoft Azure, Google Cloud, and IBM Cloud.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "Mainframe Modernization",
+        "text": "Most of the world’s major businesses run on mainframes. Yet these machines are often unsuited to the digital age. Your mainframe architecture probably represents years of technology layered on one another.\n\nA monolithic, complex mainframe structure has many shortcomings, is costly to maintain and makes you less responsive to new opportunities.\n\nWhile many organisations are opening up to new, collaborative business models, their legacy applications and back-end systems remain unchanged.\n\nTo fully leverage openness, these systems need to change.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "App Modernization",
+        "text": "We address Application Modernization by decoupling monoliths into specific functions to reduce the operational burden of application maintenance. In this journey, we use microservices, serverless, managed services, and automation for the entire environment, from provisioning to multiple deployments of modernized applications in the cloud. Additionally, we implement an observability journey to anticipate potential issues, thereby increasing application availability for our clients. As a result, clients experience uninterrupted service, professionals who previously managed servers shift their focus towards automation, process improvement, and simplification, boosting productivity and unlocking new business models.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "DevSecOps",
+        "text": "We monitor the lifecycle of our projects by collaborating in the development cycle, eliminating silos, and empowering teams to reduce manual processes, resulting in quality, reliability, and integrity in deliveries. This is achieved with security through automated tools and continuous monitoring, all aligned with our culture in applying agile practices and methodologies. We keep pace with security trends, self-service, zero-touch, observability, and chaos engineering. We offer a portfolio of services that embody our culture, automation, lean IT, monitoring, and sharing.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Platform Engineering",
+    "subcategories": [
+      {
+        "title": "QA Engineering",
+        "text": "In our QA ecosystem, we have the following solutions: Test Data Virtualization/Management, Performance Testing, Automated and Functional Testing, Digital Assurance, Integrations, Testing Consultancy, Managed Services, Agile & DevOps, Accessibility.\n\nThis creates a value proposition with cost efficiency and a blend of solutions and services. We rely on automations and accelerators to streamline the testing process, with continuous development of solutions based on open-source technologies and reusability.\n\nOur process is based on 4 key pillars: Evaluate + Strategy + Pilot + Operating Model.\n\nOur team comprises over 350 specialized professionals, where more than 30% of the team is certified in ISTQB/BSTQB.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "AMS & IMS",
+        "text": "GFT's Managed Services provide maintenance, support, and operation services for various environments, including Cloud (Azure, AWS, GCP, IBM Cloud, and OCI), applications (Java, .NET, NodeJS, Python, and mobile), platforms (Salesforce, IBM CP4BA/BPM, CP4I, CP4D, Oracle, among others), On-Premise infrastructure, and 24x7 NOC and SOC operation.\n\nIn addition to offering predictability and cost reduction with contract models that align with market needs, GFT can bring other significant benefits to your operation. These are based on the pillars that support continuous improvement in a process and automation-driven transformation journey.\n\nWe aim to free our clients from the burden of managing operations so they can focus on their core business. At the same time, we provide visibility and confidence that their environment is in good hands.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Data Engineering",
+    "subcategories": [
+      {
+        "title": "Data & Analytics",
+        "text": "GFT collaborates closely with its clients' business and technology departments, offering and delivering customer monetization solutions, 360-degree customer view, sales forecasting, customer segmentation, customer classification, product basket, dynamic recommendation systems for product and service offerings, root cause understanding of issues, data democratization and governance.\n\nWe provide specialized services in business intelligence, data engineering, data science, and artificial intelligence. With numerous success stories and innovative ways of harnessing data to optimize our clients' outcomes, GFT has provided and is implementing various types of data analysis always focused on improving our clients' results.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Regulatory & Risks",
+    "subcategories": [
+      {
+        "title": "Cyber Security",
+        "text": "We assess, implement, and manage your business's cybersecurity, contributing to the acceleration of innovation. GFT offers a comprehensive, advanced, and integrated portfolio of security consulting and services, providing strategic assessments and implementations with leading market partners, including efficient digital security strategies.\n\nWe assist our clients in aligning their security strategy with their business, integrating solutions to protect infrastructure, users, assets, and data, and implementing technologies to identify, assess, and manage defenses and mechanisms against cyber threats.\n\nOur Solutions: Cloud Security, Data Protection Security, Infrastructure Security, Application Security, Privacy, Risk and Compliance, Intelligence, Monitoring and Incident Response, Identity and Access Management, and Training and Awareness.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "Data Protection",
+        "text": "Identify and protect critical data against potential cyber threats. Our Data Protection Security solution enables the identification, classification, and protection of potential critical company data, assessing potential impacts and risks in the event of data leaks or vulnerabilities.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Business & IT Consulting",
+    "subcategories": [
+      {
+        "title": "Instant Payment",
+        "text": "We have strong expertise in implementing and evolving Cash Management solutions, handling high transaction volumes. We design and implement integration flows for offering Pix through credit card terminals (POS) and in RETAIL customer terminals, experimenting with the B2B business model using Pix APIs.\n\nWe have conceived Pix migration and contingency solutions in the integration between the financial institution and the Central Bank in architectures with hybrid Cloud and On-premise infrastructure.\n\nWe create a Payments Hub for Industry 4.0 and Financial Institutions, centrally managing different payment modalities, allowing BANKING to offer products in an open market.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "Life Moments",
+        "text": "Considering everyday moments, habits, and interactions, we are capable of creating personalized experiences to meet changing customer expectations, advising and delighting them with tailored solutions; being present in their life and environment. When we start thinking about how to create value for our customers, we can choose one of these nine \"Life Moment\" perspectives and build a service around it.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "Digital Banking",
+        "text": "We support our clients in a world where all digital banking has access to the most modern technologies, and the differentiator is a well-designed and intuitive customer experience with smooth and efficient navigation development, making it easier for customers to conduct their transactions and access relevant information in fewer steps. This leads to higher customer satisfaction, increasing loyalty, and reducing abandonment rates.\n\nFurthermore, a well-developed front-end translates all of this with a responsive, accessible, and adaptable website or application for various devices, providing a consistent experience on any platform. This enables users to access their banking services conveniently and flexibly, regardless of the device they are using. Bringing success, efficiency, and savings to Digital Banking.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  }
+]

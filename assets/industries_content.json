@@ -3,8 +3,44 @@
     "label": "Cooperatives",
     "subcategories": [
       {
-        "title": "Cooperatives Subcategory",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "title": "Cooperatives",
+        "text": "GFT has as one of its differentiators extensive experience in the financial market, contributing to the development of major financial institutions in Brazil and worldwide.\n\nIn an effort to further contribute to the development of the Brazilian financial market and provide a faster, more effective, and accessible entry into the technological world, GFT has established a specific segment within its internal structure to serve Credit Cooperatives.\n\nThrough this initiative, we aim to facilitate the development of this segment in a personalized and participatory manner, promoting modernization and automation of their technological systems, trading platforms, risk management, regulatory compliance, and other critical areas. This enables Credit Cooperatives to stand out in a competitive environment like the financial market.\n\nAll of this is provided with security, agility, scalability, and, most importantly, contributes to improved financial results (Surpluses), offering their members an increasingly fair financial inclusion."
+      }
+    ]
+  },
+  {
+    "label": "Capital Markets",
+    "subcategories": [
+      {
+        "title": "Capital Markets",
+        "text": "With more than 10 years of experience in CAPITAL MARKETS, GFT has been one of the main providers of technological solutions for financial institutions throughout Brazil.\n\nHis specialized knowledge of trading platforms, risk management, regulatory compliance and other critical areas has enabled his clients to stand out in an increasingly competitive and complex environment.\n\nWith a highly qualified team and a client-centric approach, GFT continues to be a trusted partner for companies looking to innovate and grow in an ever-evolving financial market."
+      }
+    ]
+  },
+  {
+    "label": "Banking",
+    "subcategories": [
+      {
+        "title": "Banking",
+        "text": "GFT Brasil has been operating for approximately 15 years in the local market (and also offshore), serving the main BANKING and insurance companies, supporting them in regulatory challenges and product evolutions and FINANCIAL SERVICES (LGPD, PIX, Open Banking, Open Insurance, Open Finance, Cryptocurrencies, Real Digital), modernization projects ( adoption and migration to the cloud) and technological updates. It operates in an agnostic manner, being a partner of all the main clouds (AWS, Azure, GCP and IBM) and also of several technological platforms such as Salesforce, ServiceNow, Digibee, among others."
+      }
+    ]
+  },
+  {
+    "label": "Insurance",
+    "subcategories": [
+      {
+        "title": "Insurance",
+        "text": "GFT has been operating in the insurance market in Brazil for over 8 years.\n\nWe have more than 300 people working in the main Insurance Companies and Brokers in Journey Design initiatives with Personalized Experience, App and Web Application Development, Process Automation, Application Modernization for Cloud, Analytics, Test Automation. We have partnerships with the main INSURANCE solution platforms on the market, in addition to having developed a solution for Open Insurance (GoBaaS).\n\nThe insurance market is constantly developing, growing and democratizing, where GFT's skills and solutions are excellent accelerators to support our clients and prospects in reshaping the future of digital business."
+      }
+    ]
+  },
+  {
+    "label": "Manufacturing",
+    "subcategories": [
+      {
+        "title": "Manufacturing",
+        "text": "Need Text Here"
       }
     ]
   },
@@ -12,8 +48,8 @@
     "label": "Telecom",
     "subcategories": [
       {
-        "title": "Telecom Subcategory",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "title": "Telecom",
+        "text": "GFT Brasil, being a reference in the financial segment and serving all the main BANKING and Insurance Companies, has been supporting institutions in challenges such as LGPD, PIX, Open Banking, among others.\nAll this expertise endorses GFT to operate in the Telecom segment, the company's new vertical, where technology also evolves at great speed in the IT market, where we operate in an agnostic manner, being a partner of all the main clouds (AWS, Azure, GCP and IBM), and also from different platforms (Salesforce, ServiceNow and Digibee). Challenges such as Open Telecom, where we will have the market place to best serve the general public, will be a new milestone in this segment.\n\nThe telecommunications sector in Brazil has been a constantly evolving market, driven by the growing demand for mobile communication and broadband services. The deployment of 5G technologies is also underway in the country, which should further accelerate the development of the sector. And we understand the importance of being present in such a significant market for GFT.\nIn terms of innovation, we have a structure focused on developing new businesses and solutions, which carries out studies and POCs with new technology trends, such as blockchain, IoT, Machine Learning, generative AI, QA, among others.\nAs a differentiator, in technical terms, we have strong delivery management, focusing on delivering value and quality and providing a team of consultants and specialists according to demand, who support everything from definition and development to the delivery of solutions. In terms of people management, it takes care of its teams on an individual basis, paying special attention to “people”, reducing the turnover rate."
       }
     ]
   },
@@ -21,8 +57,8 @@
     "label": "Health",
     "subcategories": [
       {
-        "title": "Health Subcategory",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "title": "Health",
+        "text": "Operating in the main laboratories and hospital networks in Brazil, we focus on digital transformation strategies, accelerated by the pandemic. This includes the creation of platforms that integrate the HEALTH ecosystem and initiatives aimed at efficiency through cloud adoption and migration programs, as well as agility consulting."
       }
     ]
   },
@@ -30,8 +66,8 @@
     "label": "Retail",
     "subcategories": [
       {
-        "title": "Retail Subcategory",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "title": "Retail",
+        "text": "Artificial Intelligence, Process Automation, Cloud, Business Consulting, Customer Journey Enhancement, Pricing, Logistics are some areas that GFT can offer to help Retail companies increase their revenue and reduce costs. With over 20 years of experience in the IT market, GFT is the right company to assist Retail in achieving higher profitability."
       }
     ]
   },
@@ -39,8 +75,8 @@
     "label": "Utilities",
     "subcategories": [
       {
-        "title": "Utilities Subcategory",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "title": "Utilities",
+        "text": "We understand that energy transition and market opening are priorities for the Energy & Utilities industry.\n\nOur mission is to enable companies in the energy sector to adapt and thrive in the digital age. We combine industry knowledge with our specialized skills in innovative technologies such as IoT, Cloud, AI, and Big Data to optimize operational efficiency, enhance resource and asset management, improve infrastructure maintenance, and deliver an enhanced customer experience. This enables the development of new business models in the sector."
       }
     ]
   },
@@ -48,17 +84,17 @@
     "label": "Financial Services",
     "subcategories": [
       {
-        "title": "Financial Services Subcategory",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "title": "Financial Services",
+        "text": "GFT has had a strong presence in the national and international financial market since its inception.\n\nWe operate in major financial services companies, bringing our expertise in Digital Transformation, Cloud, Process Automation, Data, Business Consulting, among other technologies that support our clients in achieving their business objectives."
       }
     ]
   },
   {
-    "label": "Payment Services",
+    "label": "Payment Methods",
     "subcategories": [
       {
-        "title": "Payment Services Subcategory",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "title": "Payment Methods",
+        "text": "GFT has played a significant and innovative role in the payment methods market.\n\nWith its expertise in technology and financial solutions, the company has assisted numerous organizations in modernizing their payment systems and meeting the ever-evolving demands of consumers.\n\nGFT offers a range of services, from developing custom payment platforms to implementing robust security solutions, ensuring secure and efficient transactions.\n\nMoreover, the company stays updated with the latest industry trends, such as mobile payments, digital wallets, and cryptocurrencies, empowering its clients to adapt to technological changes and provide innovative payment experiences to their users. With its experience and commitment to driving digital transformation in the payment sector, GFT stands out as a trusted and strategic partner for companies looking to excel in this continuously growing market."
       }
     ]
   },
@@ -66,8 +102,8 @@
     "label": "Government",
     "subcategories": [
       {
-        "title": "Government Subcategory",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "title": "Government",
+        "text": "We see the government as an integral part of the productive chain across various industries in which we operate.\n\nWe leverage our extensive experience in the private financial sector to bring digitization to Public Banking, offering efficiency, transparency, and innovation through the implementation of emerging technologies like AI, Big Data, Blockchain, and Open Finance.\n\nAdditionally, we collaborate with the government to adopt and implement digital technologies that enhance efficiency, productivity, and competitiveness through an end-to-end perspective of the public sector's value chain."
       }
     ]
   }

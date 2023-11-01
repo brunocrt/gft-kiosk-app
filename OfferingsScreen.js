@@ -4,8 +4,7 @@ import { useScrollToTop } from '@react-navigation/native';
 import { Swipeable } from 'react-native-gesture-handler';
 
 import offerings_content from './assets/offerings_content.json';
-import industries_content from './assets/industries_content.json';
-import GlobalUIWrapper from './GlobalUIWrapper';
+import NavigationButtons from './NavigationButtons';
 
 import icon1 from './assets/icons/collaboration_icon.png';
 import icon2 from './assets/icons/automation_icon.png';
@@ -32,9 +31,17 @@ export default function OfferingsScreen({ route, navigation }) {
 
     const icons = [icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10];
     const icon_names = [
-      'Collaboration', 'Automation', 'Digital Assets', 'Customer Centricity', 'Game Changers', 
-      'Cloud Engineering', 'Platform Engineering', 'Data Engineering', 'Regulatory & Risks', 'Business & IT Consulting'
-      ];
+        {label: 'Collaboration', align: 'right', xOffset: -140, yOffset: 124, color: '#B02A87', scale: 0.9},
+        {label: 'Automation', align: 'center', xOffset: -30, yOffset: 80, color: '#B02A87', scale: 0.8},
+        {label: 'Digital\nAssets', align: 'left', xOffset: 40, yOffset: 110, color: '#B02A87', scale: 0.85},
+        {label: 'Customer\nCentricity', align: 'left', xOffset: -10, yOffset: 60, color: '#B02A87', scale: 0.7},
+        {label: 'Game\nChangers', align: 'left', xOffset: -10, yOffset: -20, color: '#B02A87', scale: 0.85},
+        {label: 'Cloud\nEngineering', align: 'left', xOffset: 36, yOffset: -50, color: '#0097D9', scale: 0.85},
+        {label: 'Platform\nEngineering', align: 'center', xOffset: -30, yOffset: -20, color: '#0097D9', scale: 0.8},
+        {label: 'Data\nEngineering', align: 'right', xOffset: -100, yOffset: -50, color: '#0097D9', scale: 0.85},
+        {label: 'Regulatory\n& Risks', align: 'right', xOffset: -50, yOffset: -20, color: '#0097D9', scale: 0.7},
+        {label: 'Business & IT\nConsulting', align: 'right', xOffset: -60, yOffset: 60, color: '#0097D9', scale: 0.85},
+    ];
 
     const initialCategory = route.params?.initial_screen || offerings_content[0].label;
     const initialCategoryIndex = offerings_content.findIndex(category => category.label === initialCategory);
@@ -112,14 +119,24 @@ const renderItem = ({ item, index }) => (
                             index === selectedCategoryIndex ? styles.selectedIconContainer : styles.unselectedIconContainer
                         ]}>
                         <View style={styles.iconWrapper}>
-                            <View style={index === selectedCategoryIndex ? styles.selectedIcon : styles.icon}>
+                            <View style={[
+                                index === selectedCategoryIndex ? styles.selectedIcon : {...styles.icon, backgroundColor: icon_names[index].color},
+
+                                ]}>
                                 <Image
-                                    style={{ width: iconSize, height: iconSize }}
+                                    style={{ 
+                                        width: iconSize * icon_names[index].scale, 
+                                        height: iconSize * icon_names[index].scale, 
+                                        borderRadius: iconSize / 2, 
+                                        zIndex: 99, 
+                                        justifyContent: 'center', 
+                                        alignItems: 'center'
+                                    }}
                                     source={icon}
                                 />
                             </View>
 
-                            <Text style={styles.iconName}>{icon_names[index]}</Text>
+                            <Text style={styles.iconName}>{icon_names[index].label}</Text>
                             </View>
                     </TouchableOpacity>
                 ))}
@@ -169,12 +186,12 @@ const renderItem = ({ item, index }) => (
                     <View style={styles.content}>
                         <h1 style={styles.headerStyle}>{offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</h1>
                         <View style={styles.innerContentWrapper}>    
-                            {offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].image && (
+                            {/* {offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].image && (
                                 <Image 
                                     source={offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].image}
                                     style={styles.contentImage}
                                 />
-                            )}
+                            )} */}
                             <ScrollView ref={ref} style={styles.contentTextContainer}>
                                 <Text style={styles.contentText}>
                                     {offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].text}
@@ -193,9 +210,8 @@ const renderItem = ({ item, index }) => (
 
             </View>
             <View style={styles.bottomButtons}>
-                <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.smallButton}>
-                    <Text>Home</Text>
-                </TouchableOpacity>
+                <NavigationButtons navigation={navigation} />
+
             </View>
         </View>
     </View>
@@ -243,16 +259,25 @@ const styles = StyleSheet.create({
         borderColor: 'transparent',
     },
     icon: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: iconSize,
+        height: iconSize,
         borderWidth: 2,
         borderColor: 'transparent',
-        borderRadius: 37,
+        borderRadius: iconSize / 2,
         padding: 3,  // Adjust this value if you want more or less space around the icon
         marginHorizontal: -2,  // This negative margin compensates for the border width to ensure icons don't shift
     },
     selectedIcon: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: iconSize,
+        height: iconSize,
         borderWidth: 2,
         borderColor: 'black',
-        borderRadius: 37,
+        borderRadius: iconSize / 2,
+        backgroundColor: "#EC6601"
     },
     iconName: {
         marginTop: 5,
@@ -374,7 +399,7 @@ selectedSubCategoryText: {
     },
   contentText: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 24,
     textAlign: 'justify',
   },
     contentImage: {

@@ -1,0 +1,312 @@
+{
+  "offerings": {
+    "icons": [
+      {
+        "id": 0,
+        "source": "./assets/icons/collaboration_icon.png",
+        "label": "Collaboration",
+        "align": "right",
+        "xOffset": -140,
+        "yOffset": 124,
+        "color": "#B02A87"
+      },
+      {
+        "id": 1,
+        "source": "./assets/icons/automation_icon.png",
+        "label": "Automation",
+        "align": "center",
+        "xOffset": -30,
+        "yOffset": 80,
+        "color": "#B02A87"
+      },
+      {
+        "id": 2,
+        "source": "./assets/icons/digital_assets_icon.png",
+        "label": "Digital\nAssets",
+        "align": "left",
+        "xOffset": 40,
+        "yOffset": 110,
+        "color": "#B02A87"
+      },
+      {
+        "id": 3,
+        "source": "./assets/icons/customer_centricity_icon.png",
+        "label": "Customer\nCentricity",
+        "align": "left",
+        "xOffset": -10,
+        "yOffset": 60,
+        "color": "#B02A87"
+      },
+      {
+        "id": 4,
+        "source": "./assets/icons/game_changers_icon.png",
+        "label": "Game\nChangers",
+        "align": "left",
+        "xOffset": -10,
+        "yOffset": -20,
+        "color": "#B02A87"
+      },
+      {
+        "id": 5,
+        "source": "./assets/icons/cloud_engineering_icon.png",
+        "label": "Cloud\nEngineering",
+        "align": "left",
+        "xOffset": 36,
+        "yOffset": -50,
+        "color": "#0097D9"
+      },
+      {
+        "id": 6,
+        "source": "./assets/icons/platform_engineering_icon.png",
+        "label": "Platform\nEngineering",
+        "align": "center",
+        "xOffset": -30,
+        "yOffset": -20,
+        "color": "#0097D9"
+      },
+      {
+        "id": 7,
+        "source": "./assets/icons/data_engineering_icon.png",
+        "label": "Data\nEngineering",
+        "align": "right",
+        "xOffset": -100,
+        "yOffset": -50,
+        "color": "#0097D9"
+      },
+      {
+        "id": 8,
+        "source": "./assets/icons/regulatory_risks_icon.png",
+        "label": "Regulatory\n& Risks",
+        "align": "right",
+        "xOffset": -50,
+        "yOffset": -20,
+        "color": "#0097D9"
+      },
+      {
+        "id": 9,
+        "source": "./assets/icons/business_it_consulting_icon.png",
+        "label": "Business & IT\nConsulting",
+        "align": "right",
+        "xOffset": -60,
+        "yOffset": 60,
+        "color": "#0097D9"
+      }
+    ],
+    "offset_modifier": 0.5
+  },
+  "competencies": {
+    "icons": [
+      {
+        "id": 0,
+        "source": "./assets/icons/cooperatives_icon.png",
+        "label": "Cooperatives",
+        "align": "center",
+        "xOffset": -40,
+        "yOffset": 70,
+        "color": "white"
+      }
+    ],
+    "offset_modifier": 0.5
+  },
+  "industries": {
+    "icons": [
+      {
+        "id": 0,
+        "source": "./assets/icons/cooperatives_icon.png",
+        "label": "Cooperatives",
+        "align": "center",
+        "xOffset": -40,
+        "yOffset": 70,
+        "color": "white"
+      },
+      {
+        "id": 1,
+        "source": "./assets/icons/telecom_icon.png",
+        "label": "Telecom",
+        "align": "left",
+        "xOffset": 20,
+        "yOffset": 110,
+        "color": "white"
+      },
+      {
+        "id": 2,
+        "source": "./assets/icons/health_icon.png",
+        "label": "Health",
+        "align": "left",
+        "xOffset": -16,
+        "yOffset": 30,
+        "color": "white"
+      },
+      {
+        "id": 3,
+        "source": "./assets/icons/retail_icon.png",
+        "label": "Retail",
+        "align": "left",
+        "xOffset": 20,
+        "yOffset": -50,
+        "color": "white"
+      },
+      {
+        "id": 4,
+        "source": "./assets/icons/utilities_icon.png",
+        "label": "Utilities",
+        "align": "center",
+        "xOffset": 0,
+        "yOffset": -20,
+        "color": "white"
+      },
+      {
+        "id": 5,
+        "source": "./assets/icons/financial_services_icon.png",
+        "label": "Financial\nServices",
+        "align": "right",
+        "xOffset": -50,
+        "yOffset": -64,
+        "color": "white"
+      },
+      {
+        "id": 6,
+        "source": "./assets/icons/payment_methods_icon.png",
+        "label": "Payment\nMethods",
+        "align": "right",
+        "xOffset": -6,
+        "yOffset": 16,
+        "color": "white"
+      },
+      {
+        "id": 7,
+        "source": "./assets/icons/government_icon.png",
+        "label": "Government",
+        "align": "right",
+        "xOffset": -90,
+        "yOffset": 110,
+        "color": "white"
+      }
+    ],
+    "offset_modifier": 0.5
+  },
+  "success_stories": {
+    "icons": [
+      {
+        "id": 0,
+        "source": "./assets/icons/cooperatives_icon.png",
+        "label": "Cooperatives",
+        "align": "center",
+        "xOffset": -40,
+        "yOffset": 70,
+        "color": "white"
+      }
+    ],
+    "offset_modifier": 0.5
+  },
+  "solutions": {
+    "icons": [
+      {
+        "id": 0,
+        "source": "./assets/icons/cooperatives_icon.png",
+        "label": "Cooperatives",
+        "align": "center",
+        "xOffset": -40,
+        "yOffset": 70,
+        "color": "white"
+      }
+    ],
+    "offset_modifier": 0.5
+  },
+  "partners": {
+    "icons": [
+      {
+        "id": 0,
+        "source": "./assets/icons/cooperatives_icon.png",
+        "label": "Cooperatives",
+        "align": "center",
+        "xOffset": -40,
+        "yOffset": 70,
+        "color": "white"
+      }
+    ],
+    "offset_modifier": 0.5
+  },
+  "gft_aws_offerings": {
+    "icons": [
+      {
+        "id": 0,
+        "source": "./assets/icons/cooperatives_icon.png",
+        "label": "Cooperatives",
+        "align": "center",
+        "xOffset": -40,
+        "yOffset": 70,
+        "color": "white"
+      }
+    ],
+    "offset_modifier": 0.5
+  },
+  "home": {
+    "icons": [
+      {
+        "source": "./assets/icons/offerings_icon.png",
+        "label": "Offerings",
+        "align": "right",
+        "xOffset": -10,
+        "yOffset": 90,
+        "color": "black",
+        "scale": 0.8
+      },
+      {
+        "source": "./assets/icons/competencies_icon.png",
+        "label": "Competencies and\nCredentials",
+        "align": "center",
+        "xOffset": -20,
+        "yOffset": 70,
+        "color": "black",
+        "scale": 0.75
+      },
+      {
+        "source": "./assets/icons/industries_icon.png",
+        "label": "Industries",
+        "align": "left",
+        "xOffset": -40,
+        "yOffset": 0,
+        "color": "black",
+        "scale": 0.7
+      },
+      {
+        "source": "./assets/icons/success_icon.png",
+        "label": "Success Stories",
+        "align": "left",
+        "xOffset": 0,
+        "yOffset": -30,
+        "color": "black",
+        "scale": 0.85
+      },
+      {
+        "source": "./assets/icons/solutions_icon.png",
+        "label": "Solutions",
+        "align": "left",
+        "xOffset": -20,
+        "yOffset": -30,
+        "color": "black",
+        "scale": 0.7
+      },
+      {
+        "source": "./assets/icons/partners_icon.png",
+        "label": "Partners",
+        "align": "center",
+        "xOffset": 20,
+        "yOffset": 0,
+        "color": "black",
+        "scale": 0.85
+      },
+      {
+        "source": "./assets/icons/GFT_AWS_Offerings_icon.png",
+        "label": "GFT + AWS\nOfferings",
+        "align": "left",
+        "xOffset": -20,
+        "yOffset": 90,
+        "color": "black",
+        "scale": 0.85
+      }
+    ],
+    "offset_modifier": 0.5
+  }
+}

@@ -1,0 +1,195 @@
+[
+  {
+    "label": "Capital Markets",
+    "subcategories": [
+      {
+        "title": "Legacy Migration",
+        "url": "https://www.gft.com/us/en/success-story/gft-helps-investment-firm-migrate-legacy-applications-to-aws-cloud",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:57791b16-c8b4-4189-9284-a4211d5821b4/gft-key-visual-aws-cloud.webp",
+        "header": "GFT helps investment firm migrate legacy applications to AWS Cloud",
+        "subheaders": ["", "", ""],
+        "texts": [
+          "Capability to create the entire environment from scratch in 8 hours with a minimum of manual intervention or configuration",
+          "Reduce the number of servers from 20 to 14",
+          "Reduce the size of the servers based on the usage by around of 20 percent"
+        ]
+      },
+      {
+        "title": "Unlocking Cloud Benefits",
+        "url": "https://www.gft.com/us/en/success-story/gft-unlocks-cloud-benefits-for-investment-firm",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:49f01160-30b8-4484-8ab1-2698653a96c7/gft-key-visual-blacksone.webp",
+        "header": "GFT unlocks cloud benefits for $900 billion investment firm",
+        "subheaders": [
+          "Accelerate a cloud journey",
+          "Faster performance",
+          "Successful collaboration"
+        ],
+        "texts": [
+          "An enterprise cloud migration in an aggressive timeframe.",
+          "Quarter-end reporting processing time reduced by 15 hours (26%).",
+          "An ongoing strategic partnership built on success and trust."
+        ]
+      },
+      {
+        "title": "Green Bond Platform",
+        "url": "https://www.gft.com/us/en/success-story/green-bond-tokenisation-platform",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:a716069d-b528-4eca-86c9-d2fd02271254/gft-key-visual-green-bond-management.webp",
+        "header": "A pioneering digital platform for retail green bond issuance",
+        "subheaders": ["", "", ""],
+        "texts": [
+          "Align financial processes with environmental goals",
+          "Gain 100% transparency regarding green bonds issuance",
+          "Third-party integration: Octopus electronic payment system"
+        ]
+      },
+      {
+        "title": "Portal de Documentos",
+        "url": "https://www.gft.com/us/en/success-story/portal-de-documentos-soars-on-cloud",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:cc111e74-f33b-4c82-b025-59279e8abc40/GettyImages-1073009100_retouch.webp",
+        "header": "Portal de Documentos soars on cloud",
+        "subheaders": ["Fast", "Cloud Engineering", "Innovation"],
+        "texts": [
+          "Migration in record time, only 2 months to go live",
+          "Immediate cloud platform benefits",
+          "Opportunity for more agile innovations"
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Banks",
+    "subcategories": [
+      {
+        "title": "Bank Leumi",
+        "url": "https://www.gft.com/us/en/success-story/bank-leumi-creates-open-banking",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:b919b16a-9eb8-4833-8e29-a9673b1b9f43/gft-key-visual-leumi.webp",
+        "header": "Bank Leumi creates Open Banking marketplace in Israel",
+        "subheaders": [
+          "With over 2,000 developers",
+          "Wide range of products",
+          "Cloud architecture"
+        ],
+        "texts": [
+          "Involved, Bank Leumi has created a digital ecosystem for fintech collaboration.",
+          "The platform offers an expanding range of tailored products spanning data, data security, cyber and much more.",
+          "Fast, proven way to build, manage and share APIs safely and securely."
+        ]
+      },
+      {
+        "title": "Mox",
+        "url": "https://www.gft.com/us/en/success-story/revolutionising-personal-banking",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:91287e47-aa4c-4414-ae59-94e46b3ef7ee/gft-key-visual-revolutionising-personal-banking.webp",
+        "header": "A revolutionary virtual bank that puts customers at the heart of everything",
+        "subheaders": ["Congratulations", "Customer Experience", "Security"],
+        "texts": [
+          "Celent Model Bank award for Retail Digital Banking",
+          "First virtual bank to support both Apple Pay & Google Pay",
+          "Strong encryption, biometric login and fraud protection"
+        ]
+      },
+      {
+        "title": "Retail Bank",
+        "url": "https://www.gft.com/us/en/success-story/a-mobile-push-notifications-platform-for-retail-bank",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:b82dc1b1-f978-49a9-a264-f83a68f43278/Raw_GFT_1178781904_mobilepayment.webp",
+        "header": "A mobile push notifications platform for retail bank",
+        "subheaders": ["Usability", "Faster", "Legal Compliance"],
+        "texts": [
+          "Mobile push notifications",
+          "Near real-time digital banking",
+          "Supports PSD2 requirements"
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Insurance",
+    "subcategories": [
+      {
+        "title": "System Modernization",
+        "url": "https://www.gft.com/us/en/success-story/Macif-core-modernisation",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:47a8d72d-d1c9-45e7-9554-e1b1691647f9/___gft-key-visual-macif-core-modernisation%20(2).399507132159195919.webp",
+        "header": "Transforming an entire book of business",
+        "subheaders": [
+          "Rapid implementation",
+          "Capability of quick adaptation",
+          "High responsiveness"
+        ],
+        "texts": [
+          "Implemented cloud-based core systems for commercial business in only 10 months",
+          "Accelerated product launch, enabling them to quickly respond to changing customer needs",
+          "Increased efficiency through faster development and delivery of products"
+        ]
+      },
+      {
+        "title": "Portal de Documentos",
+        "url": "https://www.gft.com/us/en/success-story/portal-de-documentos-soars-on-cloud",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:cc111e74-f33b-4c82-b025-59279e8abc40/GettyImages-1073009100_retouch.webp",
+        "header": "Portal de Documentos soars on cloud",
+        "subheaders": ["Fast", "Cloud Engineering", "Innovation"],
+        "texts": [
+          "Migration in record time, only 2 months to go live",
+          "Immediate cloud platform benefits",
+          "Opportunity for more agile innovations"
+        ]
+      },
+      {
+        "title": "Workflow Digitalization",
+        "url": "https://www.gft.com/us/en/success-story/digitalisation-of-business-workflow-for-a-leading-insurance-broker",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:a2371639-3c59-42b5-ab09-2c4aa9303970/gft-key-visual-digitalisation-of-business.webp",
+        "header": "Digitalisation of business workflow for a leading insurance broker",
+        "subheaders": [
+          "Massively reduced cost",
+          "Satisfied customers",
+          "Flexible to add new products"
+        ],
+        "texts": [
+          "Completion of tasks now significantly faster",
+          "The new platform allows immediate interaction",
+          "A cloud native architecture based on AWS infrastructure"
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Manufacturing",
+    "subcategories": [
+      {
+        "title": "Automotive",
+        "url": "https://www.gft.com/us/en/success-story/car-purchasing-reimagined-search-finance-drive-away",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:1e96cec7-214e-42d2-b9a5-3e9fb26baa15/gft-key-visual-car-purchasing-reimagined-Search-finance-drive-away.webp",
+        "header": "Car purchasing reimagined – Search, finance, drive away",
+        "subheaders": [
+          "One-stop shop",
+          "Customer journey",
+          "Cloud-based solution"
+        ],
+        "texts": [
+          "A one-stop shop for vehicle sourcing and finance",
+          "Engaging customer journeys across brands in global locations",
+          "A strategic cloud-based solution"
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Other Industries",
+    "subcategories": [
+      {
+        "title": "Digital Rights",
+        "url": "https://www.gft.com/us/en/success-story/digital-rights-management-redefined",
+        "imageUrl": "https://www.gft.com/.imaging/focalpoint/1600x533/dam/jcr:e4ac2dd8-8f67-4e2a-a1fb-29addc69ad3d/gft-key-visual-digital-rights-management-redefined.webp",
+        "header": "Digital rights management redefined",
+        "subheaders": [
+          "Innovation",
+          "AWS development",
+          "Digital rights service"
+        ],
+        "texts": [
+          "A new era in digital rights management using smart contracts",
+          "Platform built by a GFT team of 15 in 4 months",
+          "Great interest among financial institutions"
+        ]
+      }
+    ]
+  }
+]

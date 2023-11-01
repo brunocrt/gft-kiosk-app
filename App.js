@@ -5,6 +5,12 @@ import { createStackNavigator, CardStyleInterpolators  } from '@react-navigation
 import HomeScreen from './HomeScreen';
 import OfferingsScreen from './OfferingsScreen';
 import IndustriesScreen from './IndustriesScreen';
+import GftAwsScreen from './GftAwsScreen';
+import SolutionsScreen from './SolutionsScreen';
+import GftAwsOffersScreen from './GftAwsOffersScreen';
+import CompetenciesScreen from './SuccessScreen';
+import SuccessScreen from './SuccessScreen';
+import Screen0 from './Screen0';
 
 const Stack = createStackNavigator();
 
@@ -43,8 +49,14 @@ const App = () => {
             },
           }}
         >
-          <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Home" component={Screen0} options={{ headerShown: false }} />
+          <Stack.Screen name="Screen0" component={Screen0} options={{ headerShown: false }} />
           <Stack.Screen name="Offerings" component={OfferingsScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="GftAws" component={GftAwsScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Competencies" component={CompetenciesScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Solutions" component={SolutionsScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="SuccessScreen" component={SuccessScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="GFT+AWS" component={GftAwsOffersScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Industries" component={IndustriesScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>

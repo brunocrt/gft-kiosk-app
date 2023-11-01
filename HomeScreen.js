@@ -11,6 +11,7 @@ import LogosVisible from './LogosVisible';
 import PartnerLogos from './partner_logos'; 
 import AnimatedCircle from './AnimatedCircle';
 import AppNavigator from './AppNavigator';
+import IconLabels from './IconLabels';
 
 
 
@@ -29,7 +30,6 @@ const HomeScreen = ({ navigation }) => {
     setBackgroundImg(require('./assets/background.png'));
     setIsBorderVisible(false);
     setShowAnimatedCircle(false);
-    setStartLogosAnimation(false);
 
     // Reset animations
     fadeAnim.forEach(anim => anim.setValue(1));
@@ -80,7 +80,7 @@ useFocusEffect(
   const [isLoaded, setIsLoaded] = useState(false);
   const [showAnimatedCircle, setShowAnimatedCircle] = useState(false);
   const [logosVisible, setLogosVisible] = useState(false);
-  const [startLogosAnimation, setStartLogosAnimation] = useState(false);
+  const [showIconLabels, setShowIconLabels] = useState(false);
 
 
   const startingAnimation = () => {
@@ -155,10 +155,10 @@ useFocusEffect(
         easing: Easing.out(Easing.cubic),
         useNativeDriver: true,
       }).start();
+      setShowIconLabels(true);
       setBackgroundImg(require('./assets/offerings_bg.png'));
     } else if (index === 1) {
       setLogosVisible(true);
-      setStartLogosAnimation(true);
       setBackgroundImg(require('./assets/partners_bg.png'));
     }
     else if (index === 2) {
@@ -168,6 +168,7 @@ useFocusEffect(
         easing: Easing.out(Easing.cubic),
         useNativeDriver: true,
       }).start();
+      setShowIconLabels(true);
       setIndustriesButtonImg(industries_inverted);
       setBackgroundImg(require('./assets/industries_bg.jpg'));
     }
@@ -179,6 +180,7 @@ useFocusEffect(
     setIsBorderVisible(false);
     setBackgroundImg(require('./assets/background.png'));
     setShowAnimatedCircle(false);
+    setShowIconLabels(false);
     index = buttonPressed;
     // Reverse opacity animations
     Animated.timing(fadeAnim[(index + 1) % 3], {
@@ -211,7 +213,6 @@ useFocusEffect(
       }).start();
     } else if (index === 1) {
       setLogosVisible(false);
-      setStartLogosAnimation(false);
     }else if (index === 2) {
       Animated.timing(moveAnim[index], {
         toValue: rightButtonInitialPosition,
@@ -232,17 +233,22 @@ if (!isLoaded) {
   return (
     <GlobalUIWrapper backgroundImage={backgroundImg}>
     <View style={styles.container}>
-    {logosVisible && <LogosVisible startAnimation={true} />}
-      
-      
+    {logosVisible && <LogosVisible startAnimation={true} buttonPressed={buttonPressed} />}
+
+    {/* {showIconLabels && <IconLabels buttonPressed={buttonPressed} navigation={navigation} />} */}
+    
+
     <View style={styles.centeredLine}></View>
     <View style={styles.verticalCenteredLine}></View> 
 
     <View style={styles.buttonRow}>
-    <View style={styles.circleContainer}>
-        {showAnimatedCircle && <AnimatedCircle radius={buttonRadius * 2.4} buttonPressed={buttonPressed} navigation={navigation} />}
-      </View>
-      
+
+        {showAnimatedCircle && <AnimatedCircle 
+          radius={buttonRadius * 2.4} 
+          buttonPressed={buttonPressed} 
+          navigation={navigation} 
+        />}
+
       <Animated.View 
         style={[
           {
@@ -253,7 +259,7 @@ if (!isLoaded) {
 
 
         {/* Button 1 */}
-        <TouchableOpacity onPress={() => onButtonPress(0)} disabled={areButtonsDisabled}>
+        <TouchableOpacity onPress={() => navigation.navigate('GftAws')}>
             <Animated.Image
             source={offerings} 
             style={[
@@ -279,8 +285,6 @@ if (!isLoaded) {
           },
         ]} />
       </TouchableOpacity>
-
-      {/* {startLogosAnimation && <PartnerLogos startAnimation={true} />} */}
       
       
     {/* Button 3 */}
@@ -333,8 +337,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     margin: 20,
+    zIndex: 3,
   },
   button: {
     width: buttonDiameter,
@@ -342,6 +347,7 @@ const styles = StyleSheet.create({
     borderRadius: buttonDiameter / 2,
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: 4,
   },
   bottomButtons: {
     position: 'absolute',
@@ -357,10 +363,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
     backgroundColor: 'skyblue',
+    zIndex: 4,
   },
   circleContainer: {
     position: 'absolute',
-    zIndex: 10,
+    width: '65%',
+    height: '90%',
+    zIndex: 2,
   },
   centeredLine: {
     position: 'absolute',

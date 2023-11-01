@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { View, Image, Animated } from 'react-native';
+import PartnerLogos from './assets/logos/partners_grouped_logos.png';
 
 const LogosVisible = ({ startAnimation }) => {
     const fadeAnim = useRef(new Animated.Value(0)).current;  // Initial value for opacity: 0
@@ -12,7 +13,6 @@ const LogosVisible = ({ startAnimation }) => {
                     delay: 500,
                     toValue: 1,
                     duration: 1000,
-                    useNativeDriver: true,
                 }
             ).start();
         }
@@ -21,7 +21,7 @@ const LogosVisible = ({ startAnimation }) => {
     return (
         <Animated.View style={{ ...styles.container, opacity: fadeAnim }}>
             <Image 
-                source={require('./assets/logos/partners_grouped_logos.png')}  // Update the path to your image
+                source={PartnerLogos}  // Update the path to your image
                 style={styles.logo}
                 resizeMode='contain'
             />

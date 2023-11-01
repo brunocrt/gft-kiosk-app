@@ -4,17 +4,20 @@ import { useScrollToTop } from '@react-navigation/native';
 import { Swipeable } from 'react-native-gesture-handler';
 
 import industries_content from './assets/industries_content.json';
-import GlobalUIWrapper from './GlobalUIWrapper';
+import NavigationButtons from './NavigationButtons';
 
 import industries_icon1 from './assets/icons/cooperatives_icon.png';
-import industries_icon2 from './assets/icons/telecom_icon.png';
-import industries_icon3 from './assets/icons/health_icon.png';
-import industries_icon4 from './assets/icons/retail_icon.png';
-import industries_icon5 from './assets/icons/utilities_icon.png';
-import industries_icon6 from './assets/icons/financial_services_icon.png';
-import industries_icon7 from './assets/icons/payment_methods_icon.png';
-import industries_icon8 from './assets/icons/government_icon.png';
-
+import industries_icon2 from './assets/icons/capital_markets_icon.png';
+import industries_icon3 from './assets/icons/banking_icon.png';
+import industries_icon4 from './assets/icons/insurance_icon.png';
+import industries_icon5 from './assets/icons/manufacturing_icon.png';
+import industries_icon6 from './assets/icons/telecom_icon.png';
+import industries_icon7 from './assets/icons/health_icon.png';
+import industries_icon8 from './assets/icons/retail_icon.png';
+import industries_icon9 from './assets/icons/utilities_icon.png';
+import industries_icon10 from './assets/icons/financial_services_icon.png';
+import industries_icon11 from './assets/icons/payment_methods_icon.png';
+import industries_icon12 from './assets/icons/government_icon.png';
 
 
 const bgImage = require('./assets/offerings_content_bg.jpg');  // Update with the correct path
@@ -25,13 +28,33 @@ export default function IndustriesScreen({ route, navigation }) {
     const swipeAnimation = React.useRef(new Animated.Value(0)).current;
 
     const icons = [
-        industries_icon1, industries_icon2, industries_icon3, industries_icon4, 
-        industries_icon5, industries_icon6, industries_icon7, industries_icon8
-    ];
+        industries_icon1, 
+        industries_icon2, 
+        industries_icon3, 
+        industries_icon4, 
+        industries_icon5, 
+        industries_icon6, 
+        industries_icon7, 
+        industries_icon8,
+        industries_icon9,
+        industries_icon10,
+        industries_icon11,
+        industries_icon12,
+      ];
     const icon_names = [
-        'Cooperatives', 'Telecom', 'Health', 'Retail', 'Utilities', 
-        'Financial Services', 'Payment Methods', 'Government'
-        ];
+        {label: 'Cooperatives', align: 'center', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.85},
+        {label: 'Capital\nMarkets', align: 'right', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.85},
+        {label: 'Banking', align: 'center', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.9},
+        {label: 'Insurance', align: 'left', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.9},
+        {label: 'Manufacturing', align: 'left', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.9},
+        {label: 'Telecom', align: 'left', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.9},
+        {label: 'Health', align: 'left', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.9},
+        {label: 'Retail', align: 'left', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.8},
+        {label: 'Utilities', align: 'center', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.8},
+        {label: 'Financial\nServices', align: 'right', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.9},
+        {label: 'Payment\nMethods', align: 'right', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.9},
+        {label: 'Government', align: 'right', xOffset: 0, yOffset: 0, color: '#B02A87', scale: 0.9},
+      ];
 
         const initialCategory = route.params?.initial_screen || industries_content[0].label;
         const initialCategoryIndex = industries_content.findIndex(category => category.label === initialCategory);
@@ -108,14 +131,28 @@ export default function IndustriesScreen({ route, navigation }) {
                                 index === selectedCategoryIndex ? styles.selectedIconContainer : styles.unselectedIconContainer
                             ]}>
                             <View style={styles.iconWrapper}>
-                                <View style={index === selectedCategoryIndex ? styles.selectedIcon : styles.icon}>
+                                <View style={[
+                                    index === selectedCategoryIndex ? styles.selectedIcon : {...styles.icon, backgroundColor: icon_names[index].color},
+                                    ]}>
+                                    <View style={{
+                                        width: iconSize * 0.7,
+                                        height: iconSize * 0.7,
+                                        borderRadius: iconSize * 0.7 / 2,
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                    }}>
                                     <Image
-                                        style={{ width: iconSize, height: iconSize }}
+                                        style={{ 
+                                            width: '100%', 
+                                            height: '100%', 
+                                        }}
                                         source={icon}
+                                        resizeMode="cover"
                                     />
+                                    </View>
                                 </View>
     
-                                <Text style={styles.iconName}>{icon_names[index]}</Text>
+                                <Text style={styles.iconName}>{icon_names[index].label}</Text>
                                 </View>
                         </TouchableOpacity>
                     ))}
@@ -134,19 +171,6 @@ export default function IndustriesScreen({ route, navigation }) {
                     }}
                 >
                     <View style={styles.subCategoriesWrapper}>
-                    <FlatList
-                        horizontal
-                        data={industries_content[selectedCategoryIndex].subcategories}
-                        renderItem={renderItem}
-                        keyExtractor={(item, index) => String(index)}
-                        style={[
-                            styles.subCategoriesList,
-                            { transform: [{ translateX: swipeAnimation.interpolate({
-                                inputRange: [-1, 1],
-                                outputRange: [-50, 50]  // Change this to adjust the amount of translation
-                            }) }] }
-                        ]}
-                    />
                     </View>
                 </Swipeable>
     
@@ -189,9 +213,8 @@ export default function IndustriesScreen({ route, navigation }) {
     
                 </View>
                 <View style={styles.bottomButtons}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.smallButton}>
-                        <Text>Home</Text>
-                    </TouchableOpacity>
+                    <NavigationButtons navigation={navigation} />
+
                 </View>
             </View>
         </View>
@@ -217,8 +240,8 @@ export default function IndustriesScreen({ route, navigation }) {
         justifyContent: 'space-between',
         paddingHorizontal: 20,
         paddingVertical: 14,
-        width: '70%',
-        backgroundColor: 'rgba(219, 3, 252, 0.6)',
+        width: '80%',
+        backgroundColor: 'rgba(30, 240, 246, 0.6)',
         borderBottomLeftRadius: 40,
         borderBottomRightRadius: 40,
       },
@@ -239,27 +262,38 @@ export default function IndustriesScreen({ route, navigation }) {
             borderColor: 'transparent',
         },
         icon: {
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: iconSize,
+            height: iconSize,
             borderWidth: 2,
             borderColor: 'transparent',
-            borderRadius: 37,
+            borderRadius: iconSize / 2,
             padding: 3,  // Adjust this value if you want more or less space around the icon
             marginHorizontal: -2,  // This negative margin compensates for the border width to ensure icons don't shift
         },
         selectedIcon: {
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: iconSize,
+            height: iconSize,
             borderWidth: 2,
             borderColor: 'black',
-            borderRadius: 37,
+            borderRadius: iconSize / 2,
+            backgroundColor: "#EC6601"
         },
         iconName: {
             marginTop: 5,
             textAlign: 'center',
-            color: 'white',
+            color: 'black',
+            fontWeight: 'bold',
         },
         subCategoriesWrapper: {
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
+            height: 30,
             marginVertical: 10,
             paddingHorizontal: 10,
             alignSelf: 'center',
@@ -370,7 +404,7 @@ export default function IndustriesScreen({ route, navigation }) {
         },
       contentText: {
         color: 'white',
-        fontSize: 20,
+        fontSize: 24,
         textAlign: 'justify',
       },
         contentImage: {

@@ -214,6 +214,7 @@ const Screen0 = ({ navigation }) => {
                         position: 'absolute',
                         justifyContent: 'center',
                         alignSelf: 'flex-end',
+                        bottom: 0,
                     }} 
                 />
             </View>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, Animated, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking } from 'react-native';
+import { View, Animated, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking, Platform } from 'react-native';
 import { Circle, Path, G, Svg, Image as SVGImage, Text as SVGText } from 'react-native-svg';
+import { WebView } from 'react-native-webview';
 
 import industries from './assets/industries.png'
 import industries_inverted from './assets/industries_inverted.png'
@@ -263,6 +264,9 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
     const fadeAnim = useRef(new Animated.Value(0)).current;  // Initial value for opacity: 0
 
+    const [showBrowser, setShowBrowser] = useState(false);
+    const [currentURL, setCurrentURL] = useState('');
+    
 
     const handleIconPress = (index) => {
       console.log('Button Pressed:', index);
@@ -275,6 +279,8 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         console.log("URL to open:", url);
 
       }
+      setCurrentURL(url);
+      setShowBrowser(true);
 
       switch (buttonPressed) {
         case 0:
@@ -457,6 +463,12 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
           return (
             <>
+              {Platform.OS === 'ios' && showBrowser && (
+                <>
+                  <WebView source={{ uri: currentURL }} style={{ flex: 1 }} />
+                  <Button title="Close" onPress={() => setShowBrowser(false)} />
+                </>
+              )}
               <TouchableOpacity key={index} style={{ position: 'absolute', top: y, left: x, zIndex: 99 }} onPress={() => handleIconPress(index)}>
                 <Animated.View style={{
                   width: iconSize,

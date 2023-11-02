@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking, Button } from 'react-native';
+import { View, Image, TouchableOpacity, Text, StyleSheet, Linking, Button } from 'react-native';
 import { Circle, Path, G, Svg, Image as SVGImage, Text as SVGText } from 'react-native-svg';
 import Animated, { Easing, withRepeat, useSharedValue, useAnimatedStyle, withSpring, withTiming } from 'react-native-reanimated';
 

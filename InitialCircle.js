@@ -249,7 +249,7 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
                 </View>
               </TouchableOpacity>
 
-              <Animated.View style={{ ...styles.container, opacity: fadeAnim }}>
+              <Animated.View key={index} style={{ ...styles.container, opacity: fadeAnim }}>
                  {/* Box */}
                  <View style={{ 
                   position: 'absolute', 

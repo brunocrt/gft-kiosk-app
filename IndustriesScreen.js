@@ -227,7 +227,6 @@ export default function IndustriesScreen({ route, navigation }) {
             backgroundColor: 'transparent',
             width: '100%',
             height: '100%',
-            backgroundImage: `url(${bgImage})`,  // or use backgroundImage: bgImage if you're using inline styles
             backgroundSize: 'cover',
             backgroundPosition: 'center',
         },

@@ -221,13 +221,13 @@ const styles = StyleSheet.create({
         
     },
     statistic: {
-        fontSize: 18,
+        fontSize: 16,
         marginTop: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
     },
     subText: {
-        fontSize: 12,
+        fontSize: 10,
         marginVertical: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',

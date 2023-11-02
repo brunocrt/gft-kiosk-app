@@ -1,7 +1,6 @@
 // GlobalUIWrapper.js
 import React, { useContext } from 'react';
 import { View, Image, Text, StyleSheet, ImageBackground, SafeAreaView  } from 'react-native';
-import { SafeAreaView } from 'react-native-web';
 
 const logoImage = require('./assets/logo_gft.png');
 const backgroundImage = require('./assets/background.png');

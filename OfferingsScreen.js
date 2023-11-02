@@ -107,6 +107,20 @@ const renderItem = ({ item, index }) => (
     <ImageBackground style={styles.backgroundImageContainer} source={bgImage}>
 
             <View style={styles.iconBar}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} 
+                        style={{
+                            borderRightWidth: 1,
+                            borderRightColor: 'gray',
+                            borderLeftWidth: 1,
+                            borderLeftColor: 'gray',
+                            margin: 10,
+                        }} 
+                    >
+                    <View style={{
+                        justifyContent: 'space-evenly',
+                        alignSelf: 'center',
+                        flexDirection: 'row',
+                    }}>
                 {icons.map((icon, index) => (
                     <TouchableOpacity 
                         key={index} 
@@ -140,6 +154,8 @@ const renderItem = ({ item, index }) => (
                             </View>
                     </TouchableOpacity>
                 ))}
+                </View>
+                </ScrollView>
             </View>
 
             
@@ -230,7 +246,6 @@ const styles = StyleSheet.create({
   iconBar: {
     flexDirection: 'row',
     alignSelf: 'center',
-    justifyContent: 'space-between',
     paddingHorizontal: 20,
     paddingVertical: 14,
     width: '70%',
@@ -244,6 +259,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         opacity: 0.7,
         width: 90,
+        marginHorizontal: 20,
     },
     selectedIconContainer: {
         opacity: 1,

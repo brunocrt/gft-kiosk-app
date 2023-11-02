@@ -212,7 +212,7 @@ const Screen0 = ({ navigation }) => {
                     isVisible={selectedIcon === 2} 
                     styles={{
                         justifyContent: 'center',
-                        alignSelf: 'flex-end',
+                        alignSelf: 'center',
                     }} 
                 />
             </View>

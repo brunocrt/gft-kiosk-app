@@ -81,7 +81,9 @@ const styles = StyleSheet.create({
     linkButtonContainer: {
         position: 'absolute',
         zIndex: 4,
-        bottom: 30,
+        borderWidth: 1,
+        borderColor: 'black',
+        bottom: 20,
     },
     linkButton: {
         width: 200,

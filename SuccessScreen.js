@@ -203,7 +203,7 @@ export default function IndustriesScreen({ route, navigation }) {
                                 <View ref={ref} style={styles.contentTextContainer}>
                                     {/* Dynamically rendering text elements */}
                                     <ImageBackground 
-                                        source={success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].imageUrl} 
+                                        source={{uri: success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].imageUrl}} 
                                         style={{
                                             width: '100%', 
                                             height: '100%',

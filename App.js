@@ -6,7 +6,6 @@ import { createStackNavigator, CardStyleInterpolators  } from '@react-navigation
 import OfferingsScreen from './OfferingsScreen';
 import IndustriesScreen from './IndustriesScreen';
 import GftAwsScreen from './GftAwsScreen';
-import GftAwsOffersScreen from './GftAwsOffersScreen';
 import SuccessScreen from './SuccessScreen';
 import Screen0 from './Screen0';
 

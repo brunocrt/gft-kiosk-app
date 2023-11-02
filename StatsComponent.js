@@ -110,35 +110,25 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%',
-        height: '100%',
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        alignSelf: 'right',
-        backgroundColor:'transparent',
-        
-    },
-    wrapper: {
         flex: 1,
         flexDirection: 'column',
+        alignItems: 'flex-end',  // Align children to the right.
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+    },
+    wrapper: {  // This will take up 60% of the container's space, pushing content 40% down.
         width: '80%',
-        backgroundColor:'transparent',
-        alignSelf: 'right',
-        alignItems: 'right',
-        left: 20,
+        backgroundColor: 'transparent',
+        alignItems: 'flex-end',  // Ensure content inside this is right-aligned.
     },
     statsWrapper: {
-        height: 500,
-        alignItems: 'right',
-        alignSelf: 'right',
-        top: 20,
+        alignItems: 'flex-end',
     },
     header: {
         width: '100%',
-        alignItems: 'right',
-        backgroundColor:'transparent',
         flexDirection: 'row',
         justifyContent: 'flex-end',
+        backgroundColor: 'transparent',
     },
     headerText: {
         fontSize: 18,
@@ -150,36 +140,29 @@ const styles = StyleSheet.create({
         width: '100%',
         flexDirection: 'column',
         justifyContent: 'center',
-        backgroundColor:'transparent',
+        backgroundColor: 'transparent',
+        alignItems: 'flex-end',  // Align children to the right.
     },
     bodyRow: {
         width: '100%',
         flexDirection: 'column',
-        alignItems: 'right',
+        alignItems: 'flex-end',
         borderTopColor: 'black',
         borderTopWidth: 1,
-        
     },
     statistic: {
-        flexDirection: 'row',
         fontSize: 16,
         marginTop: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
-        alignItems: 'flex-end',
-        justifyContent: 'flex-end',
     },
     subText: {
-        flexDirection: 'row',
         fontSize: 10,
         marginVertical: 10,
         fontFamily: 'Calibri',
-        alignItems: 'flex-end',
         textAlign: 'right',
-        justifyContent: 'flex-end',
     },
     bottomWrapper: {
-        
         flexDirection: 'column',
         bottom: 40,
     },

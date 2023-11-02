@@ -181,7 +181,7 @@ const renderItem = ({ item, index }) => (
 
                 <View style={styles.contentWrapper}>
                     <View style={styles.content}>
-                        <h1 style={styles.headerStyle}>{offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</h1>
+                        <Text style={styles.headerStyle}>{offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</Text>
                         <View style={styles.innerContentWrapper}>    
                             {/* {offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].image && (
                                 <Image 

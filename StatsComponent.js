@@ -122,9 +122,10 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                             style={{ 
                                 opacity: fadeInOpacityImage,
                                 transform: [{ translateX: translateXValueImage }],
-                                width: 140,
-                                height: 140,
+                                width: 100,
+                                height: 100,
                                 
+                                alignSelf: 'center',
                             }}
                             source={require('./assets/competencies/quadrant.png')}
                             resizeMode="contain"
@@ -138,18 +139,16 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/news/import/press-and-news/2023/Press-releases/gft-improves-its-leader-ranking-in-the-2023-spark-matrix-for-digital-banking-services')}
                     style={{ 
                         position: 'absolute',
-                        
-                        
                         bottom: 0,
-                        left: 240,
+                        left: 200,
                     }}
                     >
                         <Animated.Image
                             style={{ 
                                 opacity: fadeInOpacityImage,
                                 transform: [{ translateX: translateXValueImage }],
-                                width: 160,
-                                height: 140,
+                                width: 120,
+                                height: 100,
                                 backgroundColor: 'white',
                                 borderWidth: 1,
                                 borderColor: 'black',
@@ -182,16 +181,15 @@ const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         flexDirection: 'column',
-        alignSelf: 'right',
+        width: '70%',
         backgroundColor:'transparent',
-        paddingRight: 20,
-        paddingLeft: 60,
+        alignSelf: 'center',
     },
     statsWrapper: {
         height: 500,
         justifyContent: 'flex-start',
         alignSelf: 'right',
-        top: 40,
+        top: 20,
     },
     header: {
         width: '100%',
@@ -207,7 +205,7 @@ const styles = StyleSheet.create({
     body: {
         width: '100%',
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'right',
         justifyContent: 'center',
         backgroundColor:'transparent',
     },

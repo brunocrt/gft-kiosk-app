@@ -79,7 +79,7 @@ const LinkButton = ({ isVisible }) => {
 
 const styles = StyleSheet.create({
     linkButtonContainer: {
-        position: 'absolute',
+      
         zIndex: 4,
         borderWidth: 1,
         borderColor: 'black',

@@ -116,7 +116,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: 'transparent',
     },
-    wrapper: {  // This will take up 60% of the container's space, pushing content 40% down.
+    wrapper: {  
+        top: 20,
         width: '80%',
         backgroundColor: 'transparent',
         alignItems: 'flex-end',  // Ensure content inside this is right-aligned.

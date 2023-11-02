@@ -196,13 +196,13 @@ const styles = StyleSheet.create({
     header: {
         width: '100%',
         alignItems: 'right',
-        textAlign: 'right',
         backgroundColor:'transparent',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
     },
     headerText: {
-        fontSize: 16,
+        fontSize: 18,
         fontFamily: 'Calibri',
-        alignItems: 'right',
         fontWeight: 'bold',
         textAlign: 'right',
     },

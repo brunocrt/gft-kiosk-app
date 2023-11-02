@@ -183,6 +183,7 @@ const Screen0 = ({ navigation }) => {
                 onIconPress={handleButtonPress}
                 activeCircle={activeCircle}
             />}
+            
                 <Animated.View style={[styles.middleCircle, 
                     { 
                         backgroundColor: buttonProps[selectedIcon].color,
@@ -208,12 +209,14 @@ const Screen0 = ({ navigation }) => {
 
                             >{buttonProps[selectedIcon].label}</Text>
                 </Animated.View>
+                
                 <LinkButton 
                     isVisible={selectedIcon === 2} 
                 />
             </View>
 
 
+           
 
 
 

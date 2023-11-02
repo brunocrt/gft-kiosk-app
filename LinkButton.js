@@ -82,12 +82,10 @@ const styles = StyleSheet.create({
       
       position: 'absolute',
         zIndex: 4,
-        borderWidth: 1,
-        borderColor: 'black',
         width: 200,
         height: 60,
-        bottom: 10,
-        alignItems: 'center',
+        bottom: 20,
+        right: -100,
     },
     linkButton: {
         width: '100%',

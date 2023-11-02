@@ -213,6 +213,8 @@ const Screen0 = ({ navigation }) => {
                     styles={{
                         position: 'absolute',
                         alignSelf: 'center',
+                        borderWidth: 1,
+                        borderColor: 'black',
                     }} 
                 />
             </View>

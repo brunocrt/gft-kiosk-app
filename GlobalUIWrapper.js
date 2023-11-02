@@ -12,7 +12,7 @@ const GlobalUIWrapper = ({ children, backgroundImage }) => {
   
   return (
     
-        <View style={styles.wrapper}>
+        <SafeAreaView style={styles.wrapper}>
             <View style={styles.topBar}>
                 <Text style={styles.slogan}>Shaping the{'\n'}future of digial{'\n'}business</Text>
                 <Image source={logoImage} style={styles.logo} />
@@ -28,7 +28,7 @@ const GlobalUIWrapper = ({ children, backgroundImage }) => {
                 </Text>
             <Text style={styles.date}>{date}</Text>
             </View>
-        </View>
+        </SafeAreaView>
   );
 };
 

@@ -191,6 +191,7 @@ const styles = StyleSheet.create({
         height: 500,
         alignItems: 'right',
         alignSelf: 'right',
+        top: 20,
     },
     header: {
         width: '100%',
@@ -226,6 +227,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Calibri',
         textAlign: 'right',
         alignItems: 'flex-end',
+        justifyContent: 'flex-end',
     },
     subText: {
         flexDirection: 'row',
@@ -234,6 +236,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Calibri',
         alignItems: 'flex-end',
         textAlign: 'right',
+        justifyContent: 'flex-end',
     },
     bottomWrapper: {
         

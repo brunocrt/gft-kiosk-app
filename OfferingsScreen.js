@@ -162,10 +162,7 @@ const renderItem = ({ item, index }) => (
                     keyExtractor={(item, index) => String(index)}
                     style={[
                         styles.subCategoriesList,
-                        { transform: [{ translateX: swipeAnimation.interpolate({
-                            inputRange: [-1, 1],
-                            outputRange: [-50, 50]  // Change this to adjust the amount of translation
-                        }) }] }
+                        
                     ]}
                 />
                 </View>

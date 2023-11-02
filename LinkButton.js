@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { View, TouchableOpacity, Text, Alert, StyleSheet, Animated, Button, Modal } from 'react-native';
+import { View, TouchableOpacity, Text, Alert, StyleSheet, Animated, Button, Modal, Platform, Linking } from 'react-native';
 import WebView from 'react-native-webview';
 
 const LinkButton = ({ isVisible }) => {
@@ -7,10 +7,16 @@ const LinkButton = ({ isVisible }) => {
     const translateXValue = useRef(new Animated.Value(50)).current;
 
     const [webViewVisible, setWebViewVisible] = useState(false);
+    const url = 'https://www.example.com';
 
     const handleLinkPress = () => {
-        // Toggle the WebView visibility
-        setWebViewVisible(!webViewVisible);
+        if (Platform.OS === 'ios') {
+            // Toggle the WebView visibility for iOS
+            setWebViewVisible(!webViewVisible);
+        } else {
+            // Open in default browser for other platforms (including desktop)
+            Linking.openURL(url).catch(err => Alert.alert('Error', 'Cannot open the URL'));
+        }
     };
 
     useEffect(() => {
@@ -47,17 +53,19 @@ const LinkButton = ({ isVisible }) => {
 
     return (
         <View style={{ flex: 1 }}>
-            <Modal
-                animationType="slide"
-                transparent={false}
-                visible={webViewVisible}
-                onRequestClose={() => {
-                    setWebViewVisible(false);
-                }}
-            >
-                <WebView source={{ uri: 'https://www.example.com' }} style={{ flex: 1 }} />
-                <Button title="Close" onPress={() => setWebViewVisible(false)} />
-            </Modal>
+            {Platform.OS === 'ios' && (
+                <Modal
+                    animationType="slide"
+                    transparent={false}
+                    visible={webViewVisible}
+                    onRequestClose={() => {
+                        setWebViewVisible(false);
+                    }}
+                >
+                    <WebView source={{ uri: url }} style={{ flex: 1 }} />
+                    <Button title="Close" onPress={() => setWebViewVisible(false)} />
+                </Modal>
+            )}
 
             <Animated.View style={[styles.linkButtonContainer, { opacity: fadeInOpacity, transform: [{ translateX: translateXValue }] }]}>
                 <TouchableOpacity onPress={handleLinkPress} style={styles.linkButton}>
@@ -67,8 +75,6 @@ const LinkButton = ({ isVisible }) => {
         </View>
     );
 };
-
-
 
 
 const styles = StyleSheet.create({

@@ -28,7 +28,7 @@ const LinkButton = ({ isVisible }) => {
                     duration: 700,
                     useNativeDriver: true,
                 }),
-                Animated.timing(translateXValue, {
+                Animated.timing(translateYValue, {
                     toValue: 0,
                     duration: 700,
                     useNativeDriver: true,
@@ -42,7 +42,7 @@ const LinkButton = ({ isVisible }) => {
                     duration: 700,
                     useNativeDriver: true,
                 }),
-                Animated.timing(translateXValue, {
+                Animated.timing(translateYValue, {
                     toValue: -50,
                     duration: 700,
                     useNativeDriver: true,

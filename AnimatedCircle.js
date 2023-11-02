@@ -374,7 +374,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       {Platform.OS === 'ios' && showBrowser && (
                 <>
                   <WebView source={{ uri: currentURL }} style={{ flex: 1 }} />
-                  <Button title="Close" onPress={() => setShowBrowser(false)} color="red" />
+                  <Button title="Close" onPress={() => setShowBrowser(false)} color="red" style={{ flex: 1 }}/>
                 </>
               )}
 

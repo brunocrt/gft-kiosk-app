@@ -478,13 +478,13 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
                 <Modal
                     animationType="slide"
                     transparent={false}
-                    visible={webViewVisible}
+                    visible={showBrowser}
                     onRequestClose={() => {
-                        setWebViewVisible(false);
+                        setShowBrowser(false);
                     }}
                 >
                     <WebView source={{ uri: urls[index] }} style={{ flex: 1 }} />
-                    <Button title="Close" onPress={() => setWebViewVisible(false)} />
+                    <Button title="Close" onPress={() => setShowBrowser(false)} />
                 </Modal>
             )}
               <TouchableOpacity key={index} style={{ position: 'absolute', top: y, left: x, zIndex: 99 }} onPress={() => handleIconPress(index)}>

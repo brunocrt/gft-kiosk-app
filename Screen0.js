@@ -60,7 +60,7 @@ const Screen0 = ({ navigation }) => {
 
     const buttonProps = [
         {label: 'GFT + AWS\nOFFERINGS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'COMPETENCIES\n& CREDENTIALS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 30,},
+        {label: 'COMPETENCIES\n& CREDENTIALS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
         {label: 'GFT + AWS\nSUCCESS STORIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
         {label: 'GFT\nPARTNERS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
         {label: 'GFT\nOFFERINGS', color: 'white', textColor: 'black', borderColor: '#B02A87', fontSize: 36,},
@@ -190,9 +190,13 @@ const Screen0 = ({ navigation }) => {
                             {
                                 color: buttonProps[selectedIcon].textColor,
                                 fontSize: buttonProps[selectedIcon].fontSize,
+                                textAlign: 'center',
+                                textAlignVertical: 'center',
                             }
                             ]}
                             adjustsFontSizeToFit={true}
+                            numberOfLines={2}
+                            minimumFontScale={0.5}
 
                             >{buttonProps[selectedIcon].label}</Text>
                 </Animated.View>
@@ -281,7 +285,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         zIndex: 3,
         justifyContent: 'center',
-        borderWidth: 32,
+        borderWidth: 24,
     },
     middleCircleText: {
         flexShrink: 1,

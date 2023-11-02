@@ -236,7 +236,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
 
   const duration=1600;
-  const strokeWidth=32;
+  const strokeWidth=20;
 
     // Define the button source and stroke color depending on buttonPressed parameter being 0, 1, 2
     let buttonSource, strokeColor;

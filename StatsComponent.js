@@ -97,73 +97,13 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     <Text style={styles.statistic}>170{'\n'}engagements</Text>
                     <Text style={styles.subText}>currently with AWS</Text>
                 </View>
-
-
-                   
-
-
-
             </View>
             
         </Animated.View>
             
         </View>
 
-        <View style={styles.bottomWrapper} >
-                    <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023')}
-                    style={{
-                        position: 'absolute',
-                        
-                        bottom: 0,
-                        left: 50,
-                    }}
-                    >
-                        <Animated.Image
-                            style={{ 
-                                opacity: fadeInOpacityImage,
-                                transform: [{ translateX: translateXValueImage }],
-                                width: 120,
-                                height: 120,
-                                
-                                alignSelf: 'center',
-                            }}
-                            source={require('./assets/competencies/quadrant.png')}
-                            resizeMode="contain"
-                        />
-                       <Animated.Text style={{ 
-                                opacity: fadeInOpacityImage,
-                                transform: [{ translateX: translateXValueImage }],
-                                alignSelf: 'center',
-                            }}>View details on GFT</Animated.Text>
-                    </TouchableOpacity> 
-                    <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/news/import/press-and-news/2023/Press-releases/gft-improves-its-leader-ranking-in-the-2023-spark-matrix-for-digital-banking-services')}
-                    style={{ 
-                        position: 'absolute',
-                        bottom: 160,
-                        left: 50,
-                    }}
-                    >
-                        <Animated.Image
-                            style={{ 
-                                opacity: fadeInOpacityImage,
-                                transform: [{ translateX: translateXValueImage }],
-                                width: 120,
-                                height: 100,
-                                backgroundColor: 'white',
-                                borderWidth: 1,
-                                borderColor: 'black',
-                            }}
-                            source={require('./assets/competencies/peak.png')}
-                            resizeMode="contain"
-                        />
-                        <Animated.Text style={{ 
-                                opacity: fadeInOpacityImage,
-                                transform: [{ translateX: translateXValueImage }],
-                                alignSelf: 'center',
-                            }}>View details on GFT</Animated.Text>
-                    </TouchableOpacity> 
-            </View>
-
+        
     </View>
   );
 };

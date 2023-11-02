@@ -8,6 +8,7 @@ import AnimatedCircle from './AnimatedCircle';
 import LogosVisible from './LogosVisible';
 import StatsComponent from './StatsComponent';
 import LinkButton from './LinkButton';
+import LinkImage from './LinkImage';
 import NavigationButtons from './NavigationButtons'; // Adjust the path as needed
 
 const Screen0 = ({ navigation }) => {
@@ -210,6 +211,36 @@ const Screen0 = ({ navigation }) => {
                             >{buttonProps[selectedIcon].label}</Text>
                 </Animated.View>
                 
+                {selectedIcon === 1 && 
+                    <View style={{
+                        position: 'absolute',
+                        flexDirection: 'row',
+                        width: Math.PI * radius* 1.5,
+                        height: 150,
+                        justifyContent: 'space-between',
+                        alignItems: 'center',  // Center children vertically.
+                        bottom: 20,
+                    }}>
+                            <LinkImage 
+                                isVisible={selectedIcon === 1} 
+                                destinationUrl="https://www.gft.com" 
+                                imageSource={require('./assets/competencies/quadrant.png')} 
+                                fadeDirection="left" 
+                                width={120}
+                                height={120}
+                            />
+
+                            <LinkImage 
+                                isVisible={selectedIcon === 1} 
+                                destinationUrl="https://www.gft.com" 
+                                imageSource={require('./assets/competencies/peak.png')} 
+                                fadeDirection="right" 
+                                width={140}
+                                height={120}
+                            />
+                    </View>
+                }
+
                 <LinkButton 
                     isVisible={selectedIcon === 2} 
                 />
@@ -266,7 +297,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 1,
-        borderColor: 'black',
+        borderColor: 'transparent',
     },
     middleCircle: {
         position: 'absolute',

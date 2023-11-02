@@ -244,7 +244,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
     switch (buttonPressed) {
       
       case 2:
-        strokeColor = 'rgba(228, 157, 23, 0.8)';
+        strokeColor = 'rgba(130, 130, 130, 0.50)';
         break;
       case 3:
         buttonSource = partners;

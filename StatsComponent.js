@@ -209,7 +209,6 @@ const styles = StyleSheet.create({
     body: {
         width: '100%',
         flexDirection: 'column',
-        alignItems: 'right',
         justifyContent: 'center',
         backgroundColor:'transparent',
     },
@@ -223,17 +222,19 @@ const styles = StyleSheet.create({
         
     },
     statistic: {
+        flexDirection: 'row',
         fontSize: 16,
         marginTop: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
-        alignItems: 'right',
+        alignItems: 'flex-end',
     },
     subText: {
+        flexDirection: 'row',
         fontSize: 10,
         marginVertical: 10,
         fontFamily: 'Calibri',
-        alignItems: 'right',
+        alignItems: 'flex-end',
         textAlign: 'right',
     },
     bottomWrapper: {

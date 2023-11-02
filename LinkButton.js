@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { View, TouchableOpacity, Text, Alert, StyleSheet, Animated, Button } from 'react-native';
+import { View, TouchableOpacity, Text, Alert, StyleSheet, Animated, Button, Modal } from 'react-native';
 import WebView from 'react-native-webview';
 
 const LinkButton = ({ isVisible }) => {
@@ -47,47 +47,24 @@ const LinkButton = ({ isVisible }) => {
 
     return (
         <View style={{ flex: 1 }}>
-            {webViewVisible ? (
-                <View style={{ flex: 1 }}>
-                    <WebView source={{ uri: 'https://www.example.com' }} />
-                    <Button title="Close" onPress={() => setWebViewVisible(false)} />
-                </View>
-            ) : (
-                <Animated.View style={[styles.linkButtonContainer, { opacity: fadeInOpacity, transform: [{ translateX: translateXValue }] }]}>
-                    <TouchableOpacity onPress={handleLinkPress} style={styles.linkButton}>
-                        <Text style={styles.buttonText}>View All Gft + AWS Success Stories Here</Text>
-                    </TouchableOpacity>
-                </Animated.View>
-            )}
+            <Modal
+                animationType="slide"
+                transparent={false}
+                visible={webViewVisible}
+                onRequestClose={() => {
+                    setWebViewVisible(false);
+                }}
+            >
+                <WebView source={{ uri: 'https://www.example.com' }} style={{ flex: 1 }} />
+                <Button title="Close" onPress={() => setWebViewVisible(false)} />
+            </Modal>
+
+            <Animated.View style={[styles.linkButtonContainer, { opacity: fadeInOpacity, transform: [{ translateX: translateXValue }] }]}>
+                <TouchableOpacity onPress={handleLinkPress} style={styles.linkButton}>
+                    <Text style={styles.buttonText}>View All Gft + AWS Success Stories Here</Text>
+                </TouchableOpacity>
+            </Animated.View>
         </View>
     );
 };
 
-// ... Rest of your styles and code ...
-
-
-const styles = StyleSheet.create({
-    linkButtonContainer: {
-        top: 200,  // Adjust this value as needed
-        right: 20,
-        zIndex: 4,
-    },
-    linkButton: {
-        width: 200,
-        height: 60,
-        borderRadius: 25,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#0097D9',
-    },
-    buttonText: {
-        color: 'white',
-        textAlign: 'center',
-        fontSize: 16,
-        fontWeight: 'bold',
-        fontFamily: 'Arial',
-        padding: 10,
-    },
-});
-
-export default LinkButton;

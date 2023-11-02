@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { View, TouchableOpacity, Text, Alert, StyleSheet, Animated, Button, Modal, Platform, Linking } from 'react-native';
 import WebView from 'react-native-webview';
 
-const LinkButton = ({ isVisible }) => {
+const LinkButton = ({ isVisible, text }) => {
     const fadeInOpacity = useRef(new Animated.Value(0)).current;
     const translateYValue = useRef(new Animated.Value(25)).current;
 
@@ -69,7 +69,7 @@ const LinkButton = ({ isVisible }) => {
 
             <Animated.View style={[styles.linkButtonContainer, { opacity: fadeInOpacity, transform: [{ translateY: translateYValue }] }]}>
                 <TouchableOpacity onPress={handleLinkPress} style={styles.linkButton}>
-                    <Text style={styles.buttonText}>View All Gft Success Stories Here</Text>
+                    <Text style={styles.buttonText}>{text}</Text>
                 </TouchableOpacity>
             </Animated.View>
         </View>
@@ -91,6 +91,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         borderRadius: 25,
+        borderWidth: 2,
+        borderColor: 'black',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#0097D9',

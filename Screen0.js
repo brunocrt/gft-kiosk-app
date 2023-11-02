@@ -59,14 +59,14 @@ const Screen0 = ({ navigation }) => {
 
 
     const buttonProps = [
-        {label: 'GFT + AWS\nOFFERINGS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'COMPETENCIES\n& CREDENTIALS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'GFT + AWS\nSUCCESS STORIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'GFT\nPARTNERS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'GFT\nOFFERINGS', color: 'white', textColor: 'black', borderColor: '#B02A87', fontSize: 36,},
+        {label: 'GFT + AWS OFFERINGS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
+        {label: 'COMPETENCIES & CREDENTIALS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
+        {label: 'GFT + AWS SUCCESS STORIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
+        {label: 'GFT PARTNERS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
+        {label: 'GFT OFFERINGS', color: 'white', textColor: 'black', borderColor: '#B02A87', fontSize: 36,},
         {label: 'INDUSTRIES', color: '#213E7F', textColor: 'white', borderColor: 'white', fontSize: 36,},
-        {label: 'GFT + AWS\nSOLUTIONS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'GFT\nTECHNOLOGIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
+        {label: 'GFT + AWS SOLUTIONS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
+        {label: 'GFT TECHNOLOGIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
       ];
 
       const flipAnim = useRef(new Animated.Value(0)).current;

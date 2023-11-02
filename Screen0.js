@@ -267,7 +267,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 1,
-        borderColor: 'transparent',
+        borderColor: 'black',
     },
     middleCircle: {
         position: 'absolute',

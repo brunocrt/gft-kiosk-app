@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         zIndex: 4,
         borderWidth: 1,
         borderColor: 'black',
-        
+        alignItems: 'center',
         bottom: 0,
     },
     linkButton: {

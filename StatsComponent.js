@@ -119,12 +119,13 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                 }}>
                     <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023')}
                     style={{
-                        width: 180,
-                        height: 180,
+                        width: 140,
+                        height: 140,
                         justifyContent: 'center',
                         flexDirection: 'column',
                         margin: 20,
                         marginLeft: '10%',
+                        zIndex: 99,
                     }}
                     >
                         <Animated.Image
@@ -144,8 +145,8 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     </TouchableOpacity> 
                     <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/news/import/press-and-news/2023/Press-releases/gft-improves-its-leader-ranking-in-the-2023-spark-matrix-for-digital-banking-services')}
                     style={{ 
-                        width: 200,
-                        height: 180,
+                        width: 160,
+                        height: 140,
                         justifyContent: 'center',
                         flexDirection: 'column',
                         margin: 20,

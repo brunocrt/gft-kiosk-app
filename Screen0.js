@@ -15,13 +15,12 @@ const Screen0 = ({ navigation }) => {
     const [logosVisible, setLogosVisible] = useState(false);
 
 
-    const [buttonWidth, setButtonWidth] = useState(0);
-    const [radius, setRadius] = useState(0);
     const [selectedIcon, setSelectedIcon] = useState(7);
 
     const [activeCircle, setActiveCircle] = useState('start');
     
-    const scale = 0.35;
+    const buttonWidth = 300;
+    const radius = buttonWidth / 2;
 
     // Stats component
     const [displayInfo, setDisplayInfo] = useState(false);
@@ -58,13 +57,6 @@ const Screen0 = ({ navigation }) => {
       }, [navigation.params?.reset, displayInfo, showStoriesButton]);
 
 
-    const onOptionsLayout = event => {
-        const newButtonWidth = event.nativeEvent.layout.width;
-        setButtonWidth(newButtonWidth);
-        const newRadius = (newButtonWidth * 0.5) / 2;
-        setRadius(newRadius);
-        console.log('Radius: ' + newRadius);
-      };
 
     const buttonProps = [
         {label: 'GFT + AWS\nOFFERINGS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
@@ -182,14 +174,14 @@ const Screen0 = ({ navigation }) => {
             {renderStatsComponent && <StatsComponent onAnimationEnd={handleHideStatsComponent} display={displayInfo} />}
 
             </View>
-            <View style={styles.options} onLayout={onOptionsLayout}>
+            <View style={styles.options}>
 
                 <Animated.View style={[styles.middleCircle, 
                     { 
                         backgroundColor: buttonProps[selectedIcon].color,
-                        width: buttonWidth * scale, 
-                        height: buttonWidth * scale, 
-                        borderRadius: (buttonWidth * 0.5) / 2,
+                        width: buttonWidth , 
+                        height: buttonWidth , 
+                        borderRadius: radius,
                         borderColor: buttonProps[selectedIcon].borderColor,
                         transform: [{ rotateY: rotateY }],
                     }]}>

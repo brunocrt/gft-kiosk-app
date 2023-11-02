@@ -11,10 +11,10 @@ import partners from './assets/partners.png'
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
+  radius = radius * 1.5;
   const animatedValue = useRef(new Animated.Value(0)).current;
   const circumference = 2 * Math.PI * radius;
   const [logosVisible, setLogosVisible] = useState(false);
-
   
   const dashOffset = animatedValue.interpolate({
     inputRange: [0, 1],
@@ -24,7 +24,7 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
   let icon_names;
   let angleBetweenIcons;
   let angleOffset;
-  const iconSize=100;
+  const iconSize=80;
   icons = [
     require('./assets/icons/GFT_AWS_Offerings_icon.png'),
     require('./assets/icons/competencies_icon.png'), 
@@ -266,13 +266,13 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
                     flex: 1,
                     position: 'absolute', 
                     color: icon_names[index].textColor, 
-                    fontSize: 24,
+                    fontSize: 18,
                     width: iconSize * 2.75,
                     // Height is two line spaces worth
                     textTransform: 'uppercase',
                     fontWeight: 'bold',
                     font: 'Arial',
-                    padding: 20,
+                    padding: 10,
                     ...textAlignmentStyle
                   }
                 }>

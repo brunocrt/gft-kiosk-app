@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, Image, TouchableOpacity, Text, StyleSheet, Linking, Button } from 'react-native';
+import { View, Animated, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking } from 'react-native';
 import { Circle, Path, G, Svg, Image as SVGImage, Text as SVGText } from 'react-native-svg';
-import Animated, { Easing, withRepeat, useSharedValue, useAnimatedStyle, withSpring, withTiming } from 'react-native-reanimated';
-
 
 import industries from './assets/industries.png'
 import industries_inverted from './assets/industries_inverted.png'
@@ -36,20 +34,22 @@ import industries_icon12 from './assets/icons/government_icon.png';
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, activeCircle }) => {
+  radius = radius * 1.5;
+  const animatedValue = useRef(new Animated.Value(0)).current;
   const circumference = 2 * Math.PI * radius;
 
 
-  const animatedValue = Animated.useSharedValue(0);
-
-  const dashOffset = Animated.useDerivedValue(() => {
-    return (1 - animatedValue.value) * circumference;
+  
+  const dashOffset = animatedValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: [circumference, 0],
   });
   let icons = [];
   let icon_names;
   let urls = [];
   let angleBetweenIcons;
   let angleOffset, angleModifier;
-  const iconSize=100;
+  const iconSize=80;
 
   switch (buttonPressed) {
     case 0: // GFT + AWS Offerings
@@ -321,10 +321,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       }
       console.log('Button Pressed:', index);
     };
-
-
-
-    const progress = useSharedValue(0);
+    
     useEffect(() => {
       Animated.timing(animatedValue, {
         toValue: 1,
@@ -332,15 +329,15 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         useNativeDriver: true,
         easing: Easing.out(Easing.quad),
       }).start();
+  
 
-      progress.value = withTiming(1, { duration, easing: Easing.linear });
-      
       Animated.timing(fadeAnim, {
         delay: 700,
         toValue: 1,
         duration: 600,
         useNativeDriver: true,
       }).start();
+
       
     }, []);
 
@@ -407,19 +404,6 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           const x = centerX + (radius * Math.cos(angle)) - (iconSize / 2) + xOffset;
           const y = centerY + (radius * Math.sin(angle)) - (iconSize / 2) + yOffset;
 
-          
-          
-          
-          const animatedStyle = useAnimatedStyle(() => {
-            const angle = startAngle + (endAngle - startAngle) * progress.value;
-            const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle);
-            return {
-              transform: [{ translateX: x }, { translateY: y }]
-            };
-          });
-          
-
           let textAlignmentStyle = {};
     
           switch (icon_names[index].align) {
@@ -473,12 +457,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
           return (
             <>
-            <Animated.View
-            key={index}
-            style={{
-              animatedStyle
-            }}>
-              <TouchableOpacity key={index} onPress={() => handleIconPress(index)}>
+              <TouchableOpacity key={index} style={{ position: 'absolute', top: y, left: x, zIndex: 99 }} onPress={() => handleIconPress(index)}>
                 <Animated.View style={{
                   width: iconSize,
                   height: iconSize,
@@ -509,7 +488,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
                   </View>
                 </Animated.View>
               </TouchableOpacity>
-              </Animated.View>
+
 
               <Animated.View style={{ 
                 ...styles.container, 
@@ -532,7 +511,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
                   { 
                     position: 'absolute',
                     color: icon_names[index].textColor, 
-                    fontSize: 24,
+                    fontSize: 18,
                     width: iconSize * 2.75,
                     // Height is two line spaces worth
                     textTransform: 'uppercase',

@@ -321,6 +321,8 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       console.log('Button Pressed:', index);
     };
     
+    const animationValue = useRef(new Animated.Value(0)).current;
+
     useEffect(() => {
       Animated.timing(animatedValue, {
         toValue: 1,
@@ -329,6 +331,11 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         easing: Easing.out(Easing.quad),
       }).start();
   
+      Animated.timing(animationValue, {
+        toValue: 1,
+        duration: 1000, // Duration of animation in milliseconds
+        useNativeDriver: true,
+      }).start();
 
       Animated.timing(fadeAnim, {
         delay: 700,
@@ -403,6 +410,29 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           const x = centerX + (radius * Math.cos(angle)) - (iconSize / 2) + xOffset;
           const y = centerY + (radius * Math.sin(angle)) - (iconSize / 2) + yOffset;
 
+          const destinationAngle = (index * 2 * Math.PI) / icons.length + angleOffset;
+
+          const interpolatedAngle = animationValue.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0, destinationAngle],
+          });
+  
+          const animatedX = Animated.add(
+            (radius + strokeWidth),
+            Animated.multiply(
+              radius,
+              Animated.cos(interpolatedAngle)
+            )
+          );
+  
+          const animatedY = Animated.add(
+            (radius + strokeWidth),
+            Animated.multiply(
+              radius,
+              Animated.sin(interpolatedAngle)
+            )
+          );
+
           let textAlignmentStyle = {};
     
           switch (icon_names[index].align) {
@@ -456,7 +486,15 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
           return (
             <>
-              <TouchableOpacity key={index} style={{ position: 'absolute', top: y, left: x, zIndex: 99 }} onPress={() => handleIconPress(index)}>
+                      <Animated.View
+            key={index}
+            style={{
+              position: 'absolute',
+              left: animatedX,
+              top: animatedY,
+              zIndex: 99,
+            }}>
+              <TouchableOpacity key={index} onPress={() => handleIconPress(index)}>
                 <Animated.View style={{
                   width: iconSize,
                   height: iconSize,
@@ -487,7 +525,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
                   </View>
                 </Animated.View>
               </TouchableOpacity>
-
+              </Animated.View>
 
               <Animated.View style={{ 
                 ...styles.container, 

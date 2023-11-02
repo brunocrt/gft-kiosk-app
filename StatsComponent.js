@@ -113,8 +113,6 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023')}
                     style={{
                         position: 'absolute',
-                        width: 140,
-                        height: 140,
                         
                         bottom: 0,
                         left: 40,
@@ -124,7 +122,9 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                             style={{ 
                                 opacity: fadeInOpacityImage,
                                 transform: [{ translateX: translateXValueImage }],
-                                flex: 1,
+                                width: 140,
+                                height: 140,
+                                
                             }}
                             source={require('./assets/competencies/quadrant.png')}
                             resizeMode="contain"
@@ -138,8 +138,7 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/news/import/press-and-news/2023/Press-releases/gft-improves-its-leader-ranking-in-the-2023-spark-matrix-for-digital-banking-services')}
                     style={{ 
                         position: 'absolute',
-                        width: 160,
-                        height: 140,
+                        
                         
                         bottom: 0,
                         left: 240,
@@ -149,10 +148,11 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                             style={{ 
                                 opacity: fadeInOpacityImage,
                                 transform: [{ translateX: translateXValueImage }],
-                                flex: 1,
-                                borderColor: 'black',
-                                borderWidth: 1,
+                                width: 160,
+                                height: 140,
                                 backgroundColor: 'white',
+                                borderWidth: 1,
+                                borderColor: 'black',
                             }}
                             source={require('./assets/competencies/peak.png')}
                             resizeMode="contain"
@@ -177,8 +177,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignSelf: 'right',
         backgroundColor:'transparent',
-        borderColor: 'black',
-        borderWidth: 1,
+        
     },
     wrapper: {
         flex: 1,

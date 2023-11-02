@@ -437,7 +437,7 @@ export default function IndustriesScreen({ route, navigation }) {
         width: '100%',
       },
       headerStyle: {
-        fontSize: 48,
+        fontSize: 30,
         color: 'white',
         fontFamily: 'Calibri',
         alignSelf: 'center',

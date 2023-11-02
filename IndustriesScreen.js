@@ -383,6 +383,7 @@ export default function IndustriesScreen({ route, navigation }) {
       },
       headerStyle: {
         color: 'white',
+        fontSize: 30,
         fontFamily: 'Arial',
         alignSelf: 'center',
         textTransform: 'uppercase',

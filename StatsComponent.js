@@ -184,6 +184,7 @@ const styles = StyleSheet.create({
         width: '80%',
         backgroundColor:'transparent',
         alignSelf: 'left',
+        alignItems: 'right',
         left: 20,
     },
     statsWrapper: {

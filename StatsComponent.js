@@ -191,7 +191,6 @@ const styles = StyleSheet.create({
         height: 500,
         alignItems: 'right',
         alignSelf: 'right',
-        top: 20,
     },
     header: {
         width: '100%',

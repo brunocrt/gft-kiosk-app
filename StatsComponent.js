@@ -112,9 +112,12 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
         <View style={styles.bottomWrapper} >
                     <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023')}
                     style={{
+                        position: 'absolute',
                         width: 140,
                         height: 140,
-                        margin: 20,
+                        
+                        bottom: 0,
+                        left: 40,
                     }}
                     >
                         <Animated.Image
@@ -134,9 +137,12 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     </TouchableOpacity> 
                     <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/news/import/press-and-news/2023/Press-releases/gft-improves-its-leader-ranking-in-the-2023-spark-matrix-for-digital-banking-services')}
                     style={{ 
+                        position: 'absolute',
                         width: 160,
                         height: 140,
-                        margin: 20,
+                        
+                        bottom: 0,
+                        left: 240,
                     }}
                     >
                         <Animated.Image
@@ -171,22 +177,25 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignSelf: 'right',
         backgroundColor:'transparent',
+        borderColor: 'black',
+        borderWidth: 1,
     },
     wrapper: {
         flex: 1,
         flexDirection: 'column',
         alignSelf: 'right',
         backgroundColor:'transparent',
-        paddingRight: '5%',
-        paddingLeft: '20%',
+        paddingRight: 20,
+        paddingLeft: 60,
     },
     statsWrapper: {
-        
+        height: 500,
         justifyContent: 'flex-end',
         alignSelf: 'right',
-        top: '10%',
+        top: 40,
     },
     header: {
+        height: '20%',
         width: '100%',
         justifyContent: 'center',
         backgroundColor:'transparent',
@@ -228,7 +237,7 @@ const styles = StyleSheet.create({
         textAlign: 'right',
     },
     bottomWrapper: {
-        position: 'absolute',
+        
         flexDirection: 'row',
         bottom: 40,
     },

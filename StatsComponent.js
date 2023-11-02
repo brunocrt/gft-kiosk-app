@@ -228,8 +228,8 @@ const styles = StyleSheet.create({
         textAlign: 'right',
     },
     bottomWrapper: {
+        position: 'absolute',
         flexDirection: 'row',
-        alignItems: 'center',
         bottom: 40,
     },
 });

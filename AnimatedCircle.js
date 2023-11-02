@@ -36,14 +36,13 @@ import industries_icon12 from './assets/icons/government_icon.png';
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, activeCircle }) => {
-  const animatedValue = useRef(new Animated.Value(0)).current;
   const circumference = 2 * Math.PI * radius;
 
 
-  
-  const dashOffset = animatedValue.interpolate({
-    inputRange: [0, 1],
-    outputRange: [circumference, 0],
+  const animatedValue = useSharedValue(0);
+
+  const dashOffset = useDerivedValue(() => {
+    return (1 - animatedValue.value) * circumference;
   });
   let icons = [];
   let icon_names;

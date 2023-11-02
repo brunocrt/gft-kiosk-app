@@ -8,7 +8,7 @@ const backgroundImage = require('./assets/background.png');
 
 const GlobalUIWrapper = ({ children, backgroundImage }) => {
   const date = new Date().toLocaleDateString();
-  
+  const site = '> gft.com';
   return (
     <SafeAreaView style={{flex: 1}}> {/* Use SafeAreaView as the outermost wrapper */}
         <View style={styles.wrapper}>
@@ -23,7 +23,7 @@ const GlobalUIWrapper = ({ children, backgroundImage }) => {
             </ImageBackground>
             <View style={styles.bottomBar}>
                 <Text style={styles.websiteLink}>
-                {'>'} gft.com
+                  {site}
                 </Text>
             <Text style={styles.date}>{date}</Text>
             </View>

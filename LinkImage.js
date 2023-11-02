@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { View, TouchableOpacity, Alert, StyleSheet, Animated, Modal, Platform, Linking, Image, Text } from 'react-native';
+import { View, TouchableOpacity, Alert, StyleSheet, Animated, Modal, Platform, Linking, Image, Text, Button } from 'react-native';
 import WebView from 'react-native-webview';
 
 const LinkImage = ({ 

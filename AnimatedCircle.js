@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, Animated, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking } from 'react-native';
+import { View, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking, Button } from 'react-native';
 import { Circle, Path, G, Svg, Image as SVGImage, Text as SVGText } from 'react-native-svg';
+import Animated, { Easing, withRepeat, useSharedValue, useAnimatedStyle, withSpring, withTiming } from 'react-native-reanimated';
+
 
 import industries from './assets/industries.png'
 import industries_inverted from './assets/industries_inverted.png'
@@ -320,9 +322,10 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       }
       console.log('Button Pressed:', index);
     };
-    
-    const animationValue = useRef(new Animated.Value(0)).current;
 
+
+
+    const progress = useSharedValue(0);
     useEffect(() => {
       Animated.timing(animatedValue, {
         toValue: 1,
@@ -330,20 +333,15 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         useNativeDriver: true,
         easing: Easing.out(Easing.quad),
       }).start();
-  
-      Animated.timing(animationValue, {
-        toValue: 1,
-        duration: 1000, // Duration of animation in milliseconds
-        useNativeDriver: true,
-      }).start();
 
+      progress.value = withTiming(1, { duration, easing: Easing.linear });
+      
       Animated.timing(fadeAnim, {
         delay: 700,
         toValue: 1,
         duration: 600,
         useNativeDriver: true,
       }).start();
-
       
     }, []);
 
@@ -410,28 +408,18 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           const x = centerX + (radius * Math.cos(angle)) - (iconSize / 2) + xOffset;
           const y = centerY + (radius * Math.sin(angle)) - (iconSize / 2) + yOffset;
 
-          const destinationAngle = (index * 2 * Math.PI) / icons.length + angleOffset;
-
-          const interpolatedAngle = animationValue.interpolate({
-            inputRange: [0, 1],
-            outputRange: [0, destinationAngle],
+          
+          
+          
+          const animatedStyle = useAnimatedStyle(() => {
+            const angle = startAngle + (endAngle - startAngle) * progress.value;
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+            return {
+              transform: [{ translateX: x }, { translateY: y }]
+            };
           });
-  
-          const animatedX = Animated.add(
-            (radius + strokeWidth),
-            Animated.multiply(
-              radius,
-              Animated.cos(interpolatedAngle)
-            )
-          );
-  
-          const animatedY = Animated.add(
-            (radius + strokeWidth),
-            Animated.multiply(
-              radius,
-              Animated.sin(interpolatedAngle)
-            )
-          );
+          
 
           let textAlignmentStyle = {};
     
@@ -486,13 +474,10 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
           return (
             <>
-                      <Animated.View
+            <Animated.View
             key={index}
             style={{
-              position: 'absolute',
-              left: animatedX,
-              top: animatedY,
-              zIndex: 99,
+              animatedStyle
             }}>
               <TouchableOpacity key={index} onPress={() => handleIconPress(index)}>
                 <Animated.View style={{

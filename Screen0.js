@@ -208,7 +208,12 @@ const Screen0 = ({ navigation }) => {
 
                             >{buttonProps[selectedIcon].label}</Text>
                 </Animated.View>
-
+                <LinkButton 
+                    isVisible={selectedIcon === 2} 
+                    styles={{
+                        alignSelf: 'center',
+                    }} 
+                />
             </View>
 
 
@@ -217,12 +222,7 @@ const Screen0 = ({ navigation }) => {
 
 
             <View style={styles.graphicsContainerRight}>
-            <LinkButton 
-                    isVisible={selectedIcon === 2} 
-                    styles={{
-                        alignSelf: 'center',
-                    }} 
-                />
+ 
             </View>
           {/* Bottom Buttons */}
             <View style={styles.bottomButtons}>

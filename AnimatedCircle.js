@@ -86,7 +86,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         "https://www.gft.com/us/en/solutions/OFFERINGS/AWS-Cloud-migration",
         "https://www.gft.com/us/en/solutions/OFFERINGS/AWS-DevOps",
         "https://www.gft.com/us/en/services/banking",
-        "https://www.google.com",
+        "https://www.gft.com/us/en/solutions/competency-service-delivery/aws-guardduty",
         "https://www.gft.com/us/en/solutions/competency-service-delivery/aws-windows",
         "https://www.gft.com/us/en/solutions/competency-service-delivery/aws-elastic-kubernetes-service",
         "https://www.gft.com/us/en/solutions/competency-service-delivery/aws-relational-database-service-delivery",
@@ -279,15 +279,34 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         console.log("URL to open:", url);
 
       }
+      setCurrentURL(url);
 
       switch (buttonPressed) {
         case 0:
-          setCurrentURL(url);
-          setShowBrowser(true);
+          if (Platform.OS === 'ios') {
+            setShowBrowser(true);
+          } else{
+            Linking.canOpenURL(url).then(supported => {
+              if (supported) {
+                Linking.openURL(url);
+              } else {
+                console.log("Don't know how to open URI: " + url);
+              }
+            });
+          }
           break;
         case 1: // Competencies
-          setCurrentURL(url);
-          setShowBrowser(true);
+          if (Platform.OS === 'ios') {
+            setShowBrowser(true);
+          } else{
+            Linking.canOpenURL(url).then(supported => {
+              if (supported) {
+                Linking.openURL(url);
+              } else {
+                console.log("Don't know how to open URI: " + url);
+              }
+            });
+          }
           break;
         case 2: // Success Stories
           navigation.navigate('SuccessScreen', { initial_screen: initial_screen });
@@ -302,8 +321,17 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           navigation.navigate('Industries', { initial_screen: initial_screen });
           break;
         case 6:
-          setCurrentURL(url);
-          setShowBrowser(true);
+          if (Platform.OS === 'ios') {
+            setShowBrowser(true);
+          } else{
+            Linking.canOpenURL(url).then(supported => {
+              if (supported) {
+                Linking.openURL(url);
+              } else {
+                console.log("Don't know how to open URI: " + url);
+              }
+            });
+          }
           break;
         default:
           console.log('Invalid button index');

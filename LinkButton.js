@@ -7,7 +7,7 @@ const LinkButton = ({ isVisible }) => {
     const translateXValue = useRef(new Animated.Value(50)).current;
 
     const [webViewVisible, setWebViewVisible] = useState(false);
-    const url = 'https://www.example.com';
+    const url = 'https://www.gft.com/us/en/services/success-stories';
 
     const handleLinkPress = () => {
         if (Platform.OS === 'ios') {

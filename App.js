@@ -51,7 +51,6 @@ const App = () => {
           <Stack.Screen name="Offerings" component={OfferingsScreen} options={{ headerShown: false }} />
           <Stack.Screen name="GftAws" component={GftAwsScreen} options={{ headerShown: false }} />
           <Stack.Screen name="SuccessScreen" component={SuccessScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="GFT+AWS" component={GftAwsOffersScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Industries" component={IndustriesScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>

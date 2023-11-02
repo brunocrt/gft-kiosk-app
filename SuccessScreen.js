@@ -5,15 +5,6 @@ import { Swipeable } from 'react-native-gesture-handler';
 
 import success_content from './assets/success_content.json';
 import NavigationButtons from './NavigationButtons';
-import GlobalUIWrapper from './GlobalUIWrapper';
-
-import industries_icon1 from './assets/icons/cooperatives_icon.png';
-import industries_icon2 from './assets/icons/capital_markets_icon.png';
-import industries_icon3 from './assets/icons/banking_icon.png';
-import industries_icon4 from './assets/icons/insurance_icon.png';
-import industries_icon5 from './assets/icons/manufacturing_icon.png';
-import industries_icon6 from './assets/icons/telecom_icon.png';
-
 
 const bgImage = require('./assets/offerings_content_bg.jpg');  // Update with the correct path
 const iconSize=75;
@@ -117,7 +108,7 @@ export default function IndustriesScreen({ route, navigation }) {
     );
     
     return (
-        <View style={styles.backgroundImageContainer}>
+        <ImageBackground style={styles.backgroundImageContainer} source={bgImage}>
     
                 <View style={styles.iconBar}>
                     {icons.map((icon, index) => (
@@ -273,7 +264,7 @@ export default function IndustriesScreen({ route, navigation }) {
                     <NavigationButtons navigation={navigation} />
                 </View>
             </View>
-        </View>
+        </ImageBackground>
     );
     }
     
@@ -283,7 +274,6 @@ export default function IndustriesScreen({ route, navigation }) {
             backgroundColor: 'transparent',
             width: '100%',
             height: '100%',
-            backgroundImage: `url(${bgImage})`,  // or use backgroundImage: bgImage if you're using inline styles
             backgroundSize: 'cover',
             backgroundPosition: 'center',
         },

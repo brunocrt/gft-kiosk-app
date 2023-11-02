@@ -116,7 +116,7 @@ export default function IndustriesScreen({ route, navigation }) {
     );
     
     return (
-        <View style={styles.backgroundImageContainer}>
+        <ImageBackground style={styles.backgroundImageContainer} source={bgImage}>
     
                 <View style={styles.iconBar}>
                     {icons.map((icon, index) => (
@@ -217,7 +217,7 @@ export default function IndustriesScreen({ route, navigation }) {
 
                 </View>
             </View>
-        </View>
+        </ImageBackground>
     );
     }
     

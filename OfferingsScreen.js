@@ -104,7 +104,7 @@ const renderItem = ({ item, index }) => (
 );
 
   return (
-    <View style={styles.backgroundImageContainer}>
+    <ImageBackground style={styles.backgroundImageContainer} source={bgImage}>
 
             <View style={styles.iconBar}>
                 {icons.map((icon, index) => (
@@ -211,7 +211,7 @@ const renderItem = ({ item, index }) => (
 
             </View>
         </View>
-    </View>
+    </ImageBackground>
 );
 }
 

@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
         backgroundColor:'transparent',
     },
     bodyRow: {
-        
+        flex: 1,
         width: '100%',
         flexDirection: 'column',
         alignItems: 'right',

@@ -211,10 +211,8 @@ const Screen0 = ({ navigation }) => {
                 <LinkButton 
                     isVisible={selectedIcon === 2} 
                     styles={{
-                        position: 'absolute',
                         justifyContent: 'center',
                         alignSelf: 'flex-end',
-                        bottom: 0,
                     }} 
                 />
             </View>

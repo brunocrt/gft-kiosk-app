@@ -1,21 +1,16 @@
-import React, { useRef, useEffect } from 'react';
-import { View, TouchableOpacity, Text, Linking, Alert, StyleSheet, Animated } from 'react-native';
+import React, { useRef, useEffect, useState } from 'react';
+import { View, TouchableOpacity, Text, Alert, StyleSheet, Animated, Button } from 'react-native';
+import WebView from 'react-native-webview';
 
 const LinkButton = ({ isVisible }) => {
     const fadeInOpacity = useRef(new Animated.Value(0)).current;
     const translateXValue = useRef(new Animated.Value(50)).current;
 
+    const [webViewVisible, setWebViewVisible] = useState(false);
+
     const handleLinkPress = () => {
-        const url = 'https://www.example.com'; // Replace with your desired URL
-        Linking.canOpenURL(url)
-            .then((supported) => {
-                if (supported) {
-                    Linking.openURL(url);
-                } else {
-                    Alert.alert("Error", "Cannot open the provided URL.");
-                }
-            })
-            .catch((err) => console.error('An error occurred', err));
+        // Toggle the WebView visibility
+        setWebViewVisible(!webViewVisible);
     };
 
     useEffect(() => {
@@ -51,13 +46,25 @@ const LinkButton = ({ isVisible }) => {
     }, [isVisible]);
 
     return (
-        <Animated.View style={[styles.linkButtonContainer, { opacity: fadeInOpacity, transform: [{ translateX: translateXValue }] }]}>
-            <TouchableOpacity onPress={handleLinkPress} style={styles.linkButton}>
-                <Text style={styles.buttonText}>View All Gft + AWS Success Stories Here</Text>
-            </TouchableOpacity>
-        </Animated.View>
+        <View style={{ flex: 1 }}>
+            {webViewVisible ? (
+                <View style={{ flex: 1 }}>
+                    <WebView source={{ uri: 'https://www.example.com' }} />
+                    <Button title="Close" onPress={() => setWebViewVisible(false)} />
+                </View>
+            ) : (
+                <Animated.View style={[styles.linkButtonContainer, { opacity: fadeInOpacity, transform: [{ translateX: translateXValue }] }]}>
+                    <TouchableOpacity onPress={handleLinkPress} style={styles.linkButton}>
+                        <Text style={styles.buttonText}>View All Gft + AWS Success Stories Here</Text>
+                    </TouchableOpacity>
+                </Animated.View>
+            )}
+        </View>
     );
 };
+
+// ... Rest of your styles and code ...
+
 
 const styles = StyleSheet.create({
     linkButtonContainer: {

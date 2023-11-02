@@ -370,6 +370,13 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
   return (
     <View style={styles.wrapper}>
+      
+      {Platform.OS === 'ios' && showBrowser && (
+                <>
+                  <WebView source={{ uri: currentURL }} style={{ flex: 1 }} />
+                  <Button title="Close" onPress={() => setShowBrowser(false)} />
+                </>
+              )}
 
     {/* Center Button */}
       {/* <Animated.Image
@@ -463,12 +470,6 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
           return (
             <>
-              {Platform.OS === 'ios' && showBrowser && (
-                <>
-                  <WebView source={{ uri: currentURL }} style={{ flex: 1 }} />
-                  <Button title="Close" onPress={() => setShowBrowser(false)} />
-                </>
-              )}
               <TouchableOpacity key={index} style={{ position: 'absolute', top: y, left: x, zIndex: 99 }} onPress={() => handleIconPress(index)}>
                 <Animated.View style={{
                   width: iconSize,

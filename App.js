@@ -46,7 +46,6 @@ const App = () => {
           }}
         >
           <Stack.Screen name="Home" component={Screen0} options={{ headerShown: false }} />
-          <Stack.Screen name="Screen0" component={Screen0} options={{ headerShown: false }} />
           <Stack.Screen name="Offerings" component={OfferingsScreen} options={{ headerShown: false }} />
           <Stack.Screen name="GftAws" component={GftAwsScreen} options={{ headerShown: false }} />
           <Stack.Screen name="SuccessScreen" component={SuccessScreen} options={{ headerShown: false }} />

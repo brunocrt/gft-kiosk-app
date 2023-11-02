@@ -23,7 +23,7 @@ const GlobalUIWrapper = ({ children, backgroundImage }) => {
             </ImageBackground>
             <View style={styles.bottomBar}>
                 <Text style={styles.websiteLink}>
-                {'>'} <Text>gft.com</Text>
+                {'>'} gft.com
                 </Text>
             <Text style={styles.date}>{date}</Text>
             </View>

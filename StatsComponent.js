@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         width: '80%',
         backgroundColor:'transparent',
-        alignSelf: 'left',
+        alignSelf: 'right',
         alignItems: 'right',
         left: 20,
     },
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     headerText: {
-        fontSize: 12,
+        fontSize: 18,
         fontFamily: 'Calibri',
         fontWeight: 'bold',
         textAlign: 'right',

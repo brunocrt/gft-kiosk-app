@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, ScrollView, Animated, ImageBackground, Easing } from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, ScrollView, Animated, ImageBackground, Easing, Modal } from 'react-native';
 import { useScrollToTop } from '@react-navigation/native';
 import { Swipeable } from 'react-native-gesture-handler';
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, Animated, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking, Platform, Button } from 'react-native';
+import { View, Animated, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking, Platform, Button, Modal } from 'react-native';
 import { Circle, Path, G, Svg, Image as SVGImage, Text as SVGText } from 'react-native-svg';
 import { WebView } from 'react-native-webview';
 

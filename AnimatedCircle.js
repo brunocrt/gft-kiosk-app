@@ -279,27 +279,15 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         console.log("URL to open:", url);
 
       }
-      setCurrentURL(url);
-      setShowBrowser(true);
 
       switch (buttonPressed) {
         case 0:
-          Linking.canOpenURL(url).then(supported => {
-            if (supported) {
-              Linking.openURL(url);
-            } else {
-              console.log("Don't know how to open URI: " + url);
-            }
-          });
+          setCurrentURL(url);
+          setShowBrowser(true);
           break;
         case 1: // Competencies
-          Linking.canOpenURL(url).then(supported => {
-            if (supported) {
-              Linking.openURL(url);
-            } else {
-              console.log("Don't know how to open URI: " + url);
-            }
-          });
+          setCurrentURL(url);
+          setShowBrowser(true);
           break;
         case 2: // Success Stories
           navigation.navigate('SuccessScreen', { initial_screen: initial_screen });
@@ -314,13 +302,8 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           navigation.navigate('Industries', { initial_screen: initial_screen });
           break;
         case 6:
-          Linking.canOpenURL(url).then(supported => {
-            if (supported) {
-              Linking.openURL(url);
-            } else {
-              console.log("Don't know how to open URI: " + url);
-            }
-          });
+          setCurrentURL(url);
+          setShowBrowser(true);
           break;
         default:
           console.log('Invalid button index');

@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     headerText: {
-        fontSize: 18,
+        fontSize: 12,
         fontFamily: 'Calibri',
         fontWeight: 'bold',
         textAlign: 'right',

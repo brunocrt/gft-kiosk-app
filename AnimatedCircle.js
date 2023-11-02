@@ -372,11 +372,18 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
     <View style={styles.wrapper}>
       
       {Platform.OS === 'ios' && showBrowser && (
-                <>
-                  <WebView source={{ uri: currentURL }} style={{ flex: 1 }} />
-                  <Button title="Close" onPress={() => setShowBrowser(false)} color="red" style={{ flex: 1 }}/>
-                </>
-              )}
+                <Modal
+                    animationType="slide"
+                    transparent={false}
+                    visible={webViewVisible}
+                    onRequestClose={() => {
+                        setWebViewVisible(false);
+                    }}
+                >
+                    <WebView source={{ uri: url }} style={{ flex: 1 }} />
+                    <Button title="Close" onPress={() => setWebViewVisible(false)} />
+                </Modal>
+            )}
 
     {/* Center Button */}
       {/* <Animated.Image

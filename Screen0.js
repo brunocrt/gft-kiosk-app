@@ -226,8 +226,8 @@ const Screen0 = ({ navigation }) => {
                                 destinationUrl="https://www.gft.com" 
                                 imageSource={require('./assets/competencies/quadrant.png')} 
                                 fadeDirection="left" 
-                                width={120}
-                                height={120}
+                                width={100}
+                                height={100}
                             />
 
                             <LinkImage 
@@ -235,8 +235,8 @@ const Screen0 = ({ navigation }) => {
                                 destinationUrl="https://www.gft.com" 
                                 imageSource={require('./assets/competencies/peak.png')} 
                                 fadeDirection="right" 
-                                width={140}
-                                height={120}
+                                width={120}
+                                height={100}
                             />
                     </View>
                 }

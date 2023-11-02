@@ -31,15 +31,6 @@ const Screen0 = ({ navigation }) => {
         setDisplayInfo(false);
     }
     };
-
-    const [showStoriesButton, setShowStoriesButton] = useState(false);
-    const [renderButton, setRenderButton] = useState(false);
-    const handleHideButtonComponent = () => {
-    if (renderButton) {
-        // Tell the StatsComponent to start the 'out' animations
-        setShowStoriesButton(true);
-    }
-    };
     useEffect(() => {
 
         if (navigation.params?.reset) {
@@ -51,10 +42,7 @@ const Screen0 = ({ navigation }) => {
             // If displayInfo is set to true, mount the StatsComponent
             setRenderStatsComponent(true);
             }
-        if (showStoriesButton) {
-            setRenderButton(true);
-        }
-      }, [navigation.params?.reset, displayInfo, showStoriesButton]);
+      }, [navigation.params?.reset, displayInfo]);
 
 
 
@@ -139,7 +127,6 @@ const Screen0 = ({ navigation }) => {
                 setDisplayInfo(true);
                 break;
             case 2:
-                setShowStoriesButton(true);
                 break;
             case 3:
                 setLogosVisible(true);
@@ -160,7 +147,6 @@ const Screen0 = ({ navigation }) => {
     const reverseOnButtonPress = (index) => {
         console.log('Button pressed: ' + index);
         startFlipAnimation(index, 'start');
-        setShowStoriesButton(false);
         setLogosVisible(false);
         setDisplayInfo(false);
         setBackgroundImg(require('./assets/background.png'));
@@ -176,6 +162,27 @@ const Screen0 = ({ navigation }) => {
             </View>
             <View style={styles.options}>
 
+
+
+            
+            {logosVisible && <LogosVisible startAnimation={true} />}
+
+            {activeCircle === 'start' && <InitialCircle                 
+                radius={radius}
+                navigation={navigation} 
+                zIndex={5}
+                onIconPress={handleButtonPress}
+                activeCircle={activeCircle}
+            />}
+
+            {activeCircle === 'update' && <AnimatedCircle                 
+                radius={radius} 
+                buttonPressed={selectedIcon}
+                navigation={navigation} 
+                zIndex={5}
+                onIconPress={handleButtonPress}
+                activeCircle={activeCircle}
+            />}
                 <Animated.View style={[styles.middleCircle, 
                     { 
                         backgroundColor: buttonProps[selectedIcon].color,
@@ -205,30 +212,18 @@ const Screen0 = ({ navigation }) => {
             </View>
 
 
+
+
+
+
             <View style={styles.graphicsContainerRight}>
-
+            <LinkButton 
+                    isVisible={selectedIcon === 2} 
+                    styles={{
+                        alignSelf: 'center',
+                    }} 
+                />
             </View>
-
-            
-            {logosVisible && <LogosVisible startAnimation={true} />}
-
-            {activeCircle === 'start' && <InitialCircle                 
-                radius={radius}
-                navigation={navigation} 
-                zIndex={5}
-                onIconPress={handleButtonPress}
-                activeCircle={activeCircle}
-            />}
-
-            {activeCircle === 'update' && <AnimatedCircle                 
-                radius={radius} 
-                buttonPressed={selectedIcon}
-                navigation={navigation} 
-                zIndex={5}
-                onIconPress={handleButtonPress}
-                activeCircle={activeCircle}
-            />}
-
           {/* Bottom Buttons */}
             <View style={styles.bottomButtons}>
                 <TouchableOpacity onPress={() => {reverseOnButtonPress(7)}} style={styles.smallButton}>

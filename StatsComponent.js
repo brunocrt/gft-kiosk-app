@@ -114,11 +114,7 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     style={{
                         width: 140,
                         height: 140,
-                        justifyContent: 'center',
-                        flexDirection: 'column',
                         margin: 20,
-                        marginLeft: '10%',
-                        zIndex: 99,
                     }}
                     >
                         <Animated.Image
@@ -140,8 +136,6 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     style={{ 
                         width: 160,
                         height: 140,
-                        justifyContent: 'center',
-                        flexDirection: 'column',
                         margin: 20,
                     }}
                     >
@@ -187,7 +181,7 @@ const styles = StyleSheet.create({
         paddingLeft: '20%',
     },
     statsWrapper: {
-        flex: 2,
+        
         justifyContent: 'flex-end',
         alignSelf: 'right',
         top: '10%',
@@ -222,21 +216,21 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     statistic: {
-        fontSize: 36,
+        fontSize: 24,
         marginTop: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
     },
     subText: {
-        fontSize: 16,
+        fontSize: 12,
         marginVertical: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
     },
     bottomWrapper: {
-        flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
+        bottom: 40,
     },
 });
 

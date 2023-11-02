@@ -84,11 +84,11 @@ const styles = StyleSheet.create({
         zIndex: 4,
         borderWidth: 1,
         borderColor: 'black',
-        
+        width: 200,
         bottom: 0,
     },
     linkButton: {
-        width: 200,
+        width: '100%',
         height: 60,
         borderRadius: 25,
         justifyContent: 'center',

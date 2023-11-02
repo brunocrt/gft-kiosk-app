@@ -515,7 +515,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
                     // Height is two line spaces worth
                     textTransform: 'uppercase',
                     fontWeight: 'bold',
-                    font: 'Arial',
+                    fontStyle: 'Arial',
                     padding: 10,
                     ...textAlignmentStyle
                   }

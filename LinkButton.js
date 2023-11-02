@@ -68,3 +68,31 @@ const LinkButton = ({ isVisible }) => {
     );
 };
 
+
+
+
+const styles = StyleSheet.create({
+    linkButtonContainer: {
+        top: 200,  // Adjust this value as needed
+        right: 20,
+        zIndex: 4,
+    },
+    linkButton: {
+        width: 200,
+        height: 60,
+        borderRadius: 25,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#0097D9',
+    },
+    buttonText: {
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 16,
+        fontWeight: 'bold',
+        fontFamily: 'Arial',
+        padding: 10,
+    },
+});
+
+export default LinkButton;

@@ -2,13 +2,11 @@ import React from 'react';
 import { Animated } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators  } from '@react-navigation/stack';
-import HomeScreen from './HomeScreen';
+
 import OfferingsScreen from './OfferingsScreen';
 import IndustriesScreen from './IndustriesScreen';
 import GftAwsScreen from './GftAwsScreen';
-import SolutionsScreen from './SolutionsScreen';
 import GftAwsOffersScreen from './GftAwsOffersScreen';
-import CompetenciesScreen from './SuccessScreen';
 import SuccessScreen from './SuccessScreen';
 import Screen0 from './Screen0';
 
@@ -53,8 +51,6 @@ const App = () => {
           <Stack.Screen name="Screen0" component={Screen0} options={{ headerShown: false }} />
           <Stack.Screen name="Offerings" component={OfferingsScreen} options={{ headerShown: false }} />
           <Stack.Screen name="GftAws" component={GftAwsScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Competencies" component={CompetenciesScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Solutions" component={SolutionsScreen} options={{ headerShown: false }} />
           <Stack.Screen name="SuccessScreen" component={SuccessScreen} options={{ headerShown: false }} />
           <Stack.Screen name="GFT+AWS" component={GftAwsOffersScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Industries" component={IndustriesScreen} options={{ headerShown: false }} />

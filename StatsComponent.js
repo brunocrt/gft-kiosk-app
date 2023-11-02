@@ -189,25 +189,22 @@ const styles = StyleSheet.create({
     },
     statsWrapper: {
         height: 500,
-        justifyContent: 'flex-end',
+        justifyContent: 'flex-start',
         alignSelf: 'right',
         top: 40,
     },
     header: {
-        height: '20%',
         width: '100%',
         justifyContent: 'center',
         backgroundColor:'transparent',
     },
     headerText: {
-        fontSize: 30,
+        fontSize: 18,
         fontFamily: 'Calibri',
         fontWeight: 'bold',
         textAlign: 'right',
     },
     body: {
-        flex: 1,
-        height: '80%',
         width: '100%',
         flexDirection: 'column',
         alignItems: 'center',
@@ -215,16 +212,16 @@ const styles = StyleSheet.create({
         backgroundColor:'transparent',
     },
     bodyRow: {
-        flex: 1,
+        
         width: '100%',
         flexDirection: 'column',
-        alignItems: 'left',
+        
         borderTopColor: 'black',
         borderTopWidth: 1,
-        justifyContent: 'flex-start',
+        
     },
     statistic: {
-        fontSize: 24,
+        fontSize: 18,
         marginTop: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',

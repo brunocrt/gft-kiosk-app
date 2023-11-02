@@ -39,9 +39,9 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
   const circumference = 2 * Math.PI * radius;
 
 
-  const animatedValue = useSharedValue(0);
+  const animatedValue = Animated.useSharedValue(0);
 
-  const dashOffset = useDerivedValue(() => {
+  const dashOffset = Animated.useDerivedValue(() => {
     return (1 - animatedValue.value) * circumference;
   });
   let icons = [];

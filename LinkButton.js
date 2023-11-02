@@ -4,7 +4,7 @@ import WebView from 'react-native-webview';
 
 const LinkButton = ({ isVisible }) => {
     const fadeInOpacity = useRef(new Animated.Value(0)).current;
-    const translateXValue = useRef(new Animated.Value(50)).current;
+    const translateYValue = useRef(new Animated.Value(-50)).current;
 
     const [webViewVisible, setWebViewVisible] = useState(false);
     const url = 'https://www.gft.com/us/en/services/success-stories';
@@ -43,7 +43,7 @@ const LinkButton = ({ isVisible }) => {
                     useNativeDriver: true,
                 }),
                 Animated.timing(translateXValue, {
-                    toValue: 50,
+                    toValue: -50,
                     duration: 700,
                     useNativeDriver: true,
                 }),
@@ -67,9 +67,9 @@ const LinkButton = ({ isVisible }) => {
                 </Modal>
             )}
 
-            <Animated.View style={[styles.linkButtonContainer, { opacity: fadeInOpacity, transform: [{ translateX: translateXValue }] }]}>
+            <Animated.View style={[styles.linkButtonContainer, { opacity: fadeInOpacity, transform: [{ translateY: translateYValue }] }]}>
                 <TouchableOpacity onPress={handleLinkPress} style={styles.linkButton}>
-                    <Text style={styles.buttonText}>View All Gft + AWS Success Stories Here</Text>
+                    <Text style={styles.buttonText}>View All Gft Success Stories Here</Text>
                 </TouchableOpacity>
             </Animated.View>
         </View>
@@ -79,9 +79,9 @@ const LinkButton = ({ isVisible }) => {
 
 const styles = StyleSheet.create({
     linkButtonContainer: {
-        top: 200,  // Adjust this value as needed
-        right: 20,
+        position: 'absolute',
         zIndex: 4,
+        bottom: 30,
     },
     linkButton: {
         width: 200,

@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
     },
     statsWrapper: {
         height: 500,
-        justifyContent: 'flex-start',
+        alignItems: 'right',
         alignSelf: 'right',
         top: 20,
     },

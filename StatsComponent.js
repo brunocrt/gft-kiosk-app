@@ -195,12 +195,14 @@ const styles = StyleSheet.create({
     },
     header: {
         width: '100%',
-        justifyContent: 'center',
+        alignItems: 'right',
+        textAlign: 'right',
         backgroundColor:'transparent',
     },
     headerText: {
-        fontSize: 18,
+        fontSize: 16,
         fontFamily: 'Calibri',
+        alignItems: 'right',
         fontWeight: 'bold',
         textAlign: 'right',
     },

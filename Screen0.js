@@ -223,7 +223,7 @@ const Screen0 = ({ navigation }) => {
                     }}>
                             <LinkImage 
                                 isVisible={selectedIcon === 1} 
-                                destinationUrl="https://www.gft.com" 
+                                destinationUrl="https://www.gft.com/us/en/news/import/press-and-news/2023/Press-releases/gft-improves-its-leader-ranking-in-the-2023-spark-matrix-for-digital-banking-services" 
                                 imageSource={require('./assets/competencies/quadrant.png')} 
                                 fadeDirection="left" 
                                 width={100}
@@ -232,7 +232,7 @@ const Screen0 = ({ navigation }) => {
 
                             <LinkImage 
                                 isVisible={selectedIcon === 1} 
-                                destinationUrl="https://www.gft.com" 
+                                destinationUrl="https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023" 
                                 imageSource={require('./assets/competencies/peak.png')} 
                                 fadeDirection="right" 
                                 width={120}

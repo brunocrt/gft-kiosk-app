@@ -334,6 +334,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         delay: 700,
         toValue: 1,
         duration: 600,
+        useNativeDriver: true,
       }).start();
 
       

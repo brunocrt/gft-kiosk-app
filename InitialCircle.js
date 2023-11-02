@@ -88,6 +88,7 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
         delay: 900,
         toValue: 1,
         duration: 600,
+        useNativeDriver: true,
       }).start();
 
       

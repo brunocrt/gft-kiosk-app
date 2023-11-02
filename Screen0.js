@@ -210,10 +210,6 @@ const Screen0 = ({ navigation }) => {
                 </Animated.View>
                 <LinkButton 
                     isVisible={selectedIcon === 2} 
-                    styles={{
-                        justifyContent: 'center',
-                        alignSelf: 'center',
-                    }} 
                 />
             </View>
 

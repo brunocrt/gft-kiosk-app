@@ -11,8 +11,8 @@ const GlobalUIWrapper = ({ children, backgroundImage }) => {
   const date = new Date().toLocaleDateString();
   
   return (
-    
-        <SafeAreaView style={styles.wrapper}>
+    <SafeAreaView>
+        <View style={styles.wrapper}>
             <View style={styles.topBar}>
                 <Text style={styles.slogan}>Shaping the{'\n'}future of digial{'\n'}business</Text>
                 <Image source={logoImage} style={styles.logo} />
@@ -28,7 +28,8 @@ const GlobalUIWrapper = ({ children, backgroundImage }) => {
                 </Text>
             <Text style={styles.date}>{date}</Text>
             </View>
-        </SafeAreaView>
+        </View>
+      </SafeAreaView>
   );
 };
 

@@ -233,7 +233,6 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
   angleBetweenIcons = (360 / icons.length) * (Math.PI / 180); // Angle between icons in radians
   angleOffset = -angleBetweenIcons * angleModifier;  // Offset in radians (positive or negative value)
 
-  const animatedIcons = icons.map(() => useRef(new Animated.Value(0)).current);
 
   const duration=1600;
   const strokeWidth=32;
@@ -330,13 +329,6 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         easing: Easing.out(Easing.quad),
       }).start();
   
-      animatedIcons.forEach((animatedIcon, index) => {
-        Animated.timing(animatedIcon, {
-          toValue: 1,
-          duration: duration,
-          useNativeDriver: true,
-        }).start();
-      });
 
       Animated.timing(fadeAnim, {
         delay: 700,
@@ -409,12 +401,6 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           const angle = (index * 2 * Math.PI) / icons.length + angleOffset;
           const x = centerX + (radius * Math.cos(angle)) - (iconSize / 2) + xOffset;
           const y = centerY + (radius * Math.sin(angle)) - (iconSize / 2) + yOffset;
-
-              // Additional offset for text to appear outside the icons
-          const textXOffset = icon_names[index].xOffset;  // Adjust this value as needed
-          const textYOffset = icon_names[index].yOffset;  // Adjust this value as needed
-          const textX = x + (radius/1.7 * Math.cos(angle)) + textXOffset;
-          const textY = y + (radius/1.7 * Math.sin(angle)) + textYOffset;
 
           let textAlignmentStyle = {};
     

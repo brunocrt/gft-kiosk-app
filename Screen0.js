@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Image, View, TouchableOpacity, Text, Animated, StyleSheet, Easing, Dimensions, SafeAreaView, StatusBar } from 'react-native';
+import { Image, View, TouchableOpacity, Text, Animated, StyleSheet, Easing, Dimensions, SafeAreaView, Linking } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 
 import GlobalUIWrapper from './GlobalUIWrapper';
@@ -7,7 +7,7 @@ import InitialCircle from './InitialCircle';
 import AnimatedCircle from './AnimatedCircle';
 import LogosVisible from './LogosVisible';
 import StatsComponent from './StatsComponent';
-import SuccessStoriesButton from './SuccessStoriesButton';
+import LinkButton from './LinkButton';
 import NavigationButtons from './NavigationButtons'; // Adjust the path as needed
 
 const Screen0 = ({ navigation }) => {
@@ -209,7 +209,14 @@ const Screen0 = ({ navigation }) => {
 
 
             <View style={styles.graphicsContainerRight}>
-                {showStoriesButton && <SuccessStoriesButton onAnimationEnd={handleHideButtonComponent} display={showStoriesButton} />}
+                
+                {showStoriesButton && 
+                <LinkButton
+                    text="View All GFT Success Stories"
+                    url='https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023'
+                    buttonStyle={{ backgroundColor: 'red' }}
+                    textStyle={{ color: 'yellow' }}
+                />}
 
             </View>
 
@@ -288,7 +295,7 @@ const styles = StyleSheet.create({
         flexShrink: 1,
         textAlign: 'center',
         fontWeight: 'bold',
-        fontFamily: 'Arial',
+        fontFamily: 'Calibri',
     },
     bottomButtons: {
         position: 'absolute',

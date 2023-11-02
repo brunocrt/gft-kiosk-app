@@ -135,17 +135,22 @@ export default function IndustriesScreen({ route, navigation }) {
                                 <View style={[
                                     index === selectedCategoryIndex ? styles.selectedIcon : styles.icon,
                                     ]}>
+                                        <View style={{
+                                        width: iconSize * 0.7,
+                                        height: iconSize * 0.7,
+                                        borderRadius: iconSize * 0.7 / 2,
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                    }}>
                                     <Image
                                         style={{ 
-                                            width: iconSize * icon_names[index].scale, 
-                                            height: iconSize * icon_names[index].scale, 
-                                            borderRadius: iconSize / 2, 
-                                            zIndex: 99, 
-                                            justifyContent: 'center', 
-                                            alignItems: 'center'
+                                            width: '100%', 
+                                            height: '100%', 
                                         }}
                                         source={icon}
+                                        resizeMode="cover"
                                     />
+                                    </View>
                                 </View>
     
                                 <Text style={styles.iconName}>{icon_names[index].label}</Text>

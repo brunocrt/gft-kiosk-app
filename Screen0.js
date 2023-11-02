@@ -213,6 +213,7 @@ const Screen0 = ({ navigation }) => {
                     styles={{
                         position: 'absolute',
                         alignSelf: 'center',
+                        justifyContent: 'center',
                         borderWidth: 1,
                         borderColor: 'black',
                     }} 

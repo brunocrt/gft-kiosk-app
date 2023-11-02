@@ -4,7 +4,7 @@ import WebView from 'react-native-webview';
 
 const LinkButton = ({ isVisible }) => {
     const fadeInOpacity = useRef(new Animated.Value(0)).current;
-    const translateYValue = useRef(new Animated.Value(-50)).current;
+    const translateYValue = useRef(new Animated.Value(25)).current;
 
     const [webViewVisible, setWebViewVisible] = useState(false);
     const url = 'https://www.gft.com/us/en/services/success-stories';
@@ -43,7 +43,7 @@ const LinkButton = ({ isVisible }) => {
                     useNativeDriver: true,
                 }),
                 Animated.timing(translateYValue, {
-                    toValue: -50,
+                    toValue: 25,
                     duration: 700,
                     useNativeDriver: true,
                 }),

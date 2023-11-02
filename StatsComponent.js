@@ -181,9 +181,10 @@ const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         flexDirection: 'column',
-        width: '70%',
+        width: '80%',
         backgroundColor:'transparent',
-        alignSelf: 'center',
+        alignSelf: 'left',
+        left: 20,
     },
     statsWrapper: {
         height: 500,
@@ -219,13 +220,13 @@ const styles = StyleSheet.create({
         
     },
     statistic: {
-        fontSize: 16,
+        fontSize: 18,
         marginTop: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
     },
     subText: {
-        fontSize: 10,
+        fontSize: 12,
         marginVertical: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',

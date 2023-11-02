@@ -212,6 +212,8 @@ const Screen0 = ({ navigation }) => {
                     isVisible={selectedIcon === 2} 
                     styles={{
                         position: 'absolute',
+                        bottom: 20,
+                        left: 0,
                         alignSelf: 'center',
                         justifyContent: 'center',
                         borderWidth: 1,

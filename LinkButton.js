@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         zIndex: 4,
         borderWidth: 1,
         borderColor: 'black',
-        bottom: 20,
+        
     },
     linkButton: {
         width: 200,

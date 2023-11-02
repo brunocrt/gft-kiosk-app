@@ -115,15 +115,15 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                         position: 'absolute',
                         
                         bottom: 0,
-                        left: 40,
+                        left: 50,
                     }}
                     >
                         <Animated.Image
                             style={{ 
                                 opacity: fadeInOpacityImage,
                                 transform: [{ translateX: translateXValueImage }],
-                                width: 100,
-                                height: 100,
+                                width: 120,
+                                height: 120,
                                 
                                 alignSelf: 'center',
                             }}
@@ -139,8 +139,8 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/news/import/press-and-news/2023/Press-releases/gft-improves-its-leader-ranking-in-the-2023-spark-matrix-for-digital-banking-services')}
                     style={{ 
                         position: 'absolute',
-                        bottom: 0,
-                        left: 200,
+                        bottom: 160,
+                        left: 50,
                     }}
                     >
                         <Animated.Image
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
         
         width: '100%',
         flexDirection: 'column',
-        
+        alignItems: 'right',
         borderTopColor: 'black',
         borderTopWidth: 1,
         
@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
     },
     bottomWrapper: {
         
-        flexDirection: 'row',
+        flexDirection: 'column',
         bottom: 40,
     },
 });

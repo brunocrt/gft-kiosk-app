@@ -206,14 +206,6 @@ const Screen0 = ({ navigation }) => {
 
 
             <View style={styles.graphicsContainerRight}>
-                
-                {showStoriesButton && 
-                <LinkButton
-                    text="View All GFT Success Stories"
-                    url='https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023'
-                    buttonStyle={{ backgroundColor: 'red' }}
-                    textStyle={{ color: 'yellow' }}
-                />}
 
             </View>
 

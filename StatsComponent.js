@@ -110,13 +110,6 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
         </View>
 
         <View style={styles.bottomWrapper} >
-                <View style={{
-                    width: '100%',
-                    height: '80%',
-                    flexDirection: 'row',
-                    alignItems: 'flex-end',
-                    marginTop: '10%',
-                }}>
                     <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023')}
                     style={{
                         width: 140,
@@ -170,7 +163,6 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                                 alignSelf: 'center',
                             }}>View details on GFT</Animated.Text>
                     </TouchableOpacity> 
-                </View>
             </View>
 
     </View>
@@ -195,7 +187,7 @@ const styles = StyleSheet.create({
         paddingLeft: '20%',
     },
     statsWrapper: {
-        flex: 1,
+        flex: 2,
         justifyContent: 'flex-end',
         alignSelf: 'right',
         top: '10%',
@@ -244,6 +236,7 @@ const styles = StyleSheet.create({
     bottomWrapper: {
         flex: 1,
         flexDirection: 'row',
+        alignItems: 'center',
     },
 });
 

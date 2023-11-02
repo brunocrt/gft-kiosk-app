@@ -225,11 +225,13 @@ const styles = StyleSheet.create({
         marginTop: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
+        alignItems: 'right',
     },
     subText: {
         fontSize: 10,
         marginVertical: 10,
         fontFamily: 'Calibri',
+        alignItems: 'right',
         textAlign: 'right',
     },
     bottomWrapper: {

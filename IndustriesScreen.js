@@ -187,7 +187,7 @@ export default function IndustriesScreen({ route, navigation }) {
     
                     <View style={styles.contentWrapper}>
                         <View style={styles.content}>
-                            <h1 style={styles.headerStyle}>{industries_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</h1>
+                            <Text style={styles.headerStyle}>{industries_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</Text>
                             <View style={styles.innerContentWrapper}>    
                                 {industries_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].image && (
                                     <Image 

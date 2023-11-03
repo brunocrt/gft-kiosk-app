@@ -257,7 +257,7 @@ export default function SuccessScreen({ route, navigation }) {
                                             </Animated.View>
                                             
                                             <SuccessScreenButton 
-                                                url={success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].url}
+                                                url={success_content[selectedCategoryIndex].subcategories[0].url}
                                                 text={"Read more about this success story here ->"}
                                             />
                                         </View>

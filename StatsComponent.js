@@ -112,17 +112,23 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'center',  // Align children to the right.
+        alignItems: 'flex-start',  // Align children to the right.
         justifyContent: 'center',
         backgroundColor: 'transparent',
+        borderWidth: 1,
+        borderColor: 'black',
     },
     wrapper: {  
         top: 20,
         width: '80%',
         backgroundColor: 'transparent',
-        alignItems: 'flex-start',  // Ensure content inside this is right-aligned.
+        borderWidth: 1,
+        borderColor: 'black',
+        alignItems: 'center',  // Ensure content inside this is right-aligned.
     },
     statsWrapper: {
+        borderWidth: 1,
+        borderColor: 'black',
         alignItems: 'flex-start',
     },
     header: {

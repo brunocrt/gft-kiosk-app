@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'Calibri',
         fontWeight: 'bold',
-        alignSelf: 'flex-end',  
+        alignSelf: 'center',  
         textAlign: 'right',
         borderColor: 'blue',
         borderWidth: 1,

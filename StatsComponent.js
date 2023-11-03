@@ -118,7 +118,6 @@ const styles = StyleSheet.create({
     },
     wrapper: {  
         top: 20,
-        right: 20,
         width: '80%',
         backgroundColor: 'transparent',
         alignItems: 'flex-end',  // Ensure content inside this is right-aligned.

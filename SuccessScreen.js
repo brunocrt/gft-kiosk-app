@@ -201,7 +201,7 @@ export default function SuccessScreen({ route, navigation }) {
                                 <View ref={ref} style={styles.contentTextContainer}>
                                     {/* Dynamically rendering text elements */}
                                     <ImageBackground 
-                                        source={{uri: success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].imageUrl}} 
+                                        source={{uri: success_content[selectedCategoryIndex].subcategories[0].imageUrl}} 
                                         style={{
                                             width: '100%', 
                                             height: '100%',
@@ -228,7 +228,7 @@ export default function SuccessScreen({ route, navigation }) {
                                                 top: curtainReveal,
                                             }}>                                                         
                                                              
-                                            {success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].subheaders.map((subheader, index) => (
+                                            {success_content[selectedCategoryIndex].subcategories[0].subheaders.map((subheader, index) => (
                                             <>
                                                 <View key={index} style={styles.contentText}>
                                                     <Text
@@ -248,7 +248,7 @@ export default function SuccessScreen({ route, navigation }) {
                                                         marginBottom: 10,
                                                         fontFamily: 'Calibri',
                                                     }}>
-                                                        {success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].texts[index]}
+                                                        {success_content[selectedCategoryIndex].subcategories[0].texts[index]}
                                                     </Text>
                                                 </View>
                                             </>

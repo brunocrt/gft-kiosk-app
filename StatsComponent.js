@@ -125,8 +125,6 @@ const styles = StyleSheet.create({
     },
     statsWrapper: {
         alignItems: 'flex-end',
-        borderColor: 'black',
-        borderWidth: 1,
     },
     header: {
         flexWrap: 'wrap',
@@ -138,8 +136,6 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         borderBottomColor: 'black',
         borderBottomColor: 1,
-        borderColor: 'red',
-        borderWidth: 1,
     },
     headerText: {
         flexWrap: 'wrap',
@@ -148,8 +144,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         alignSelf: 'right',  
         textAlign: 'right',
-        borderColor: 'blue',
-        borderWidth: 1,
     },
     body: {
         width: '100%',

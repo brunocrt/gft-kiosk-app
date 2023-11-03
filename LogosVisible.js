@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { View, Image, Animated } from 'react-native';
 import PartnerLogos from './assets/logos/partners_grouped_logos.png';
 
-const width = 1200;
+const width = 1300;
 const height = 900;
 
 const LogosVisible = ({ startAnimation }) => {
@@ -47,9 +47,7 @@ const styles = {
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: 'red',
-    width: height * 4 / 3, 
+    width: width, 
     height: height,
   },
   logo: {        

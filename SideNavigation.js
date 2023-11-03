@@ -5,16 +5,24 @@ import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 const SideNavigation = ({ selectedIcon, setSelectedIcon }) => {
     const icons = [
         'GFT + AWS Offerings', 
-        'Competencies & Credentials', 
-        'Success Stories', 
-        'Partners', 
-        'Offerings', 
-        'Industries', 
-        'Solutions'
+        'GFT + AWS Solutions',
+        'GFT + AWS Success Stories',
     ];
 
   const handlePress = (index) => {
-    setSelectedIcon(index);
+    switch (index) {
+        case 0:
+            setSelectedIcon(0);
+            break;
+        case 1:
+            setSelectedIcon(6);
+            break;
+        case 2:
+            setSelectedIcon(2);
+            break;
+        default:
+            break;
+    }
   };
 
     // The selected icon will have a background color of #213E7F, otherwise it will be transparent with black colored text and black border

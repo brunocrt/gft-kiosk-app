@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import { View, Image, Animated } from 'react-native';
 import PartnerLogos from './assets/logos/partners_grouped_logos.png';
 
+const width = 1200;
+const height = 900;
+
 const LogosVisible = ({ startAnimation }) => {
   const fadeAnim = useRef(new Animated.Value(0)).current;  // Initial value for opacity: 0
 
@@ -44,14 +47,16 @@ const styles = {
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%', 
-    height: '100%',
+    borderWidth: 1,
+    borderColor: 'red',
+    width: height * 4 / 3, 
+    height: height,
   },
   logo: {        
     alignItems: 'center',
     justifyContent: 'center',
-    width: 1200,
-    height: 900,
+    width: '100%',
+    height: '100%',
   }
 };
 

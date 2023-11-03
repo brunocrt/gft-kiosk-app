@@ -164,6 +164,8 @@ const Screen0 = ({ navigation }) => {
         <View style={styles.container}>
             <View style={{
                 position: 'absolute',
+                alignItems: 'center',
+                justifyContent: 'center',
                 width: '100%',
                 height: '100%',
             }}>

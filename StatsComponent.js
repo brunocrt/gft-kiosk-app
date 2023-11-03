@@ -132,6 +132,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         backgroundColor: 'transparent',
+        borderBottomColor: 'black',
+        borderBottomColor: 1,
     },
     headerText: {
         fontSize: 18,

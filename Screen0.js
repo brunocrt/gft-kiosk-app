@@ -219,7 +219,7 @@ const Screen0 = ({ navigation }) => {
                         height: 150,
                         justifyContent: 'space-between',
                         alignItems: 'center',  // Center children vertically.
-                        bottom: 20,
+                        bottom: 0,
                     }}>
                             <LinkImage 
                                 isVisible={selectedIcon === 1} 

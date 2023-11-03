@@ -118,12 +118,13 @@ const styles = StyleSheet.create({
     },
     wrapper: {  
         top: 20,
+        left: 20,
         width: '80%',
         backgroundColor: 'transparent',
         alignItems: 'center',  // Ensure content inside this is right-aligned.
     },
     statsWrapper: {
-        alignItems: 'flex-end',
+        alignItems: 'flex-start',
     },
     header: {
         width: '100%',

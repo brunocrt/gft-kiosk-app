@@ -3,7 +3,7 @@ import { View, Image, Animated } from 'react-native';
 import PartnerLogos from './assets/logos/partners_grouped_logos.png';
 
 const width = 1300;
-const height = 900;
+const height = 800;
 
 const LogosVisible = ({ startAnimation }) => {
   const fadeAnim = useRef(new Animated.Value(0)).current;  // Initial value for opacity: 0
@@ -48,7 +48,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     width: width, 
-    height: height,
+    height: '100%',
   },
   logo: {        
     alignItems: 'center',

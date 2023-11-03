@@ -115,8 +115,6 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',  // Align children to the right.
         justifyContent: 'center',
         backgroundColor: 'transparent',
-        borderWidth: 1,
-        borderColor: 'black',
     },
     wrapper: {  
         top: 20,
@@ -124,13 +122,9 @@ const styles = StyleSheet.create({
         width: '80%',
         backgroundColor: 'transparent',
         alignItems: 'flex-start',  // Ensure content inside this is right-aligned.
-        borderWidth: 1,
-        borderColor: 'black',
     },
     statsWrapper: {
         alignItems: 'flex-start',
-        borderWidth: 1,
-        borderColor: 'black',
     },
     header: {
         flexWrap: 'wrap',
@@ -138,8 +132,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         backgroundColor: 'transparent',
-        borderWidth: 1,
-        borderColor: 'red',
     },
     headerText: {
         fontSize: 18,

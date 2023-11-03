@@ -47,7 +47,7 @@ const styles = {
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center',
-    width: width, 
+    width: '100%', 
     height: '100%',
   },
   logo: {        

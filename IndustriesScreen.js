@@ -121,11 +121,7 @@ export default function IndustriesScreen({ route, navigation }) {
                 <View style={styles.iconBar}>
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} 
                         style={{
-                            borderRightWidth: 1,
-                            borderRightColor: 'gray',
-                            borderLeftWidth: 1,
-                            borderLeftColor: 'gray',
-                            margin: 10,
+                            padding: 10,
                         }} 
                     >
                     <View style={{

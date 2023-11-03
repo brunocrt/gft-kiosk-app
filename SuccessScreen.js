@@ -230,8 +230,8 @@ export default function IndustriesScreen({ route, navigation }) {
                                                              
                                             {success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].subheaders.map((subheader, index) => (
                                             <>
-                                                <View style={styles.contentText}>
-                                                    <Text key={index}
+                                                <View key={index} style={styles.contentText}>
+                                                    <Text
                                                     style={{
                                                         fontSize: 24,
                                                         color: 'white',
@@ -240,7 +240,7 @@ export default function IndustriesScreen({ route, navigation }) {
                                                     }}>
                                                         {subheader}
                                                     </Text>
-                                                    <Text key={index}
+                                                    <Text
                                                     style={{
                                                         fontSize: 18,
                                                         fontWeight: 'normal',

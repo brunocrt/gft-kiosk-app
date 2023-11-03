@@ -255,7 +255,7 @@ const Screen0 = ({ navigation }) => {
 
                 <LinkButton 
                     isVisible={selectedIcon === 2}
-                    text="View All Gft Success Stories Here"
+                    text="View All GFT Success Stories Here"
                 />
             </View>
 

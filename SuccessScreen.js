@@ -196,12 +196,12 @@ export default function SuccessScreen({ route, navigation }) {
     
                     <View style={styles.contentWrapper}>
                         <View style={styles.content}>
-                            <Text style={styles.headerStyle}>{success_content[selectedCategoryIndex].subcategories[0].subheaders[selectedSubCategoryIndex]}</Text>
+                            <Text style={styles.headerStyle}>{success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].header}</Text>
                             <View style={styles.innerContentWrapper}>    
                                 <View ref={ref} style={styles.contentTextContainer}>
                                     {/* Dynamically rendering text elements */}
                                     <ImageBackground 
-                                        source={{uri: success_content[selectedCategoryIndex].subcategories[0].imageUrl}} 
+                                        source={{uri: success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].imageUrl}} 
                                         style={{
                                             width: '100%', 
                                             height: '100%',
@@ -228,7 +228,7 @@ export default function SuccessScreen({ route, navigation }) {
                                                 top: curtainReveal,
                                             }}>                                                         
                                                              
-                                            {success_content[selectedCategoryIndex].subcategories[0].subheaders.map((subheader, index) => (
+                                            {success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].subheaders.map((subheader, index) => (
                                             <>
                                                 <View key={index} style={styles.contentText}>
                                                     <Text
@@ -248,7 +248,7 @@ export default function SuccessScreen({ route, navigation }) {
                                                         marginBottom: 10,
                                                         fontFamily: 'Calibri',
                                                     }}>
-                                                        {success_content[selectedCategoryIndex].subcategories[0].texts[index]}
+                                                        {success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].texts[index]}
                                                     </Text>
                                                 </View>
                                             </>
@@ -257,7 +257,7 @@ export default function SuccessScreen({ route, navigation }) {
                                             </Animated.View>
                                             
                                             <SuccessScreenButton 
-                                                url={success_content[selectedCategoryIndex].subcategories[0].url}
+                                                url={success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].url}
                                                 text={"Read more about this success story here ->"}
                                             />
                                         </View>

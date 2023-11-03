@@ -321,6 +321,9 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           navigation.navigate('Industries', { initial_screen: initial_screen });
           break;
         case 6:
+          // Special case here, if the button is the AI.DA button, then navigate to the AI.DA screen
+          // If
+
           if (Platform.OS === 'ios') {
             setShowBrowser(true);
           } else{
@@ -474,6 +477,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
           return (
             <>
+            {/* if button pressed is gft+aws solutions (buttonpress === 6), then the AI.DA button will navigate to another screen */}
               {Platform.OS === 'ios' && showBrowser && (
                 <Modal
                     animationType="slide"

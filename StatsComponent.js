@@ -113,15 +113,15 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         alignItems: 'flex-start', 
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         backgroundColor: 'transparent',
     },
     wrapper: {  
-        bottom: 20,
+        top: 20,
         left: 20,
         width: '80%',
         backgroundColor: 'transparent',
-        alignItems: 'flex-end',  // Ensure content inside this is right-aligned.
+        alignItems: 'flex-start',  // Ensure content inside this is right-aligned.
     },
     statsWrapper: {
         alignItems: 'flex-end',

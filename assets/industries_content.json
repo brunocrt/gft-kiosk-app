@@ -4,6 +4,7 @@
     "subcategories": [
       {
         "title": "Cooperatives",
+        "header": "",
         "text": "As one of its competitive advantages, GFT has extensive experience in financial markets, contributing to the development of major financial institutions in Brazil and worldwide.\n\nIn an effort to further contribute to the development of the Brazilian financial market and provide a faster, more effective and easier market entry into the world of technology, GFT has established a specific segment within its internal structure to serve credit cooperatives.\n\nThrough this initiative, we aim to facilitate the development of this segment in a personalized and participatory manner, promoting modernization and automation of their technological systems, trading platforms, risk management, regulatory compliance and other critical areas. This enables credit cooperatives to stand out in a competitive environment like the financial market.\n\nAll of this is provided with security, agility, scalability and, most importantly, it contributes to improved financial results, in the form of surpluses, while at the same time increasingly offering their members a chance at financial inclusion."
       }
     ]
@@ -13,6 +14,7 @@
     "subcategories": [
       {
         "title": "Capital Markets",
+        "header": "",
         "text": "With more than 10 years of experience in capital markets, GFT has been one of the main providers of technical solutions for financial institutions throughout Brazil.\n\nSpecialized knowledge in trading platforms, risk management, regulatory compliance and other critical areas has enabled GFT’s clients to stand out in an increasingly competitive and complex environment.\n\nWith a highly qualified team and a client-centric approach, GFT continues to be a trusted partner for companies looking to innovate and grow in an ever-evolving financial market."
       }
     ]
@@ -22,6 +24,7 @@
     "subcategories": [
       {
         "title": "Banking",
+        "header": "",
         "text": "GFT Brazil has been operating for approximately 15 years in the local market, as well as offshore, serving the main banking and insurance companies, supporting them in regulatory challenges and product evolutions and financial services (LGPD, PIX, Open Banking, Open Insurance, Open Finance, Cryptocurrencies, Real Digital), modernization projects (adoption and migration to the cloud) and technical updates. It operates in an agnostic manner, being a partner of all the main clouds (AWS, Azure, GCP and IBM) and also of several technological platforms such as Salesforce, ServiceNow, Digibee, among others."
       }
     ]
@@ -31,6 +34,7 @@
     "subcategories": [
       {
         "title": "Insurance",
+        "header": "",
         "text": "GFT has been operating in the insurance market in Brazil for over eight years.\n\nWe have more than 300 people working in the main insurance companies and brokers in journey design initiatives with personalized experience, app and web application development, process automation, application modernization for cloud, analytics and test automation. We have partnerships with the main insurance solution platforms in the market. As well, we have developed a solution for Open Insurance (GO!BaaS).\n\nThe insurance market is constantly developing, growing and democratizing, where GFT’s skills and solutions are excellent accelerators to support our clients and prospects in reshaping the future of digital business."
       }
     ]
@@ -40,6 +44,7 @@
     "subcategories": [
       {
         "title": "Manufacturing",
+        "header": "",
         "text": "Need Text Here"
       }
     ]
@@ -49,6 +54,7 @@
     "subcategories": [
       {
         "title": "Telecom",
+        "header": "",
         "text": "GFT Brazil, being a reference in the financial segment and serving all the main banking and Insurance Companies, has been supporting institutions in challenges such as Brazilian General Data Protection Law (LGPD), PIX, Open Banking, among others.\n\nAll of this expertise affords GFT the ability to operate in the telecoms sector, the company’s new vertical, where technology also evolves at great speed in the IT market, where we operate in an agnostic manner, being a partner of all the main clouds (AWS, Azure, GCP and IBM), and also from different platforms (Salesforce, ServiceNow and Digibee). Challenges such as Open Telecom, where we have the market place that best serves the general public, will be a new milestone in this sector.\n\nThe telecommunications sector in Brazil is a constantly evolving market, driven by the growing demand for mobile communications and broadband services. The deployment of 5G technologies is also under way in the country, which should further accelerate the development of the sector. We understand the importance of being present in such a significant market for GFT.\n\nIn terms of innovation, we have a structure focused on developing new businesses and solutions, which carries out studies and proof of concepts with new technology trends, such as blockchain, IoT, Machine Learning, generative AI and Quality Assurance, among others.\n\nAs a differentiator, in technical terms, we have strong delivery management, focusing on delivering value and quality and providing a team of consultants and specialists according to demand, who support everything from definition and development to the delivery of solutions. In terms of personnel management, GFT takes care of its teams on an individual basis, paying special attention to ’people’, reducing the turnover rate."
       }
     ]
@@ -58,6 +64,7 @@
     "subcategories": [
       {
         "title": "Health",
+        "header": "",
         "text": "Operating in the main laboratories and hospital networks in Brazil, we focus on digital transformation strategies accelerated by the Covid-19 pandemic. Included in this, is the creation of platforms that integrate the health ecosystem and initiatives aimed at efficiency through cloud adoption and migration programs, as well as agility consulting."
       }
     ]
@@ -67,6 +74,7 @@
     "subcategories": [
       {
         "title": "AI-powered Process Automation",
+        "header": "",
         "text": "AI, Process Automation, cloud, business consulting, customer journey enhancement, pricing and logistics, among others, are some areas that GFT can offer to help retail companies increase their revenue and reduce costs. With over 20 years of experience in the IT market, GFT is the right company to assist retail companies achieve higher profitability."
       }
     ]
@@ -76,6 +84,7 @@
     "subcategories": [
       {
         "title": "Utilities",
+        "header": "",
         "text": "We understand that energy transition and market entry are priorities for the energy and utilities sectors.\n\nOur mission is to enable companies in the energy sector to adapt and thrive in the digital age. We combine industry knowledge with our specialized skills in innovative technologies such as IoT, cloud, AI and Big Data to optimize operational efficiency, enhance resource and asset management, improve infrastructure maintenance, and deliver an enhanced customer experience. This enables the development of new business models within the sector."
       }
     ]
@@ -85,6 +94,7 @@
     "subcategories": [
       {
         "title": "Financial Services",
+        "header": "",
         "text": " GFT has always had a strong presence in the US domestic financial market and international financial markets since its establishment in digital transformation, cloud, process automation, data and business consulting, among other technologies, that support our clients in achieving their business objectives."
       }
     ]
@@ -94,6 +104,7 @@
     "subcategories": [
       {
         "title": "Payment Methods",
+        "header": "",
         "text": "GFT has played a significant and innovative role in the payment methods market.\n\nWith its expertise in technology and financial solutions, the company has assisted several organizations in modernizing their payment systems and meeting the ever-evolving demands of its consumers.\n\nGFT offers a range of services, from developing custom payment platforms to implementing robust security solutions, ensuring secure and efficient transactions.\n\n Moreover, the company stays updated with the latest industry trends, such as mobile payments, digital wallets and cryptocurrencies, empowering its clients to adapt to technological changes and provide innovative payment experiences to their users. With its experience and commitment to driving digital transformation in the payment sector, GFT stands out as a trusted and strategic partner for companies looking to excel in this continuously growing market."
       }
     ]
@@ -103,6 +114,7 @@
     "subcategories": [
       {
         "title": "Government",
+        "header": "",
         "text": "We see the government as an integral part of the productive chain across various industries in which we operate.\n\nWe leverage our extensive experience in the private financial sector to bring digitization to public banking, offering efficiency, transparency and innovation through the implementation of emerging technologies like AI, Big Data, blockchain and Open Finance.\n\nAdditionally, we are collaborating with the federal government to adopt and implement digital technologies that enhance efficiency, productivity and competitiveness through an end-to-end perspective of the public sector’s value chain."
       }
     ]

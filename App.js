@@ -7,6 +7,8 @@ import IndustriesScreen from './IndustriesScreen';
 import GftAwsScreen from './GftAwsScreen';
 import SuccessScreen from './SuccessScreen';
 import Screen0 from './Screen0';
+import AI from './AIScreen';
+import AI_DA from './AI_DA';
 
 const Stack = createStackNavigator();
 
@@ -50,6 +52,8 @@ const App = () => {
           <Stack.Screen name="GftAws" component={GftAwsScreen} options={{ headerShown: false }} />
           <Stack.Screen name="SuccessScreen" component={SuccessScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Industries" component={IndustriesScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="AI" component={AI} options={{ headerShown: false }} />
+          <Stack.Screen name="AI_DA" component={AI_DA} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );

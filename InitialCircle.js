@@ -30,6 +30,7 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
     require('./assets/icons/competencies_icon.png'), 
     require('./assets/icons/success_icon.png'), 
     require('./assets/icons/partners_icon.png'), 
+    require('./assets/icons/partners_icon.png'), 
     require('./assets/icons/offerings_icon.png'), 
     require('./assets/icons/industries_icon.png'), 
     require('./assets/icons/solutions_icon.png'), 
@@ -38,13 +39,14 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
     {label: 'GFT + AWS\nOfferings', align: 'bottom', xOffset: 0, yOffset: 48, color: '#0097D9', textColor: '#0097D9', scale: 0.85},
     {label: 'Competencies & Credentials', align: 'left', xOffset: 0, yOffset: 0, color: '#0097D9', textColor: '#0097D9', scale: 0.75},
     {label: 'GFT + AWS\nSuccess Stories', align: 'left', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.85},
-    {label: 'Partners', align: 'top', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.85},
-    {label: 'Offerings', align: 'top', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.8},
+    {label: 'Partners', align: 'left', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.85},
+    {label: 'AI.DA Marketplace', align: 'top', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.85},
+    {label: 'Offerings', align: 'right', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.8},
     {label: 'Industries', align: 'right', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.7},
     {label: 'GFT + AWS Solutions', align: 'right', xOffset: 0, yOffset: 0, color: '#0097D9', textColor: '#0097D9', scale: 0.7},
   ];
   angleBetweenIcons = (360 / icons.length) * (Math.PI / 180); // Angle between icons in radians
-  angleOffset = -angleBetweenIcons / 2 * 3.5;  // Offset in radians (positive or negative value)
+  angleOffset = -angleBetweenIcons / 2 * 4;  // Offset in radians (positive or negative value)
  
 
   const animatedIcons = icons.map(() => useRef(new Animated.Value(0)).current);
@@ -61,7 +63,11 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
 
 
     const handleIconPress = (index) => {
-
+      
+        if (index === 4) {
+          
+          navigation.navigate('AI_DA');
+        }
         if (onIconPress) {
           onIconPress(index);
         }

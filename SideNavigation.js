@@ -15,7 +15,7 @@ const SideNavigation = ({ selectedIcon, setSelectedIcon }) => {
             setSelectedIcon(0);
             break;
         case 1:
-            setSelectedIcon(6);
+            setSelectedIcon(7);
             break;
         case 2:
             setSelectedIcon(2);
@@ -31,17 +31,17 @@ const SideNavigation = ({ selectedIcon, setSelectedIcon }) => {
     const getStyle = (index) => {
         if (selectedIcon === index) {
             return {
-                backgroundColor: '#213E7F',
-                color: 'white',
-                borderColor: 'white',
-                borderWidth: 1,
+                backgroundColor: '#EC6601',
+                color: 'black',
+                borderColor: 'black',
+                borderWidth: 2,
             };
         } else {
             return {
-                backgroundColor: 'white',
+                backgroundColor: '#213E7F',
                 color: 'black',
                 borderColor: 'black',
-                borderWidth: 1,
+                borderWidth: 2,
             };
         }
     };
@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
   },
   button: {
     marginVertical: 10,
-    width: 60,
-    height: 60,
+    width: 80,
+    height: 80,
     borderRadius: 40,
     justifyContent: 'center',
     alignItems: 'center',
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     flexWrap: 'wrap',
+    color: 'white',
     fontSize: 10,
   },
 });

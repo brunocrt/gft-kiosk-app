@@ -119,7 +119,7 @@ export default function IndustriesScreen({ route, navigation }) {
         <ImageBackground style={styles.backgroundImageContainer} source={bgImage}>
     
                 <View style={styles.iconBar}>
-                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} 
+                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={true} 
                         style={{
                             padding: 10,
                         }} 

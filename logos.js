@@ -4,7 +4,7 @@ import logo1 from './assets/logos/1.png';
 import logo2 from './assets/logos/2.png';
 import logo3 from './assets/logos/3.png';
 import logo4 from './assets/logos/4.png';
-// import logo5 from './assets/logos/5.png';
+import logo5 from './assets/logos/5.png';
 import logo6 from './assets/logos/6.png';
 import logo7 from './assets/logos/7.png';
 import logo8 from './assets/logos/8.png';
@@ -32,10 +32,10 @@ import logo29 from './assets/logos/29.png';
 import logo30 from './assets/logos/30.png';
 import logo31 from './assets/logos/31.png';
 import logo32 from './assets/logos/32.png';
-// import logo33 from './assets/logos/33.png';
+import logo33 from './assets/logos/33.png';
 import logo34 from './assets/logos/34.png';
 import logo35 from './assets/logos/35.png';
-// import logo36 from './assets/logos/36.png';
+import logo36 from './assets/logos/36.png';
 import logo37 from './assets/logos/37.png';
 import logo38 from './assets/logos/38.png';
 
@@ -45,7 +45,7 @@ export default [
     logo2,
     logo3,
     logo4,
-    // logo5,
+    logo5,
     logo6,
     logo7,
     logo8,
@@ -73,10 +73,10 @@ export default [
     logo30,
     logo31,
     logo32,
-    // logo33,
+    logo33,
     logo34,
     logo35,
-    // logo36,
+    logo36,
     logo37,
     logo38,
 ];

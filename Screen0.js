@@ -16,8 +16,8 @@ const Screen0 = ({ navigation }) => {
     const [backgroundImg, setBackgroundImg] = useState(require('./assets/background.png')); // default image
     const [logosVisible, setLogosVisible] = useState(false);
 
-
-    const [selectedIcon, setSelectedIcon] = useState(7);
+    console.log(navigation)
+    const [selectedIcon, setSelectedIcon] = useState(8);
 
     const [activeCircle, setActiveCircle] = useState('start');
     
@@ -37,7 +37,7 @@ const Screen0 = ({ navigation }) => {
 
         if (navigation.params?.reset) {
           // Reset the state to its initial values
-            reverseOnButtonPress(7);
+            reverseOnButtonPress(8);
         }
 
         if (displayInfo) {
@@ -53,6 +53,7 @@ const Screen0 = ({ navigation }) => {
         {label: 'COMPETENCIES & CREDENTIALS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
         {label: 'GFT + AWS SUCCESS STORIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
         {label: 'GFT PARTNERS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
+        {label: 'AI.DA MARKETPLACE', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,}, // AI.DA Marketplace placeholder
         {label: 'GFT OFFERINGS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
         {label: 'INDUSTRIES', color: '#213E7F', textColor: 'white', borderColor: 'white', fontSize: 32,},
         {label: 'GFT + AWS SOLUTIONS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
@@ -120,7 +121,7 @@ const Screen0 = ({ navigation }) => {
 
     const handleButtonPress = (index) => {
         console.log('Button pressed: ' + index);
-        startFlipAnimation(index, 'update');
+            startFlipAnimation(index, 'update');
         
         switch (index) {
             case 0:
@@ -136,13 +137,15 @@ const Screen0 = ({ navigation }) => {
                 setLogosVisible(true);
                 setBackgroundImg(require('./assets/partners_bg.png'));
                 break;
-            case 4:
+            case 4: // AI.DA Marketplace
+                break;
+            case 5:
                 setBackgroundImg(require('./assets/offerings_bg.png'));
                 break;
-            case 5: // Industries
+            case 6: // Industries
                 setBackgroundImg(require('./assets/industries_bg.jpg'));
                 break;
-            case 6:
+            case 7:
                 setBackgroundImg(require('./assets/background.png'));
                 break;
             default:

@@ -53,8 +53,8 @@ const styles = {
   logo: {        
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
-    height: '100%',
+    width: 1400,
+    height: 1000,
   }
 };
 

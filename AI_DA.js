@@ -3,7 +3,7 @@ import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, ScrollView, 
 import { useScrollToTop } from '@react-navigation/native';
 import { Swipeable } from 'react-native-gesture-handler';
 
-import offerings_content from './assets/offerings_content.json';
+import AI_DA_content from './assets/AI_DA_content.json';
 import NavigationButtons from './NavigationButtons';
 
 import icon1 from './assets/icons/collaboration_icon.png';
@@ -22,7 +22,7 @@ import icon10 from './assets/icons/business_it_consulting_icon.png';
 const bgImage = require('./assets/offerings_content_bg.jpg');  // Update with the correct path
 const iconSize=75;
 
-export default function OfferingsScreen({ route, navigation }) {
+export default function AI_DA({ route, navigation }) {
     
     console.log(navigation)
     const swipeAnimation = React.useRef(new Animated.Value(0)).current;
@@ -30,22 +30,15 @@ export default function OfferingsScreen({ route, navigation }) {
 
     const [imageHeight, setImageHeight] = useState(null);
 
-    const icons = [icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10];
+    const icons = [icon1, icon2, icon3];
     const icon_names = [
-        {label: 'Collaboration', align: 'right', xOffset: -140, yOffset: 124, color: '#B02A87', scale: 0.9},
-        {label: 'Automation', align: 'center', xOffset: -30, yOffset: 80, color: '#B02A87', scale: 0.8},
-        {label: 'Digital\nAssets', align: 'left', xOffset: 40, yOffset: 110, color: '#B02A87', scale: 0.85},
-        {label: 'Customer\nCentricity', align: 'left', xOffset: -10, yOffset: 60, color: '#B02A87', scale: 0.7},
-        {label: 'Game\nChangers', align: 'left', xOffset: -10, yOffset: -20, color: '#B02A87', scale: 0.85},
-        {label: 'Cloud\nEngineering', align: 'left', xOffset: 36, yOffset: -50, color: '#0097D9', scale: 0.85},
-        {label: 'Platform\nEngineering', align: 'center', xOffset: -30, yOffset: -20, color: '#0097D9', scale: 0.8},
-        {label: 'Data\nEngineering', align: 'right', xOffset: -100, yOffset: -50, color: '#0097D9', scale: 0.85},
-        {label: 'Regulatory\n& Risks', align: 'right', xOffset: -50, yOffset: -20, color: '#0097D9', scale: 0.7},
-        {label: 'Business & IT\nConsulting', align: 'right', xOffset: -60, yOffset: 60, color: '#0097D9', scale: 0.85},
+        {label: '', align: 'right', xOffset: -140, yOffset: 124, color: '#B02A87', scale: 0.9},
+        {label: '', align: 'center', xOffset: -30, yOffset: 80, color: '#B02A87', scale: 0.8},
+        {label: '', align: 'left', xOffset: 40, yOffset: 110, color: '#B02A87', scale: 0.85},
     ];
 
-    const initialCategory = route.params?.initial_screen || offerings_content[0].label;
-    const initialCategoryIndex = offerings_content.findIndex(category => category.label === initialCategory);
+    const initialCategory = route.params?.initial_screen || AI_DA_content[0].label;
+    const initialCategoryIndex = AI_DA_content.findIndex(category => category.label === initialCategory);
   
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(initialCategoryIndex !== -1 ? initialCategoryIndex : 0);
   const [selectedSubCategoryIndex, setSelectedSubCategoryIndex] = useState(0);
@@ -67,13 +60,13 @@ export default function OfferingsScreen({ route, navigation }) {
         // Swiping right at the first subcategory
         newCategoryIndex = selectedCategoryIndex - 1;
         if (newCategoryIndex < 0) {
-            newCategoryIndex = offerings_content.length - 1; // Wrap to the last category if on the first one
+            newCategoryIndex = AI_DA_content.length - 1; // Wrap to the last category if on the first one
         }
-        newSubCategoryIndex = offerings_content[newCategoryIndex].subcategories.length - 1; // Move to the last subcategory of the previous category
-    } else if (direction === 1 && newSubCategoryIndex >= offerings_content[selectedCategoryIndex].subcategories.length) {
+        newSubCategoryIndex = AI_DA_content[newCategoryIndex].subcategories.length - 1; // Move to the last subcategory of the previous category
+    } else if (direction === 1 && newSubCategoryIndex >= AI_DA_content[selectedCategoryIndex].subcategories.length) {
         // Swiping left at the last subcategory
         newCategoryIndex = selectedCategoryIndex + 1;
-        if (newCategoryIndex >= offerings_content.length) {
+        if (newCategoryIndex >= AI_DA_content.length) {
             newCategoryIndex = 0; // Wrap to the first category if on the last one
         }
         newSubCategoryIndex = 0; // Move to the first subcategory of the next category
@@ -174,7 +167,7 @@ const renderItem = ({ item, index }) => (
                 <View style={styles.subCategoriesWrapper}>
                 <FlatList
                     horizontal
-                    data={offerings_content[selectedCategoryIndex].subcategories}
+                    data={AI_DA_content[selectedCategoryIndex].subcategories}
                     renderItem={renderItem}
                     keyExtractor={(item, index) => String(index)}
                     style={[
@@ -198,7 +191,7 @@ const renderItem = ({ item, index }) => (
 
                 <View style={styles.contentWrapper}>
                     <View style={styles.content}>
-                        <Text style={styles.headerStyle}>{offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</Text>
+                        <Text style={styles.headerStyle}>{AI_DA_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</Text>
                         <View style={styles.innerContentWrapper}>    
                             {/* {offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].image && (
                                 <Image 
@@ -208,7 +201,7 @@ const renderItem = ({ item, index }) => (
                             )} */}
                             <ScrollView ref={ref} style={styles.contentTextContainer}>
                                 <Text style={styles.contentText}>
-                                    {offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].text}
+                                    {AI_DA_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].text}
                                 </Text>
                             
                             </ScrollView>

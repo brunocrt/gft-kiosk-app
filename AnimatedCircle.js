@@ -133,7 +133,10 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       break;
     case 3: // Partners
       break;
-    case 4: // Offerings
+    case 4: // AI.DA
+      
+      break;
+    case 5: // Offerings
       icons = [
         offerings_icon1, 
         offerings_icon2, 
@@ -160,7 +163,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       ];
       angleModifier = 3.5;
       break;
-    case 5: // Industries
+    case 6: // Industries
       icons = [
         industries_icon1, 
         industries_icon2, 
@@ -191,23 +194,26 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       ];
       angleModifier = 3;
       break;
-    case 6: // Solutions
+    case 7: // Solutions
       urls = [
         "https://www.gft.com/us/en/solutions/SOLUTIONS/BankLiteX",
         "https://www.gft.com/us/en/solutions/SOLUTIONS/BankStart",
+        "",
         "https://www.gft.com/us/en/solutions/OFFERINGS/AWS-Open-API-Framework"
       ];
       icons = [
         require('./assets/icons/migration_icon.png'), 
         require('./assets/icons/devops_icon.png'), 
+        require('./assets/icons/migration_icon.png'), 
         require('./assets/icons/financial_services_icon.png'), 
       ];
       icon_names = [
         {label: 'BankLiteX', align: 'bottom', xOffset: -12, yOffset: 108, color: '#0097D9', textColor: '#0097D9', scale: 0.85},
         {label: 'BankStart', align: 'left', xOffset: -24, yOffset: 0, color: '#0097D9', textColor: '#0097D9', scale: 0.85},
+        {label: 'AI Impact', align: 'top', xOffset: -24, yOffset: -18, color: '#0097D9', textColor: '#0097D9', scale: 0.9},
         {label: 'Open API\nFramework', align: 'right', xOffset: -24, yOffset: -18, color: '#0097D9', textColor: '#0097D9', scale: 0.9},
       ];
-        angleModifier = .75;
+        angleModifier = 1;
       break;
     default:
       icons = [
@@ -280,7 +286,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
       }
       setCurrentURL(url);
-
+      
       switch (buttonPressed) {
         case 0:
           if (Platform.OS === 'ios') {
@@ -315,25 +321,30 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           setLogosVisible(true);
           break;
         case 4:
+          navigation.navigate('AI_DA', {initial_screen: initial_screen});
+          break;
+        case 5:
           navigation.navigate('Offerings', { initial_screen: initial_screen });
           break;
-        case 5: // Industries
+        case 6: // Industries
           navigation.navigate('Industries', { initial_screen: initial_screen });
           break;
-        case 6:
-          // Special case here, if the button is the AI.DA button, then navigate to the AI.DA screen
-          // If
-
-          if (Platform.OS === 'ios') {
-            setShowBrowser(true);
-          } else{
-            Linking.canOpenURL(url).then(supported => {
-              if (supported) {
-                Linking.openURL(url);
-              } else {
-                console.log("Don't know how to open URI: " + url);
-              }
-            });
+        case 7:
+          // Special case here, if the button is the AI Impact button, then navigate to the AI screen
+          if (index === 2) {
+            navigation.navigate('AI');
+          }else {
+            if (Platform.OS === 'ios') {
+              setShowBrowser(true);
+            } else{
+              Linking.canOpenURL(url).then(supported => {
+                if (supported) {
+                  Linking.openURL(url);
+                } else {
+                  console.log("Don't know how to open URI: " + url);
+                }
+              });
+            }
           }
           break;
         default:

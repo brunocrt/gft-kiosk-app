@@ -124,15 +124,15 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',  // Ensure content inside this is right-aligned.
     },
     statsWrapper: {
-        alignItems: 'flex-start',
+        alignItems: 'flex-end',
         borderColor: 'black',
         borderWidth: 1,
     },
     header: {
         flexWrap: 'wrap',
-        width: '95%',
+        width: '100%',
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'felx-end',
         alignItems: 'flex-end',
         backgroundColor: 'transparent',
         marginBottom: 10,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'Calibri',
         fontWeight: 'bold',
-        alignSelf: 'center',  
+        alignSelf: 'right',  
         textAlign: 'right',
         borderColor: 'blue',
         borderWidth: 1,

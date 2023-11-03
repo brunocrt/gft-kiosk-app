@@ -18,14 +18,9 @@
     "label": "Automation",
     "subcategories": [
       {
-        "title": "Hyperautomation",
+        "title": "Hyperautomation & Digital Back Office",
         "text": "Hyperautomation is the combination of Robotic Process Automation (RPA), Artificial Intelligence, Machine Learning, and also Intelligent Business Process Management (IBPM) technologies. RPA stands as the core element of hyperautomation, always working in conjunction with artificial intelligence, Data Analytics, Process/Task Mining, and process governance in this context. By leveraging all of these components, the financial market has witnessed a transformation marked by error reduction, diminished operational costs, minimized management risk, enhanced process control, and scalability. Today, automation is no longer an option but rather a strategic tool for a company to remain competitive in the market.",
         "image": "./assets/industries_bg.jpg"
-      },
-      {
-        "title": "Digital Back Office",
-        "text": "More informational text...",
-        "image": "./offerings_content_images/placeholder.png"
       }
     ]
   },

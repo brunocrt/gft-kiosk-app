@@ -153,13 +153,13 @@ const styles = StyleSheet.create({
         borderTopWidth: 1,
     },
     statistic: {
-        fontSize: 16,
+        fontSize: 18,
         marginTop: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
     },
     subText: {
-        fontSize: 10,
+        fontSize: 12,
         marginVertical: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',

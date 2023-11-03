@@ -10,25 +10,23 @@ const GlobalUIWrapper = ({ children, backgroundImage }) => {
   const date = new Date().toLocaleDateString();
   const site = '> gft.com';
   return (
-    <SafeAreaView style={{flex: 1}}> {/* Use SafeAreaView as the outermost wrapper */}
-        <View style={styles.wrapper}>
-            <View style={styles.topBar}>
-                <Text style={styles.slogan}>Shaping the{'\n'}future of digial{'\n'}business</Text>
-                <Image source={logoImage} style={styles.logo} />
-            </View>
-            <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-            
-            {children}
-
-            </ImageBackground>
-            <View style={styles.bottomBar}>
-                <Text style={styles.websiteLink}>
-                  {site}
-                </Text>
-            <Text style={styles.date}>{date}</Text>
-            </View>
+    <View style={styles.wrapper}>
+        <View style={styles.topBar}>
+            <Text style={styles.slogan}>Shaping the{'\n'}future of digial{'\n'}business</Text>
+            <Image source={logoImage} style={styles.logo} />
         </View>
-            </SafeAreaView>
+        <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+        
+        {children}
+
+        </ImageBackground>
+        <View style={styles.bottomBar}>
+            <Text style={styles.websiteLink}>
+              {site}
+            </Text>
+        <Text style={styles.date}>{date}</Text>
+        </View>
+    </View>
   );
 };
 

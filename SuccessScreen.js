@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, ScrollView, Animated, ImageBackground, Easing, Modal } from 'react-native';
 import { useScrollToTop } from '@react-navigation/native';
 import { Swipeable } from 'react-native-gesture-handler';
+import SuccessScreenButton from './SuccessScreenButton';
+
 
 import success_content from './assets/success_content.json';
 import NavigationButtons from './NavigationButtons';
@@ -85,6 +87,11 @@ export default function IndustriesScreen({ route, navigation }) {
         }).start();
     }, []);
     
+    const [showBrowser, setShowBrowser] = useState(false);
+
+    const handleLinkPress = () => {
+        setShowBrowser(true);
+    };
     
 
     const renderItem = ({ item, index }) => (
@@ -248,6 +255,11 @@ export default function IndustriesScreen({ route, navigation }) {
                                             ))}
 
                                             </Animated.View>
+                                            
+                                            <SuccessScreenButton 
+                                                url={success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].url}
+                                                text={"Read more about this success story here ->"}
+                                            />
                                         </View>
                                     </ImageBackground>
                                 </View>

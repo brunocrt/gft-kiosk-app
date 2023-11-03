@@ -133,6 +133,7 @@ const styles = StyleSheet.create({
         borderColor: 'black',
     },
     header: {
+        flexWrap: 'wrap',
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'flex-end',

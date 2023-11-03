@@ -11,7 +11,7 @@ import NavigationButtons from './NavigationButtons';
 const bgImage = require('./assets/offerings_content_bg.jpg');  // Update with the correct path
 const iconSize=75;
 
-export default function IndustriesScreen({ route, navigation }) {
+export default function SuccessScreen({ route, navigation }) {
 
     const swipeAnimation = React.useRef(new Animated.Value(0)).current;
 

@@ -141,6 +141,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
     },
     headerText: {
+        flexWrap: 'wrap',
         fontSize: 18,
         fontFamily: 'Calibri',
         fontWeight: 'bold',

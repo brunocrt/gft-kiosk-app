@@ -82,7 +82,7 @@ export default function IndustriesScreen({ route, navigation }) {
             toValue: 1,
             delay: 300,
             duration: 700,
-            useNativeDriver: true,
+            useNativeDriver: false,
             easing: Easing.out(Easing.cubic),
         }).start();
     }, []);

@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'flex-end',  // Align children to the right.
+        alignItems: 'center',  // Align children to the right.
         justifyContent: 'center',
         backgroundColor: 'transparent',
     },

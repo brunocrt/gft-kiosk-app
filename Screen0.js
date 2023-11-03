@@ -9,6 +9,7 @@ import LogosVisible from './LogosVisible';
 import StatsComponent from './StatsComponent';
 import LinkButton from './LinkButton';
 import LinkImage from './LinkImage';
+import SideNavigation from './SideNavigation';
 import NavigationButtons from './NavigationButtons'; // Adjust the path as needed
 
 const Screen0 = ({ navigation }) => {
@@ -52,7 +53,7 @@ const Screen0 = ({ navigation }) => {
         {label: 'COMPETENCIES & CREDENTIALS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
         {label: 'GFT + AWS SUCCESS STORIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
         {label: 'GFT PARTNERS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
-        {label: 'GFT OFFERINGS', color: 'white', textColor: 'black', borderColor: '#B02A87', fontSize: 32,},
+        {label: 'GFT OFFERINGS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
         {label: 'INDUSTRIES', color: '#213E7F', textColor: 'white', borderColor: 'white', fontSize: 32,},
         {label: 'GFT + AWS SOLUTIONS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
         {label: 'GFT TECHNOLOGIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
@@ -131,8 +132,10 @@ const Screen0 = ({ navigation }) => {
                 break;
             case 3:
                 setLogosVisible(true);
+                setBackgroundImg(require('./assets/partners_bg.png'));
                 break;
             case 4:
+                setBackgroundImg(require('./assets/offerings_bg.png'));
                 break;
             case 5: // Industries
                 setBackgroundImg(require('./assets/industries_bg.jpg'));
@@ -156,6 +159,13 @@ const Screen0 = ({ navigation }) => {
   return (
     <GlobalUIWrapper backgroundImage={backgroundImg}>
         <View style={styles.container}>
+            <View style={{
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+            }}>
+                {<LogosVisible startAnimation={true} circleSize={buttonWidth * 1.5 + 50} />}
+            </View>
             <View style={styles.graphicsContainerLeft}>
 
             {renderStatsComponent && <StatsComponent onAnimationEnd={handleHideStatsComponent} display={displayInfo} />}
@@ -164,10 +174,7 @@ const Screen0 = ({ navigation }) => {
             <View style={styles.options}>
 
 
-
-            
-            {logosVisible && <LogosVisible startAnimation={true} />}
-
+ 
             {activeCircle === 'start' && <InitialCircle                 
                 radius={radius}
                 navigation={navigation} 
@@ -291,7 +298,7 @@ const styles = StyleSheet.create({
         width: '20%',
     },
     options: {
-        flex: 1,
+        
         width: '60%',
         height: '100%',
         flexDirection: 'column',

@@ -41,7 +41,7 @@ export default function IndustriesScreen({ route, navigation }) {
         Animated.timing(swipeAnimation, {
             toValue: direction, // 1 for right, -1 for left
             duration: 250,
-            useNativeDriver: false,
+            useNativeDriver: true,
         }).start(() => {
             swipeAnimation.setValue(0); // Reset the animation value
     
@@ -82,7 +82,7 @@ export default function IndustriesScreen({ route, navigation }) {
             toValue: 1,
             delay: 300,
             duration: 700,
-            useNativeDriver: false,
+            useNativeDriver: true,
             easing: Easing.out(Easing.cubic),
         }).start();
     }, []);

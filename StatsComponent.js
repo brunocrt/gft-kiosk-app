@@ -112,12 +112,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'flex-start',  // Align children to the right.
-        justifyContent: 'center',
+        alignItems: 'flex-start', 
+        justifyContent: 'flex-end',
         backgroundColor: 'transparent',
     },
     wrapper: {  
-        top: 20,
+        bottom: 20,
         left: 20,
         width: '80%',
         backgroundColor: 'transparent',

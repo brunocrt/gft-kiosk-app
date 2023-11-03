@@ -1,37 +1,84 @@
+// SideNavigation.js
 import React from 'react';
-import { View, TouchableOpacity, Image } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-// Assuming you're using React Navigation
-import { useNavigation } from '@react-navigation/native';
+const SideNavigation = ({ selectedIcon, setSelectedIcon }) => {
+    const icons = [
+        'GFT + AWS Offerings', 
+        'Competencies & Credentials', 
+        'Success Stories', 
+        'Partners', 
+        'Offerings', 
+        'Industries', 
+        'Solutions'
+    ];
 
-const SideNavigation = ({ onHomeStateChange, icons, activeState, currentScreen }) => {
-  const navigation = useNavigation();
-
-  const handleIconPress = (index) => {
-    if (currentScreen === 'Home' && index !== activeState) {
-      onHomeStateChange(index);
-    } else if (currentScreen !== 'Home') {
-      navigation.navigate('Home', { initialState: index });
-    }
+  const handlePress = (index) => {
+    setSelectedIcon(index);
   };
 
+    // The selected icon will have a background color of #213E7F, otherwise it will be transparent with black colored text and black border
+    // However, if the current selectedIcon is 5, then the background color of the selected icon will be white, otherwise it will be transparent with white colored text and white border
+    // The following function will return the appropriate style object based on the index of the icon
+    const getStyle = (index) => {
+        if (selectedIcon === index) {
+            return {
+                backgroundColor: '#213E7F',
+                color: 'white',
+                borderColor: 'white',
+                borderWidth: 1,
+            };
+        } else {
+            return {
+                backgroundColor: 'white',
+                color: 'black',
+                borderColor: 'black',
+                borderWidth: 1,
+            };
+        }
+    };
+
+
+
   return (
-    <View style={{ flexDirection: 'column', alignItems: 'center' }}>
-      {icons.map((icon, index) => (
-        <TouchableOpacity 
-          key={index} 
-          onPress={() => handleIconPress(index)}
-          disabled={index === activeState}
-          style={{
-            backgroundColor: index === activeState ? 'blue' : 'transparent', // Change 'blue' to your preferred color
-            marginVertical: 10,
-          }}
+    <View style={styles.container}>
+      {icons.map((iconText, index) => (
+        <TouchableOpacity
+          key={index}
+          style={[
+            styles.button,
+            getStyle(index),
+          ]}
+          onPress={() => handlePress(index)}
         >
-          <Image source={icon.source} style={{ width: 50, height: 50 }} />
+          <Text style={styles.text}>{iconText}</Text>
         </TouchableOpacity>
       ))}
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    position: 'absolute',
+    right: 30,
+    top: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
+    marginVertical: 10,
+    width: 60,
+    height: 60,
+    borderRadius: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    textAlign: 'center',
+    flexWrap: 'wrap',
+    fontSize: 10,
+  },
+});
 
 export default SideNavigation;

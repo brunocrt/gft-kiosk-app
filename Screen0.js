@@ -124,11 +124,13 @@ const Screen0 = ({ navigation }) => {
         
         switch (index) {
             case 0:
+                setBackgroundImg(require('./assets/background.png'));
                 break;
             case 1:
                 setDisplayInfo(true);
                 break;
             case 2:
+                setBackgroundImg(require('./assets/background.png'));
                 break;
             case 3:
                 setLogosVisible(true);
@@ -141,6 +143,7 @@ const Screen0 = ({ navigation }) => {
                 setBackgroundImg(require('./assets/industries_bg.jpg'));
                 break;
             case 6:
+                setBackgroundImg(require('./assets/background.png'));
                 break;
             default:
                 setBackgroundImg(require('./assets/background.png'));
@@ -164,7 +167,7 @@ const Screen0 = ({ navigation }) => {
                 width: '100%',
                 height: '100%',
             }}>
-                {<LogosVisible startAnimation={true} circleSize={buttonWidth * 1.5 + 50} />}
+                {logosVisible && <LogosVisible startAnimation={true} circleSize={buttonWidth * 1.5 + 50} />}
             </View>
             <View style={styles.graphicsContainerLeft}>
 
@@ -263,6 +266,12 @@ const Screen0 = ({ navigation }) => {
             <View style={styles.graphicsContainerRight}>
  
             </View>
+
+            <SideNavigation
+                selectedIcon={selectedIcon}
+                setSelectedIcon={handleButtonPress}
+            />
+
           {/* Bottom Buttons */}
             <View style={styles.bottomButtons}>
                 <TouchableOpacity onPress={() => {reverseOnButtonPress(7)}} style={styles.smallButton}>

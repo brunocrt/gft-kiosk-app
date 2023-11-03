@@ -119,9 +119,9 @@ const styles = StyleSheet.create({
     wrapper: {  
         top: 20,
         left: 20,
-        width: '80%',
+        width: '100%',
         backgroundColor: 'transparent',
-        alignItems: 'flex-end',  // Ensure content inside this is right-aligned.
+        alignItems: 'center',  // Ensure content inside this is right-aligned.
     },
     statsWrapper: {
         alignItems: 'flex-end',

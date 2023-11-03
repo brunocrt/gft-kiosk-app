@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     },
     header: {
         flexWrap: 'wrap',
-        width: '100%',
+        width: '95%',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'flex-end',

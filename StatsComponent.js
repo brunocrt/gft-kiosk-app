@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         width: '100%',
         flexDirection: 'row',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         backgroundColor: 'transparent',
         borderWidth: 1,
         borderColor: 'red',

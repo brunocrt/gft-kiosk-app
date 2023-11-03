@@ -157,6 +157,8 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',  // Align children to the right.
     },
     bodyRow: {
+        
+        flexWrap: 'wrap',
         width: '100%',
         flexDirection: 'column',
         alignItems: 'flex-end',

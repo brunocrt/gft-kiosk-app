@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'flex-start', 
+        
         justifyContent: 'flex-end',
         backgroundColor: 'transparent',
     },

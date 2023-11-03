@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         backgroundColor: 'transparent',
+        marginBottom: 10,
         borderBottomColor: 'black',
         borderBottomColor: 1,
     },

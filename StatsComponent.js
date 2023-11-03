@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'Calibri',
         fontWeight: 'bold',
-        textAlign: 'right',
+        textAlign: 'justify',
         borderColor: 'blue',
         borderWidth: 1,
     },

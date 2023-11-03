@@ -196,7 +196,7 @@ export default function SuccessScreen({ route, navigation }) {
     
                     <View style={styles.contentWrapper}>
                         <View style={styles.content}>
-                            <Text style={styles.headerStyle}>{success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].header}</Text>
+                            <Text style={styles.headerStyle}>{success_content[selectedCategoryIndex].subcategories[0].subheaders[selectedSubCategoryIndex]}</Text>
                             <View style={styles.innerContentWrapper}>    
                                 <View ref={ref} style={styles.contentTextContainer}>
                                     {/* Dynamically rendering text elements */}

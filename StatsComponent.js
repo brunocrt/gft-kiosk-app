@@ -120,10 +120,10 @@ const styles = StyleSheet.create({
         top: 20,
         width: '80%',
         backgroundColor: 'transparent',
-        alignItems: 'flex-end',  // Ensure content inside this is right-aligned.
+        alignItems: 'flex-start',  // Ensure content inside this is right-aligned.
     },
     statsWrapper: {
-        alignItems: 'flex-end',
+        alignItems: 'flex-start',
     },
     header: {
         width: '100%',

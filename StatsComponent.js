@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         alignItems: 'flex-start', 
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         backgroundColor: 'transparent',
     },
     wrapper: {  

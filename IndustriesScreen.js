@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, ScrollView, Animated } from 'react-native';
+import { View, Text, Image, ImageBackground, StyleSheet, TouchableOpacity, ScrollView, Animated } from 'react-native';
 import { useScrollToTop } from '@react-navigation/native';
 import { Swipeable } from 'react-native-gesture-handler';
 
@@ -116,9 +116,19 @@ export default function IndustriesScreen({ route, navigation }) {
     );
     
     return (
-        <View style={styles.backgroundImageContainer}>
+        <ImageBackground style={styles.backgroundImageContainer} source={bgImage}>
     
                 <View style={styles.iconBar}>
+                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={true} 
+                        style={{
+                            padding: 10,
+                        }} 
+                    >
+                    <View style={{
+                        justifyContent: 'space-evenly',
+                        alignSelf: 'center',
+                        flexDirection: 'row',
+                    }}>
                     {icons.map((icon, index) => (
                         <TouchableOpacity 
                             key={index} 
@@ -156,6 +166,8 @@ export default function IndustriesScreen({ route, navigation }) {
                                 </View>
                         </TouchableOpacity>
                     ))}
+                    </View>
+                    </ScrollView>
                 </View>
     
                 
@@ -187,7 +199,7 @@ export default function IndustriesScreen({ route, navigation }) {
     
                     <View style={styles.contentWrapper}>
                         <View style={styles.content}>
-                            <h1 style={styles.headerStyle}>{industries_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</h1>
+                            <Text style={styles.headerStyle}>{industries_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</Text>
                             <View style={styles.innerContentWrapper}>    
                                 {industries_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].image && (
                                     <Image 
@@ -217,7 +229,7 @@ export default function IndustriesScreen({ route, navigation }) {
 
                 </View>
             </View>
-        </View>
+        </ImageBackground>
     );
     }
     
@@ -227,7 +239,6 @@ export default function IndustriesScreen({ route, navigation }) {
             backgroundColor: 'transparent',
             width: '100%',
             height: '100%',
-            backgroundImage: `url(${bgImage})`,  // or use backgroundImage: bgImage if you're using inline styles
             backgroundSize: 'cover',
             backgroundPosition: 'center',
         },
@@ -237,7 +248,6 @@ export default function IndustriesScreen({ route, navigation }) {
       iconBar: {
         flexDirection: 'row',
         alignSelf: 'center',
-        justifyContent: 'space-between',
         paddingHorizontal: 20,
         paddingVertical: 14,
         width: '80%',
@@ -251,6 +261,7 @@ export default function IndustriesScreen({ route, navigation }) {
             justifyContent: 'center',
             opacity: 0.7,
             width: 90,
+            marginHorizontal: 15,
         },
         selectedIconContainer: {
             opacity: 1,
@@ -383,6 +394,7 @@ export default function IndustriesScreen({ route, navigation }) {
       },
       headerStyle: {
         color: 'white',
+        fontSize: 30,
         fontFamily: 'Arial',
         alignSelf: 'center',
         textTransform: 'uppercase',

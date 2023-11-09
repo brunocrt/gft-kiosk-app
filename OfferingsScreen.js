@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, ScrollView, Animated } from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, ScrollView, Animated, ImageBackground } from 'react-native';
 import { useScrollToTop } from '@react-navigation/native';
 import { Swipeable } from 'react-native-gesture-handler';
 
@@ -24,6 +24,7 @@ const iconSize=75;
 
 export default function OfferingsScreen({ route, navigation }) {
     
+    console.log(navigation)
     const swipeAnimation = React.useRef(new Animated.Value(0)).current;
 
 
@@ -104,9 +105,23 @@ const renderItem = ({ item, index }) => (
 );
 
   return (
-    <View style={styles.backgroundImageContainer}>
+    <ImageBackground style={styles.backgroundImageContainer} source={bgImage}>
 
             <View style={styles.iconBar}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={true} 
+                        style={{
+                            borderRightWidth: 1,
+                            borderRightColor: 'gray',
+                            borderLeftWidth: 1,
+                            borderLeftColor: 'gray',
+                            margin: 10,
+                        }} 
+                    >
+                    <View style={{
+                        justifyContent: 'space-evenly',
+                        alignSelf: 'center',
+                        flexDirection: 'row',
+                    }}>
                 {icons.map((icon, index) => (
                     <TouchableOpacity 
                         key={index} 
@@ -140,6 +155,8 @@ const renderItem = ({ item, index }) => (
                             </View>
                     </TouchableOpacity>
                 ))}
+                </View>
+                </ScrollView>
             </View>
 
             
@@ -162,10 +179,7 @@ const renderItem = ({ item, index }) => (
                     keyExtractor={(item, index) => String(index)}
                     style={[
                         styles.subCategoriesList,
-                        { transform: [{ translateX: swipeAnimation.interpolate({
-                            inputRange: [-1, 1],
-                            outputRange: [-50, 50]  // Change this to adjust the amount of translation
-                        }) }] }
+                        
                     ]}
                 />
                 </View>
@@ -184,7 +198,7 @@ const renderItem = ({ item, index }) => (
 
                 <View style={styles.contentWrapper}>
                     <View style={styles.content}>
-                        <h1 style={styles.headerStyle}>{offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</h1>
+                        <Text style={styles.headerStyle}>{offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].title}</Text>
                         <View style={styles.innerContentWrapper}>    
                             {/* {offerings_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].image && (
                                 <Image 
@@ -214,7 +228,7 @@ const renderItem = ({ item, index }) => (
 
             </View>
         </View>
-    </View>
+    </ImageBackground>
 );
 }
 
@@ -224,7 +238,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         width: '100%',
         height: '100%',
-        backgroundImage: `url(${bgImage})`,  // or use backgroundImage: bgImage if you're using inline styles
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     },
@@ -234,7 +247,6 @@ const styles = StyleSheet.create({
   iconBar: {
     flexDirection: 'row',
     alignSelf: 'center',
-    justifyContent: 'space-between',
     paddingHorizontal: 20,
     paddingVertical: 14,
     width: '70%',
@@ -248,6 +260,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         opacity: 0.7,
         width: 90,
+        marginHorizontal: 20,
     },
     selectedIconContainer: {
         opacity: 1,
@@ -378,6 +391,7 @@ selectedSubCategoryText: {
   },
   headerStyle: {
     color: 'white',
+    fontSize: 30,
     fontFamily: 'Arial',
     alignSelf: 'center',
     textTransform: 'uppercase',

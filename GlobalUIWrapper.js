@@ -1,7 +1,6 @@
 // GlobalUIWrapper.js
 import React, { useContext } from 'react';
-import { View, Image, Text, StyleSheet, ImageBackground } from 'react-native';
-import { SafeAreaView } from 'react-native-web';
+import { View, Image, Text, StyleSheet, ImageBackground, SafeAreaView  } from 'react-native';
 
 const logoImage = require('./assets/logo_gft.png');
 const backgroundImage = require('./assets/background.png');
@@ -9,26 +8,25 @@ const backgroundImage = require('./assets/background.png');
 
 const GlobalUIWrapper = ({ children, backgroundImage }) => {
   const date = new Date().toLocaleDateString();
-  
+  const site = '> gft.com';
   return (
-    
-        <View style={styles.wrapper}>
-            <View style={styles.topBar}>
-                <Text style={styles.slogan}>Shaping the{'\n'}future of digial{'\n'}business</Text>
-                <Image source={logoImage} style={styles.logo} />
-            </View>
-            <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-            
-            {children}
-
-            </ImageBackground>
-            <View style={styles.bottomBar}>
-                <Text style={styles.websiteLink}>
-                {'>'} gft.com
-                </Text>
-            <Text style={styles.date}>{date}</Text>
-            </View>
+    <View style={styles.wrapper}>
+        <View style={styles.topBar}>
+            <Text style={styles.slogan}>Shaping the{'\n'}future of digial{'\n'}business</Text>
+            <Image source={logoImage} style={styles.logo} />
         </View>
+        <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+        
+        {children}
+
+        </ImageBackground>
+        <View style={styles.bottomBar}>
+            <Text style={styles.websiteLink}>
+              {site}
+            </Text>
+        <Text style={styles.date}>{date}</Text>
+        </View>
+    </View>
   );
 };
 

@@ -7,7 +7,7 @@ const NavigationButtons = ({ navigation }) => {
     return (
         <View style={styles.bottomButtons}>
             <TouchableOpacity 
-                onPress={() => navigation.navigate("Home")}
+                onPress={() => navigation.goBack()}
                 style={styles.smallButton}
             >
                 <Text>Back</Text>

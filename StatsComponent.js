@@ -97,152 +97,84 @@ const StatsComponent = ({ onAnimationEnd, display }) => {
                     <Text style={styles.statistic}>170{'\n'}engagements</Text>
                     <Text style={styles.subText}>currently with AWS</Text>
                 </View>
-
-
-                   
-
-
-
             </View>
             
         </Animated.View>
             
         </View>
 
-        <View style={styles.bottomWrapper} >
-                <View style={{
-                    width: '100%',
-                    height: '80%',
-                    flexDirection: 'row',
-                    alignItems: 'flex-end',
-                    marginTop: '10%',
-                }}>
-                    <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023')}
-                    style={{
-                        width: 180,
-                        height: 180,
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        margin: 20,
-                        marginLeft: '10%',
-                    }}
-                    >
-                        <Animated.Image
-                            style={{ 
-                                opacity: fadeInOpacityImage,
-                                transform: [{ translateX: translateXValueImage }],
-                                flex: 1,
-                            }}
-                            source={require('./assets/competencies/quadrant.png')}
-                            resizeMode="contain"
-                        />
-                       <Animated.Text style={{ 
-                                opacity: fadeInOpacityImage,
-                                transform: [{ translateX: translateXValueImage }],
-                                alignSelf: 'center',
-                            }}>View details on GFT</Animated.Text>
-                    </TouchableOpacity> 
-                    <TouchableOpacity onPress={() => Linking.openURL('https://www.gft.com/us/en/news/import/press-and-news/2023/Press-releases/gft-improves-its-leader-ranking-in-the-2023-spark-matrix-for-digital-banking-services')}
-                    style={{ 
-                        width: 200,
-                        height: 180,
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        margin: 20,
-                    }}
-                    >
-                        <Animated.Image
-                            style={{ 
-                                opacity: fadeInOpacityImage,
-                                transform: [{ translateX: translateXValueImage }],
-                                flex: 1,
-                                borderColor: 'black',
-                                borderWidth: 1,
-                                backgroundColor: 'white',
-                            }}
-                            source={require('./assets/competencies/peak.png')}
-                            resizeMode="contain"
-                        />
-                        <Animated.Text style={{ 
-                                opacity: fadeInOpacityImage,
-                                transform: [{ translateX: translateXValueImage }],
-                                alignSelf: 'center',
-                            }}>View details on GFT</Animated.Text>
-                    </TouchableOpacity> 
-                </View>
-            </View>
-
+        
     </View>
   );
 };
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%',
-        height: '100%',
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        alignSelf: 'right',
-        backgroundColor:'transparent',
-    },
-    wrapper: {
         flex: 1,
         flexDirection: 'column',
-        alignSelf: 'right',
-        backgroundColor:'transparent',
-        paddingRight: '5%',
-        paddingLeft: '20%',
+        alignItems: 'flex-start', 
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+    },
+    wrapper: {  
+        top: 20,
+        left: 20,
+        width: '80%',
+        backgroundColor: 'transparent',
+        alignItems: 'flex-start',  // Ensure content inside this is right-aligned.
     },
     statsWrapper: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        alignSelf: 'right',
-        top: '10%',
+        alignItems: 'flex-end',
     },
     header: {
+        flexWrap: 'wrap',
         width: '100%',
-        justifyContent: 'center',
-        backgroundColor:'transparent',
+        flexDirection: 'row',
+        justifyContent: 'felx-end',
+        alignItems: 'flex-end',
+        backgroundColor: 'transparent',
+        marginBottom: 10,
+        borderBottomColor: 'black',
+        borderBottomColor: 1,
     },
     headerText: {
-        fontSize: 30,
+        flexWrap: 'wrap',
+        fontSize: 18,
         fontFamily: 'Calibri',
         fontWeight: 'bold',
+        alignSelf: 'right',  
         textAlign: 'right',
     },
     body: {
-        flex: 1,
-        height: '80%',
         width: '100%',
         flexDirection: 'column',
-        alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor:'transparent',
+        backgroundColor: 'transparent',
+        alignItems: 'flex-end',  // Align children to the right.
     },
     bodyRow: {
-        flex: 1,
         width: '100%',
         flexDirection: 'column',
-        alignItems: 'left',
+        alignItems: 'flex-end',
         borderTopColor: 'black',
         borderTopWidth: 1,
-        justifyContent: 'flex-start',
     },
     statistic: {
-        fontSize: 36,
+        fontSize: 18,
         marginTop: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
     },
     subText: {
-        fontSize: 16,
+        flexWrap: 'wrap',
+        fontSize: 12,
         marginVertical: 10,
         fontFamily: 'Calibri',
         textAlign: 'right',
     },
     bottomWrapper: {
-        flex: 1,
-        flexDirection: 'row',
+        flexDirection: 'column',
+        bottom: 40,
     },
 });
 

@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Collaboration",
+    "subcategories": [
+      {
+        "title": "Business Agility",
+        "text": "The GFT Business Agility Center (BAC) is our specialized hub for agile practices, values, and culture. We have over 300 agilists deployed in more than 100 projects across clients from different business segments. Our main services include:",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "API & Integration",
+        "text": "GFT offers a comprehensive portfolio of services to address all aspects related to the connectivity of your technological environment with internal systems, partners, and open channels. We can provide support at every stage of the API lifecycle, from Discovery to Delivery, with specialized architects and developers. This ensures governance and applies security practices in compliance with the most widely accepted market standards and protocols.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  },
+  {
+    "label": "Automation",
+    "subcategories": [
+      {
+        "title": "Hyperautomation & Digital Back Office",
+        "text": "Hyperautomation is the combination of Robotic Process Automation (RPA), Artificial Intelligence, Machine Learning, and also Intelligent Business Process Management (IBPM) technologies. RPA stands as the core element of hyperautomation, always working in conjunction with artificial intelligence, Data Analytics, Process/Task Mining, and process governance in this context. By leveraging all of these components, the financial market has witnessed a transformation marked by error reduction, diminished operational costs, minimized management risk, enhanced process control, and scalability. Today, automation is no longer an option but rather a strategic tool for a company to remain competitive in the market.",
+        "image": "./assets/industries_bg.jpg"
+      }
+    ]
+  },
+  {
+    "label": "Digital Assets",
+    "subcategories": [
+      {
+        "title": "SaaS Solutions",
+        "text": "Open Business as a Service GO!BaaS, harnesses the full potential of Open Finance and Open Insurance. It's your all-in-one solution for regulation, optimization, and monitoring, built on our national and international expertise in Open Finance.\n\nGO!Dash, powered by Business Intelligence (BI) and Artificial Intelligence (AI), drives product strategies based on Open Finance movement data.\n\nGO!Quality, a platform for verifying the quality of data within the Open Finance ecosystem, ensuring correct adherence to regulatory standards.\n\nGO!Client, a platform to accelerate your strategy for handling and defending consent operations within the Open Finance ecosystem, seamlessly integrated with Salesforce.",
+        "image": "./offerings_content_images/placeholder.png"
+      },
+      {
+        "title": "Accelerator Components",
+        "text": "OAF - Open API Framework: An accelerating solution for open APIs developed in partnership with AWS. It manages and enables monetization of your APIs through a secure and intuitive management interface, including a developer portal and a management portal.\n\nMood Sensor: A solution that enhances talent management using AI, allowing you to gauge employee satisfaction levels, alerting about imminent turnover risks, and more.\n\nCybercheck: Professional cybersecurity services, offering assessments and security strategies through leading market solutions. With a complete and trained team, GFT can help you quantify and understand your risks, enhance your team's resources, detect and respond to threats, and unify your company's security priorities to accelerate transformation.",
+        "image": "./offerings_content_images/placeholder.png"
+      }
+    ]
+  }
+]

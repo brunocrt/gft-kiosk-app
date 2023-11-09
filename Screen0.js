@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Image, View, TouchableOpacity, Text, Animated, StyleSheet, Easing, Dimensions, SafeAreaView, StatusBar } from 'react-native';
+import { Image, View, TouchableOpacity, Text, Animated, StyleSheet, Easing, Dimensions, SafeAreaView, Linking } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 
 import GlobalUIWrapper from './GlobalUIWrapper';
@@ -7,21 +7,22 @@ import InitialCircle from './InitialCircle';
 import AnimatedCircle from './AnimatedCircle';
 import LogosVisible from './LogosVisible';
 import StatsComponent from './StatsComponent';
-import SuccessStoriesButton from './SuccessStoriesButton';
+import LinkButton from './LinkButton';
+import LinkImage from './LinkImage';
+import SideNavigation from './SideNavigation';
 import NavigationButtons from './NavigationButtons'; // Adjust the path as needed
 
 const Screen0 = ({ navigation }) => {
     const [backgroundImg, setBackgroundImg] = useState(require('./assets/background.png')); // default image
     const [logosVisible, setLogosVisible] = useState(false);
 
-
-    const [buttonWidth, setButtonWidth] = useState(0);
-    const [radius, setRadius] = useState(0);
-    const [selectedIcon, setSelectedIcon] = useState(7);
+    console.log(navigation)
+    const [selectedIcon, setSelectedIcon] = useState(8);
 
     const [activeCircle, setActiveCircle] = useState('start');
     
-    const scale = 0.35;
+    const buttonWidth = 300;
+    const radius = buttonWidth / 2;
 
     // Stats component
     const [displayInfo, setDisplayInfo] = useState(false);
@@ -32,49 +33,31 @@ const Screen0 = ({ navigation }) => {
         setDisplayInfo(false);
     }
     };
-
-    const [showStoriesButton, setShowStoriesButton] = useState(false);
-    const [renderButton, setRenderButton] = useState(false);
-    const handleHideButtonComponent = () => {
-    if (renderButton) {
-        // Tell the StatsComponent to start the 'out' animations
-        setShowStoriesButton(true);
-    }
-    };
     useEffect(() => {
 
         if (navigation.params?.reset) {
           // Reset the state to its initial values
-            reverseOnButtonPress(7);
+            reverseOnButtonPress(8);
         }
 
         if (displayInfo) {
             // If displayInfo is set to true, mount the StatsComponent
             setRenderStatsComponent(true);
             }
-        if (showStoriesButton) {
-            setRenderButton(true);
-        }
-      }, [navigation.params?.reset, displayInfo, showStoriesButton]);
+      }, [navigation.params?.reset, displayInfo]);
 
 
-    const onOptionsLayout = event => {
-        const newButtonWidth = event.nativeEvent.layout.width;
-        setButtonWidth(newButtonWidth);
-        const newRadius = (newButtonWidth * 0.5) / 2;
-        setRadius(newRadius);
-        console.log('Radius: ' + newRadius);
-      };
 
     const buttonProps = [
-        {label: 'GFT + AWS\nOFFERINGS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'COMPETENCIES\n& CREDENTIALS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 30,},
-        {label: 'GFT + AWS\nSUCCESS STORIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'GFT\nPARTNERS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'GFT\nOFFERINGS', color: 'white', textColor: 'black', borderColor: '#B02A87', fontSize: 36,},
-        {label: 'INDUSTRIES', color: '#213E7F', textColor: 'white', borderColor: 'white', fontSize: 36,},
-        {label: 'GFT + AWS\nSOLUTIONS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
-        {label: 'GFT\nTECHNOLOGIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 36,},
+        {label: 'GFT + AWS OFFERINGS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
+        {label: 'COMPETENCIES & CREDENTIALS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
+        {label: 'GFT + AWS SUCCESS STORIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
+        {label: 'GFT PARTNERS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
+        {label: 'AI.DA MARKETPLACE', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,}, // AI.DA Marketplace placeholder
+        {label: 'GFT OFFERINGS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
+        {label: 'INDUSTRIES', color: '#213E7F', textColor: 'white', borderColor: 'white', fontSize: 32,},
+        {label: 'GFT + AWS SOLUTIONS', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
+        {label: 'GFT TECHNOLOGIES', color: 'white', textColor: 'black', borderColor: '#213E7F', fontSize: 32,},
       ];
 
       const flipAnim = useRef(new Animated.Value(0)).current;
@@ -138,26 +121,32 @@ const Screen0 = ({ navigation }) => {
 
     const handleButtonPress = (index) => {
         console.log('Button pressed: ' + index);
-        startFlipAnimation(index, 'update');
+            startFlipAnimation(index, 'update');
         
         switch (index) {
             case 0:
+                setBackgroundImg(require('./assets/background.png'));
                 break;
             case 1:
                 setDisplayInfo(true);
                 break;
             case 2:
-                setShowStoriesButton(true);
+                setBackgroundImg(require('./assets/background.png'));
                 break;
             case 3:
                 setLogosVisible(true);
+                setBackgroundImg(require('./assets/partners_bg.png'));
                 break;
-            case 4:
+            case 4: // AI.DA Marketplace
                 break;
-            case 5: // Industries
+            case 5:
+                setBackgroundImg(require('./assets/offerings_bg.png'));
+                break;
+            case 6: // Industries
                 setBackgroundImg(require('./assets/industries_bg.jpg'));
                 break;
-            case 6:
+            case 7:
+                setBackgroundImg(require('./assets/background.png'));
                 break;
             default:
                 setBackgroundImg(require('./assets/background.png'));
@@ -168,7 +157,6 @@ const Screen0 = ({ navigation }) => {
     const reverseOnButtonPress = (index) => {
         console.log('Button pressed: ' + index);
         startFlipAnimation(index, 'start');
-        setShowStoriesButton(false);
         setLogosVisible(false);
         setDisplayInfo(false);
         setBackgroundImg(require('./assets/background.png'));
@@ -177,45 +165,24 @@ const Screen0 = ({ navigation }) => {
   return (
     <GlobalUIWrapper backgroundImage={backgroundImg}>
         <View style={styles.container}>
+            <View style={{
+                position: 'absolute',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                height: '100%',
+            }}>
+                {logosVisible && <LogosVisible startAnimation={true} circleSize={buttonWidth * 1.5 + 50} />}
+            </View>
             <View style={styles.graphicsContainerLeft}>
 
             {renderStatsComponent && <StatsComponent onAnimationEnd={handleHideStatsComponent} display={displayInfo} />}
 
             </View>
-            <View style={styles.options} onLayout={onOptionsLayout}>
-
-                <Animated.View style={[styles.middleCircle, 
-                    { 
-                        backgroundColor: buttonProps[selectedIcon].color,
-                        width: buttonWidth * scale, 
-                        height: buttonWidth * scale, 
-                        borderRadius: (buttonWidth * 0.5) / 2,
-                        borderColor: buttonProps[selectedIcon].borderColor,
-                        transform: [{ rotateY: rotateY }],
-                    }]}>
-                        <Text style={[
-                            styles.middleCircleText,
-                            {
-                                color: buttonProps[selectedIcon].textColor,
-                                fontSize: buttonProps[selectedIcon].fontSize,
-                            }
-                            ]}
-                            adjustsFontSizeToFit={true}
-
-                            >{buttonProps[selectedIcon].label}</Text>
-                </Animated.View>
-
-            </View>
+            <View style={styles.options}>
 
 
-            <View style={styles.graphicsContainerRight}>
-                {showStoriesButton && <SuccessStoriesButton onAnimationEnd={handleHideButtonComponent} display={showStoriesButton} />}
-
-            </View>
-
-            
-            {logosVisible && <LogosVisible startAnimation={true} />}
-
+ 
             {activeCircle === 'start' && <InitialCircle                 
                 radius={radius}
                 navigation={navigation} 
@@ -232,6 +199,83 @@ const Screen0 = ({ navigation }) => {
                 onIconPress={handleButtonPress}
                 activeCircle={activeCircle}
             />}
+            
+                <Animated.View style={[styles.middleCircle, 
+                    { 
+                        backgroundColor: buttonProps[selectedIcon].color,
+                        width: buttonWidth , 
+                        height: buttonWidth , 
+                        borderRadius: radius,
+                        borderColor: buttonProps[selectedIcon].borderColor,
+                        transform: [{ rotateY: rotateY }],
+                    }]}>
+                        <Text style={[
+                            styles.middleCircleText,
+                            {
+                                color: buttonProps[selectedIcon].textColor,
+                                fontSize: buttonProps[selectedIcon].fontSize,
+                                textAlign: 'center',
+                                textAlignVertical: 'center',
+                                padding: 10,
+                            }
+                            ]}
+                            adjustsFontSizeToFit={true}
+                            numberOfLines={2}
+                            minimumFontScale={0.5}
+
+                            >{buttonProps[selectedIcon].label}</Text>
+                </Animated.View>
+                
+                {selectedIcon === 1 && 
+                    <View style={{
+                        position: 'absolute',
+                        flexDirection: 'row',
+                        width: Math.PI * radius* 1.5,
+                        height: 150,
+                        justifyContent: 'space-between',
+                        alignItems: 'center',  // Center children vertically.
+                        bottom: 0,
+                    }}>
+                            <LinkImage 
+                                isVisible={selectedIcon === 1} 
+                                destinationUrl="https://www.gft.com/us/en/news/import/press-and-news/2023/Press-releases/gft-improves-its-leader-ranking-in-the-2023-spark-matrix-for-digital-banking-services" 
+                                imageSource={require('./assets/competencies/quadrant.png')} 
+                                fadeDirection="left" 
+                                width={100}
+                                height={100}
+                            />
+
+                            <LinkImage 
+                                isVisible={selectedIcon === 1} 
+                                destinationUrl="https://www.gft.com/us/en/about-us/awards-and-recognitions/everest-group-guidewire-services-2023" 
+                                imageSource={require('./assets/competencies/peak.png')} 
+                                fadeDirection="right" 
+                                width={120}
+                                height={100}
+                            />
+                    </View>
+                }
+
+                <LinkButton 
+                    isVisible={selectedIcon === 2}
+                    text="View All GFT Success Stories Here"
+                />
+            </View>
+
+
+           
+
+
+
+
+            <View style={styles.graphicsContainerRight}>
+ 
+            </View>
+
+            <SideNavigation
+                selectedIcon={selectedIcon}
+                setSelectedIcon={handleButtonPress}
+            />
 
           {/* Bottom Buttons */}
             <View style={styles.bottomButtons}>
@@ -268,7 +312,7 @@ const styles = StyleSheet.create({
         width: '20%',
     },
     options: {
-        flex: 1,
+        
         width: '60%',
         height: '100%',
         flexDirection: 'column',
@@ -282,13 +326,13 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         zIndex: 3,
         justifyContent: 'center',
-        borderWidth: 32,
+        borderWidth: 24,
     },
     middleCircleText: {
         flexShrink: 1,
         textAlign: 'center',
         fontWeight: 'bold',
-        fontFamily: 'Arial',
+        fontFamily: 'Calibri',
     },
     bottomButtons: {
         position: 'absolute',

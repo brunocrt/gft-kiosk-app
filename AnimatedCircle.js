@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, Animated, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking } from 'react-native';
+import { View, Animated, Image, TouchableOpacity, Easing, Text, StyleSheet, Linking, Platform, Button, Modal } from 'react-native';
 import { Circle, Path, G, Svg, Image as SVGImage, Text as SVGText } from 'react-native-svg';
+import { WebView } from 'react-native-webview';
 
 import industries from './assets/industries.png'
 import industries_inverted from './assets/industries_inverted.png'
@@ -34,6 +35,7 @@ import industries_icon12 from './assets/icons/government_icon.png';
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, activeCircle }) => {
+  radius = radius * 1.5;
   const animatedValue = useRef(new Animated.Value(0)).current;
   const circumference = 2 * Math.PI * radius;
 
@@ -48,7 +50,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
   let urls = [];
   let angleBetweenIcons;
   let angleOffset, angleModifier;
-  const iconSize=100;
+  const iconSize=80;
 
   switch (buttonPressed) {
     case 0: // GFT + AWS Offerings
@@ -84,7 +86,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         "https://www.gft.com/us/en/solutions/OFFERINGS/AWS-Cloud-migration",
         "https://www.gft.com/us/en/solutions/OFFERINGS/AWS-DevOps",
         "https://www.gft.com/us/en/services/banking",
-        "https://www.google.com",
+        "https://www.gft.com/us/en/solutions/competency-service-delivery/aws-guardduty",
         "https://www.gft.com/us/en/solutions/competency-service-delivery/aws-windows",
         "https://www.gft.com/us/en/solutions/competency-service-delivery/aws-elastic-kubernetes-service",
         "https://www.gft.com/us/en/solutions/competency-service-delivery/aws-relational-database-service-delivery",
@@ -131,7 +133,10 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       break;
     case 3: // Partners
       break;
-    case 4: // Offerings
+    case 4: // AI.DA
+      
+      break;
+    case 5: // Offerings
       icons = [
         offerings_icon1, 
         offerings_icon2, 
@@ -158,7 +163,7 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       ];
       angleModifier = 3.5;
       break;
-    case 5: // Industries
+    case 6: // Industries
       icons = [
         industries_icon1, 
         industries_icon2, 
@@ -189,23 +194,26 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
       ];
       angleModifier = 3;
       break;
-    case 6: // Solutions
+    case 7: // Solutions
       urls = [
         "https://www.gft.com/us/en/solutions/SOLUTIONS/BankLiteX",
         "https://www.gft.com/us/en/solutions/SOLUTIONS/BankStart",
+        "",
         "https://www.gft.com/us/en/solutions/OFFERINGS/AWS-Open-API-Framework"
       ];
       icons = [
         require('./assets/icons/migration_icon.png'), 
         require('./assets/icons/devops_icon.png'), 
+        require('./assets/icons/migration_icon.png'), 
         require('./assets/icons/financial_services_icon.png'), 
       ];
       icon_names = [
         {label: 'BankLiteX', align: 'bottom', xOffset: -12, yOffset: 108, color: '#0097D9', textColor: '#0097D9', scale: 0.85},
         {label: 'BankStart', align: 'left', xOffset: -24, yOffset: 0, color: '#0097D9', textColor: '#0097D9', scale: 0.85},
+        {label: 'AI Impact', align: 'top', xOffset: -24, yOffset: -18, color: '#0097D9', textColor: '#0097D9', scale: 0.9},
         {label: 'Open API\nFramework', align: 'right', xOffset: -24, yOffset: -18, color: '#0097D9', textColor: '#0097D9', scale: 0.9},
       ];
-        angleModifier = .75;
+        angleModifier = 1;
       break;
     default:
       icons = [
@@ -233,17 +241,16 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
   angleBetweenIcons = (360 / icons.length) * (Math.PI / 180); // Angle between icons in radians
   angleOffset = -angleBetweenIcons * angleModifier;  // Offset in radians (positive or negative value)
 
-  const animatedIcons = icons.map(() => useRef(new Animated.Value(0)).current);
 
   const duration=1600;
-  const strokeWidth=32;
+  const strokeWidth=20;
 
     // Define the button source and stroke color depending on buttonPressed parameter being 0, 1, 2
     let buttonSource, strokeColor;
     switch (buttonPressed) {
       
       case 2:
-        strokeColor = 'rgba(228, 157, 23, 0.8)';
+        strokeColor = 'rgba(130, 130, 130, 0.50)';
         break;
       case 3:
         buttonSource = partners;
@@ -263,6 +270,9 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
     const fadeAnim = useRef(new Animated.Value(0)).current;  // Initial value for opacity: 0
 
+    const [showBrowser, setShowBrowser] = useState(false);
+    const [currentURL, setCurrentURL] = useState('');
+    
 
     const handleIconPress = (index) => {
       console.log('Button Pressed:', index);
@@ -275,25 +285,34 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         console.log("URL to open:", url);
 
       }
-
+      setCurrentURL(url);
+      
       switch (buttonPressed) {
         case 0:
-          Linking.canOpenURL(url).then(supported => {
-            if (supported) {
-              Linking.openURL(url);
-            } else {
-              console.log("Don't know how to open URI: " + url);
-            }
-          });
+          if (Platform.OS === 'ios') {
+            setShowBrowser(true);
+          } else{
+            Linking.canOpenURL(url).then(supported => {
+              if (supported) {
+                Linking.openURL(url);
+              } else {
+                console.log("Don't know how to open URI: " + url);
+              }
+            });
+          }
           break;
         case 1: // Competencies
-          Linking.canOpenURL(url).then(supported => {
-            if (supported) {
-              Linking.openURL(url);
-            } else {
-              console.log("Don't know how to open URI: " + url);
-            }
-          });
+          if (Platform.OS === 'ios') {
+            setShowBrowser(true);
+          } else{
+            Linking.canOpenURL(url).then(supported => {
+              if (supported) {
+                Linking.openURL(url);
+              } else {
+                console.log("Don't know how to open URI: " + url);
+              }
+            });
+          }
           break;
         case 2: // Success Stories
           navigation.navigate('SuccessScreen', { initial_screen: initial_screen });
@@ -302,19 +321,31 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           setLogosVisible(true);
           break;
         case 4:
+          navigation.navigate('AI_DA', {initial_screen: initial_screen});
+          break;
+        case 5:
           navigation.navigate('Offerings', { initial_screen: initial_screen });
           break;
-        case 5: // Industries
+        case 6: // Industries
           navigation.navigate('Industries', { initial_screen: initial_screen });
           break;
-        case 6:
-          Linking.canOpenURL(url).then(supported => {
-            if (supported) {
-              Linking.openURL(url);
-            } else {
-              console.log("Don't know how to open URI: " + url);
+        case 7:
+          // Special case here, if the button is the AI Impact button, then navigate to the AI screen
+          if (index === 2) {
+            navigation.navigate('AI');
+          }else {
+            if (Platform.OS === 'ios') {
+              setShowBrowser(true);
+            } else{
+              Linking.canOpenURL(url).then(supported => {
+                if (supported) {
+                  Linking.openURL(url);
+                } else {
+                  console.log("Don't know how to open URI: " + url);
+                }
+              });
             }
-          });
+          }
           break;
         default:
           console.log('Invalid button index');
@@ -330,18 +361,12 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
         easing: Easing.out(Easing.quad),
       }).start();
   
-      animatedIcons.forEach((animatedIcon, index) => {
-        Animated.timing(animatedIcon, {
-          toValue: 1,
-          duration: duration,
-          useNativeDriver: true,
-        }).start();
-      });
 
       Animated.timing(fadeAnim, {
         delay: 700,
         toValue: 1,
         duration: 600,
+        useNativeDriver: true,
       }).start();
 
       
@@ -410,12 +435,6 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
           const x = centerX + (radius * Math.cos(angle)) - (iconSize / 2) + xOffset;
           const y = centerY + (radius * Math.sin(angle)) - (iconSize / 2) + yOffset;
 
-              // Additional offset for text to appear outside the icons
-          const textXOffset = icon_names[index].xOffset;  // Adjust this value as needed
-          const textYOffset = icon_names[index].yOffset;  // Adjust this value as needed
-          const textX = x + (radius/1.7 * Math.cos(angle)) + textXOffset;
-          const textY = y + (radius/1.7 * Math.sin(angle)) + textYOffset;
-
           let textAlignmentStyle = {};
     
           switch (icon_names[index].align) {
@@ -469,6 +488,20 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
 
           return (
             <>
+            {/* if button pressed is gft+aws solutions (buttonpress === 6), then the AI.DA button will navigate to another screen */}
+              {Platform.OS === 'ios' && showBrowser && (
+                <Modal
+                    animationType="slide"
+                    transparent={false}
+                    visible={showBrowser}
+                    onRequestClose={() => {
+                        setShowBrowser(false);
+                    }}
+                >
+                    <WebView source={{ uri: urls[index] }} style={{ flex: 1 }} />
+                    <Button title="Close" onPress={() => setShowBrowser(false)} />
+                </Modal>
+            )}
               <TouchableOpacity key={index} style={{ position: 'absolute', top: y, left: x, zIndex: 99 }} onPress={() => handleIconPress(index)}>
                 <Animated.View style={{
                   width: iconSize,
@@ -523,12 +556,12 @@ const AnimatedCircle = ({ radius, buttonPressed, navigation, onIconPress, active
                   { 
                     position: 'absolute',
                     color: icon_names[index].textColor, 
-                    fontSize: 24,
+                    fontSize: 18,
                     width: iconSize * 2.75,
                     // Height is two line spaces worth
                     textTransform: 'uppercase',
                     fontWeight: 'bold',
-                    font: 'Arial',
+                    fontFamily: 'Arial',
                     padding: 10,
                     ...textAlignmentStyle
                   }

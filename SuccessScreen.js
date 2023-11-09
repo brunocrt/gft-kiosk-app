@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, ScrollView, Animated, ImageBackground, Easing } from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, ScrollView, Animated, ImageBackground, Easing, Modal } from 'react-native';
 import { useScrollToTop } from '@react-navigation/native';
 import { Swipeable } from 'react-native-gesture-handler';
+import SuccessScreenButton from './SuccessScreenButton';
+
 
 import success_content from './assets/success_content.json';
 import NavigationButtons from './NavigationButtons';
-import GlobalUIWrapper from './GlobalUIWrapper';
-
-import industries_icon1 from './assets/icons/cooperatives_icon.png';
-import industries_icon2 from './assets/icons/capital_markets_icon.png';
-import industries_icon3 from './assets/icons/banking_icon.png';
-import industries_icon4 from './assets/icons/insurance_icon.png';
-import industries_icon5 from './assets/icons/manufacturing_icon.png';
-import industries_icon6 from './assets/icons/telecom_icon.png';
-
 
 const bgImage = require('./assets/offerings_content_bg.jpg');  // Update with the correct path
 const iconSize=75;
 
-export default function IndustriesScreen({ route, navigation }) {
+export default function SuccessScreen({ route, navigation }) {
 
     const swipeAnimation = React.useRef(new Animated.Value(0)).current;
 
@@ -48,7 +41,7 @@ export default function IndustriesScreen({ route, navigation }) {
         Animated.timing(swipeAnimation, {
             toValue: direction, // 1 for right, -1 for left
             duration: 250,
-            useNativeDriver: false,
+            useNativeDriver: true,
         }).start(() => {
             swipeAnimation.setValue(0); // Reset the animation value
     
@@ -94,6 +87,11 @@ export default function IndustriesScreen({ route, navigation }) {
         }).start();
     }, []);
     
+    const [showBrowser, setShowBrowser] = useState(false);
+
+    const handleLinkPress = () => {
+        setShowBrowser(true);
+    };
     
 
     const renderItem = ({ item, index }) => (
@@ -117,7 +115,7 @@ export default function IndustriesScreen({ route, navigation }) {
     );
     
     return (
-        <View style={styles.backgroundImageContainer}>
+        <ImageBackground style={styles.backgroundImageContainer} source={bgImage}>
     
                 <View style={styles.iconBar}>
                     {icons.map((icon, index) => (
@@ -135,17 +133,22 @@ export default function IndustriesScreen({ route, navigation }) {
                                 <View style={[
                                     index === selectedCategoryIndex ? styles.selectedIcon : styles.icon,
                                     ]}>
+                                        <View style={{
+                                        width: iconSize * 0.7,
+                                        height: iconSize * 0.7,
+                                        borderRadius: iconSize * 0.7 / 2,
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                    }}>
                                     <Image
                                         style={{ 
-                                            width: iconSize * icon_names[index].scale, 
-                                            height: iconSize * icon_names[index].scale, 
-                                            borderRadius: iconSize / 2, 
-                                            zIndex: 99, 
-                                            justifyContent: 'center', 
-                                            alignItems: 'center'
+                                            width: '100%', 
+                                            height: '100%', 
                                         }}
                                         source={icon}
+                                        resizeMode="cover"
                                     />
+                                    </View>
                                 </View>
     
                                 <Text style={styles.iconName}>{icon_names[index].label}</Text>
@@ -174,12 +177,7 @@ export default function IndustriesScreen({ route, navigation }) {
                         keyExtractor={(item, index) => String(index)}
                         style={[
                             styles.subCategoriesList,
-                            { transform: [{ translateX: swipeAnimation.interpolate({
-                                inputRange: [-1, 1],
-                                outputRange: [-50, 50]  // Change this to adjust the amount of translation
-                                }) 
-                            }], 
-                            }
+                            
                         ]}
                     />
                     </View>
@@ -203,7 +201,7 @@ export default function IndustriesScreen({ route, navigation }) {
                                 <View ref={ref} style={styles.contentTextContainer}>
                                     {/* Dynamically rendering text elements */}
                                     <ImageBackground 
-                                        source={success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].imageUrl} 
+                                        source={{uri: success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].imageUrl}} 
                                         style={{
                                             width: '100%', 
                                             height: '100%',
@@ -232,8 +230,9 @@ export default function IndustriesScreen({ route, navigation }) {
                                                              
                                             {success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].subheaders.map((subheader, index) => (
                                             <>
-                                                <View style={styles.contentText}>
-                                                    <Text style={{
+                                                <View key={index} style={styles.contentText}>
+                                                    <Text
+                                                    style={{
                                                         fontSize: 24,
                                                         color: 'white',
                                                         marginBottom: 10,
@@ -241,7 +240,8 @@ export default function IndustriesScreen({ route, navigation }) {
                                                     }}>
                                                         {subheader}
                                                     </Text>
-                                                    <Text style={{
+                                                    <Text
+                                                    style={{
                                                         fontSize: 18,
                                                         fontWeight: 'normal',
                                                         color: 'white',
@@ -255,6 +255,11 @@ export default function IndustriesScreen({ route, navigation }) {
                                             ))}
 
                                             </Animated.View>
+                                            
+                                            <SuccessScreenButton 
+                                                url={success_content[selectedCategoryIndex].subcategories[selectedSubCategoryIndex].url}
+                                                text={"Read more about this success story here ->"}
+                                            />
                                         </View>
                                     </ImageBackground>
                                 </View>
@@ -273,7 +278,7 @@ export default function IndustriesScreen({ route, navigation }) {
                     <NavigationButtons navigation={navigation} />
                 </View>
             </View>
-        </View>
+        </ImageBackground>
     );
     }
     
@@ -283,7 +288,6 @@ export default function IndustriesScreen({ route, navigation }) {
             backgroundColor: 'transparent',
             width: '100%',
             height: '100%',
-            backgroundImage: `url(${bgImage})`,  // or use backgroundImage: bgImage if you're using inline styles
             backgroundSize: 'cover',
             backgroundPosition: 'center',
         },
@@ -437,7 +441,7 @@ export default function IndustriesScreen({ route, navigation }) {
         width: '100%',
       },
       headerStyle: {
-        fontSize: 48,
+        fontSize: 30,
         color: 'white',
         fontFamily: 'Calibri',
         alignSelf: 'center',

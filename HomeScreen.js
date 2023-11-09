@@ -8,10 +8,7 @@ import offerings from './assets/offerings.png'
 import partners from './assets/partners.png'
 import GlobalUIWrapper from './GlobalUIWrapper'; 
 import LogosVisible from './LogosVisible';
-import PartnerLogos from './partner_logos'; 
 import AnimatedCircle from './AnimatedCircle';
-import AppNavigator from './AppNavigator';
-import IconLabels from './IconLabels';
 
 
 

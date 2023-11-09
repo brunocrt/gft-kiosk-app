@@ -11,10 +11,10 @@ import partners from './assets/partners.png'
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
+  radius = radius * 1.5;
   const animatedValue = useRef(new Animated.Value(0)).current;
   const circumference = 2 * Math.PI * radius;
   const [logosVisible, setLogosVisible] = useState(false);
-
   
   const dashOffset = animatedValue.interpolate({
     inputRange: [0, 1],
@@ -24,11 +24,12 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
   let icon_names;
   let angleBetweenIcons;
   let angleOffset;
-  const iconSize=100;
+  const iconSize=80;
   icons = [
     require('./assets/icons/GFT_AWS_Offerings_icon.png'),
     require('./assets/icons/competencies_icon.png'), 
     require('./assets/icons/success_icon.png'), 
+    require('./assets/icons/partners_icon.png'), 
     require('./assets/icons/partners_icon.png'), 
     require('./assets/icons/offerings_icon.png'), 
     require('./assets/icons/industries_icon.png'), 
@@ -38,19 +39,20 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
     {label: 'GFT + AWS\nOfferings', align: 'bottom', xOffset: 0, yOffset: 48, color: '#0097D9', textColor: '#0097D9', scale: 0.85},
     {label: 'Competencies & Credentials', align: 'left', xOffset: 0, yOffset: 0, color: '#0097D9', textColor: '#0097D9', scale: 0.75},
     {label: 'GFT + AWS\nSuccess Stories', align: 'left', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.85},
-    {label: 'Partners', align: 'top', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.85},
-    {label: 'Offerings', align: 'top', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.8},
+    {label: 'Partners', align: 'left', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.85},
+    {label: 'AI.DA Marketplace', align: 'top', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.85},
+    {label: 'Offerings', align: 'right', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.8},
     {label: 'Industries', align: 'right', xOffset: 0, yOffset: 0, color: '#B02A87', textColor: '#B02A87', scale: 0.7},
     {label: 'GFT + AWS Solutions', align: 'right', xOffset: 0, yOffset: 0, color: '#0097D9', textColor: '#0097D9', scale: 0.7},
   ];
   angleBetweenIcons = (360 / icons.length) * (Math.PI / 180); // Angle between icons in radians
-  angleOffset = -angleBetweenIcons / 2 * 3.5;  // Offset in radians (positive or negative value)
+  angleOffset = -angleBetweenIcons / 2 * 4;  // Offset in radians (positive or negative value)
  
 
   const animatedIcons = icons.map(() => useRef(new Animated.Value(0)).current);
 
   const duration=1600;
-  const strokeWidth=32;
+  const strokeWidth=20;
 
     // Define the button source and stroke color depending on buttonPressed parameter being 0, 1, 2
     let buttonSource, strokeColor;
@@ -61,7 +63,11 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
 
 
     const handleIconPress = (index) => {
-
+      
+        if (index === 4) {
+          
+          navigation.navigate('AI_DA');
+        }
         if (onIconPress) {
           onIconPress(index);
         }
@@ -88,6 +94,7 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
         delay: 900,
         toValue: 1,
         duration: 600,
+        useNativeDriver: true,
       }).start();
 
       
@@ -265,13 +272,13 @@ const AnimatedCircle = ({ radius, navigation, onIconPress, activeCircle }) => {
                     flex: 1,
                     position: 'absolute', 
                     color: icon_names[index].textColor, 
-                    fontSize: 24,
+                    fontSize: 18,
                     width: iconSize * 2.75,
                     // Height is two line spaces worth
                     textTransform: 'uppercase',
                     fontWeight: 'bold',
                     font: 'Arial',
-                    padding: 20,
+                    padding: 10,
                     ...textAlignmentStyle
                   }
                 }>
